@@ -5,6 +5,9 @@ transactional completion, and countable database effects. Phase 3 adds real seed
 chaos experiments, a sustained open-loop HTTP load test, and a documented verdict.
 See [REPORT.md](REPORT.md) for measured results and their limits; the submission
 design note is [DESIGN_SUMMARY.md](DESIGN_SUMMARY.md), with the full design retained.
+The developer's later manual Swagger/PostgreSQL checks are in
+[MANUAL_VERIFICATION.md](MANUAL_VERIFICATION.md); AI assistance and verification
+boundaries are documented in [AI_USE.md](AI_USE.md).
 
 The complete one-page Soup assignment PDF was read in Phase 1. The user's stack
 and deadline govern: **November 11, 2026, 22:10 Asia/Almaty (UTC+05:00)**. Per the
@@ -257,5 +260,7 @@ python3 scripts/record.py uv run --frozen python -m scripts.verify_evidence
 
 The report includes the failure-analysis matrix, exact counts, performance metrics,
 limitations, reflection, and prioritized fixes. The live discussion was cancelled
-according to the user's latest Soup email update. No submission email or PR has
-been sent/opened. Phase 3 ends for review before submission.
+according to the user's latest Soup email update. At the end of the Phase 3
+experiments, no submission email or PR had yet been sent/opened. The subsequent
+manual developer review is recorded in [MANUAL_VERIFICATION.md](MANUAL_VERIFICATION.md).
+No submission email has been sent as part of this repository preparation.
