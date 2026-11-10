@@ -36,4 +36,6 @@ checks verify Markdown file links, gzip integrity, completed recorder exit recor
 report/summary totals, and preservation of tracked Phase 2 raw files. Checksums of
 all final raw run files are in `artifacts/SHA256SUMS`; regenerating the derived
 index/checksums does not edit any raw file. The report is a scoped assessment,
-not a production certification or a claim of independent human verification.
+not a production certification or a claim that the developer independently reran
+Codex's automated tests. Subsequent developer-led manual API and PostgreSQL
+checks are recorded separately in [MANUAL_VERIFICATION.md](MANUAL_VERIFICATION.md).
