@@ -1,0 +1,35 @@
+ASYNC109 Async function definition with a `timeout` parameter
+  --> scripts/smoke.py:50:46
+   |
+48 |             return response.json()
+49 |
+50 |         async def wait_state(job_id, states, timeout=25):
+   |                                              ^^^^^^^^^^
+51 |             deadline = time.monotonic() + timeout
+52 |             while time.monotonic() < deadline:
+   |
+help: Use `asyncio.timeout` instead
+
+E501 Line too long (102 > 100)
+   --> scripts/smoke.py:108:101
+    |
+106 |             final = await wait_state(abrupt["id"], {"succeeded"})
+107 |             assert final["generation"] == before["generation"] + 1
+108 |             assert int(docker("inspect", "--format", "{{.RestartCount}}", container)) > restart_before
+    |                                                                                                     ^^
+109 |
+110 |             async with sessions() as session:
+    |
+
+E501 Line too long (104 > 100)
+   --> src/training_queue/transitions.py:137:101
+    |
+135 |         return await self._transaction(operation)
+136 |
+137 |     async def list_jobs(self, limit: int, cursor: Cursor | None = None) -> tuple[list[Job], str | None]:
+    |                                                                                                     ^^^^
+138 |         if not 1 <= limit <= 100:
+139 |             raise ValueError("limit must be 1..100")
+    |
+
+Found 3 errors.

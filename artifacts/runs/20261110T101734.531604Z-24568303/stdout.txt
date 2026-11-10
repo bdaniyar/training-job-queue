@@ -1,0 +1,91 @@
+worker-7  | 2026-11-10T10:17:02.555995843Z {"time": "2026-11-10T10:17:02.555847+00:00", "event": "worker_started", "owner": "ff455e1c-6c27-4892-9e91-c9a418dc397b"}
+worker-6  | 2026-11-10T10:17:02.647244218Z {"time": "2026-11-10T10:17:02.647118+00:00", "event": "worker_started", "owner": "89c7b868-8882-4429-81a4-04df047ad7ef"}
+api-1     | 2026-11-10T10:17:02.652440552Z INFO:     Started server process [7]
+api-1     | 2026-11-10T10:17:02.652482385Z INFO:     Waiting for application startup.
+api-1     | 2026-11-10T10:17:02.668528760Z INFO:     Application startup complete.
+api-1     | 2026-11-10T10:17:02.668886635Z INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1     | 2026-11-10T10:17:07.118489096Z INFO:     127.0.0.1:52044 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:17:12.305584292Z INFO:     127.0.0.1:52048 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:17:17.494699420Z INFO:     127.0.0.1:47396 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:17:22.684867964Z INFO:     127.0.0.1:47410 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:17:27.869440341Z INFO:     127.0.0.1:37754 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:17:33.044312469Z INFO:     127.0.0.1:48554 - "GET /health HTTP/1.1" 200 OK
+worker-3  | 2026-11-10T10:15:59.160957258Z {"time": "2026-11-10T10:15:59.160685+00:00", "event": "worker_started", "owner": "a215da8b-1957-497e-bd4e-b8a0ce3f51c1"}
+worker-3  | 2026-11-10T10:16:26.331460715Z {"time": "2026-11-10T10:16:26.331154+00:00", "event": "claim_committed", "owner": "a215da8b-1957-497e-bd4e-b8a0ce3f51c1", "job_id": "d172e2ab-2b4c-44b7-859c-9505f5625cb4", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:16:26.331482590Z {"time": "2026-11-10T10:16:26.331313+00:00", "event": "execution_started", "owner": "a215da8b-1957-497e-bd4e-b8a0ce3f51c1", "job_id": "d172e2ab-2b4c-44b7-859c-9505f5625cb4", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:16:26.352542590Z {"time": "2026-11-10T10:16:26.352363+00:00", "event": "execution_finished", "owner": "a215da8b-1957-497e-bd4e-b8a0ce3f51c1", "job_id": "d172e2ab-2b4c-44b7-859c-9505f5625cb4", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:16:26.358165799Z {"time": "2026-11-10T10:16:26.358078+00:00", "event": "effect_committed", "owner": "a215da8b-1957-497e-bd4e-b8a0ce3f51c1", "job_id": "d172e2ab-2b4c-44b7-859c-9505f5625cb4", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:16:27.840658924Z {"time": "2026-11-10T10:16:27.840391+00:00", "event": "worker_stopped", "owner": "a215da8b-1957-497e-bd4e-b8a0ce3f51c1"}
+worker-3  | 2026-11-10T10:16:48.724248962Z {"time": "2026-11-10T10:16:48.724128+00:00", "event": "worker_started", "owner": "ac6f954d-a005-40e2-86d8-1c40312406d2"}
+worker-2  | 2026-11-10T10:15:59.025099383Z {"time": "2026-11-10T10:15:59.024489+00:00", "event": "worker_started", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f"}
+worker-2  | 2026-11-10T10:16:06.883685887Z {"time": "2026-11-10T10:16:06.883220+00:00", "event": "claim_committed", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "2b3d99ee-038c-4add-b7db-769740856e2c", "generation": 2, "attempt": 2}
+worker-2  | 2026-11-10T10:16:06.883780220Z {"time": "2026-11-10T10:16:06.883402+00:00", "event": "execution_started", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "2b3d99ee-038c-4add-b7db-769740856e2c", "generation": 2, "attempt": 2}
+worker-2  | 2026-11-10T10:16:08.385415013Z {"time": "2026-11-10T10:16:08.385151+00:00", "event": "execution_finished", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "2b3d99ee-038c-4add-b7db-769740856e2c", "generation": 2, "attempt": 2}
+worker-2  | 2026-11-10T10:16:08.392639763Z {"time": "2026-11-10T10:16:08.392540+00:00", "event": "effect_committed", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "2b3d99ee-038c-4add-b7db-769740856e2c", "generation": 2, "attempt": 2}
+worker-2  | 2026-11-10T10:16:26.327271007Z {"time": "2026-11-10T10:16:26.326891+00:00", "event": "claim_committed", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "ac805330-b433-43f1-b60a-86e220abdb6f", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:16:26.327308174Z {"time": "2026-11-10T10:16:26.327025+00:00", "event": "execution_started", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "ac805330-b433-43f1-b60a-86e220abdb6f", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:16:26.349115632Z {"time": "2026-11-10T10:16:26.349019+00:00", "event": "execution_finished", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "ac805330-b433-43f1-b60a-86e220abdb6f", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:16:26.351826507Z {"time": "2026-11-10T10:16:26.351764+00:00", "event": "effect_committed", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "ac805330-b433-43f1-b60a-86e220abdb6f", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:16:26.355129215Z {"time": "2026-11-10T10:16:26.355028+00:00", "event": "claim_committed", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "265db8ac-2d51-46fd-abcf-67ac703aefd0", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:16:26.355141882Z {"time": "2026-11-10T10:16:26.355060+00:00", "event": "execution_started", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "265db8ac-2d51-46fd-abcf-67ac703aefd0", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:16:26.459944715Z {"time": "2026-11-10T10:16:26.459795+00:00", "event": "failure_recorded", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f", "job_id": "265db8ac-2d51-46fd-abcf-67ac703aefd0", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:16:27.841709633Z {"time": "2026-11-10T10:16:27.840768+00:00", "event": "worker_stopped", "owner": "b155fc3a-25a7-4055-a046-c6365036c71f"}
+worker-2  | 2026-11-10T10:16:48.638961587Z {"time": "2026-11-10T10:16:48.638795+00:00", "event": "worker_started", "owner": "5b16e3a5-85fe-4960-be13-03a52e1089ff"}
+db-1      | 2026-11-10T10:16:44.976998293Z 
+db-1      | 2026-11-10T10:16:44.977020793Z PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-1      | 2026-11-10T10:16:44.977043543Z 
+db-1      | 2026-11-10T10:16:44.989540168Z 2026-11-10 10:16:44.989 UTC [1] LOG:  starting PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-1      | 2026-11-10T10:16:44.989583002Z 2026-11-10 10:16:44.989 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1      | 2026-11-10T10:16:44.989585210Z 2026-11-10 10:16:44.989 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1      | 2026-11-10T10:16:44.990839210Z 2026-11-10 10:16:44.990 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+worker-4  | 2026-11-10T10:15:59.252800800Z {"time": "2026-11-10T10:15:59.252569+00:00", "event": "worker_started", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d"}
+worker-4  | 2026-11-10T10:16:05.817730387Z {"time": "2026-11-10T10:16:05.817328+00:00", "event": "recovered", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "2b3d99ee-038c-4add-b7db-769740856e2c", "state": "queued", "generation": 1}
+worker-4  | 2026-11-10T10:16:26.255776549Z {"time": "2026-11-10T10:16:26.255567+00:00", "event": "claim_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "3c78b899-b08f-483c-92ca-909c43eae87c", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.255816632Z {"time": "2026-11-10T10:16:26.255682+00:00", "event": "execution_started", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "3c78b899-b08f-483c-92ca-909c43eae87c", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.276777590Z {"time": "2026-11-10T10:16:26.276659+00:00", "event": "execution_finished", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "3c78b899-b08f-483c-92ca-909c43eae87c", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.283521049Z {"time": "2026-11-10T10:16:26.283398+00:00", "event": "effect_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "3c78b899-b08f-483c-92ca-909c43eae87c", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.286494799Z {"time": "2026-11-10T10:16:26.286418+00:00", "event": "claim_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "d30f6aab-185f-4192-8a44-df34d71f530e", "generation": 1, "attempt": 1}
+worker-5  | 2026-11-10T10:17:02.758048260Z {"time": "2026-11-10T10:17:02.757895+00:00", "event": "worker_started", "owner": "bbef71c1-6caf-4eb9-aad1-260024200fae"}
+worker-4  | 2026-11-10T10:16:26.286502007Z {"time": "2026-11-10T10:16:26.286447+00:00", "event": "execution_started", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "d30f6aab-185f-4192-8a44-df34d71f530e", "generation": 1, "attempt": 1}
+worker-8  | 2026-11-10T10:17:02.859267677Z {"time": "2026-11-10T10:17:02.859135+00:00", "event": "worker_started", "owner": "73c6d773-74b0-4ecc-91d3-35e6a6d4be34"}
+worker-4  | 2026-11-10T10:16:26.309169090Z {"time": "2026-11-10T10:16:26.309060+00:00", "event": "execution_finished", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "d30f6aab-185f-4192-8a44-df34d71f530e", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.312097465Z {"time": "2026-11-10T10:16:26.312014+00:00", "event": "effect_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "d30f6aab-185f-4192-8a44-df34d71f530e", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.315333507Z {"time": "2026-11-10T10:16:26.315264+00:00", "event": "claim_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "9092a937-5bfa-429d-a8f1-97b01465fe25", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.315340049Z {"time": "2026-11-10T10:16:26.315294+00:00", "event": "execution_started", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "9092a937-5bfa-429d-a8f1-97b01465fe25", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.337146049Z {"time": "2026-11-10T10:16:26.337026+00:00", "event": "execution_finished", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "9092a937-5bfa-429d-a8f1-97b01465fe25", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.339887757Z {"time": "2026-11-10T10:16:26.339820+00:00", "event": "effect_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "9092a937-5bfa-429d-a8f1-97b01465fe25", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.342285715Z {"time": "2026-11-10T10:16:26.342213+00:00", "event": "claim_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "514c36a5-fabb-4843-bda5-bbc76f06ac58", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.342313132Z {"time": "2026-11-10T10:16:26.342250+00:00", "event": "execution_started", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "514c36a5-fabb-4843-bda5-bbc76f06ac58", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:26.452921382Z {"time": "2026-11-10T10:16:26.452747+00:00", "event": "failure_recorded", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "514c36a5-fabb-4843-bda5-bbc76f06ac58", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:27.512017133Z {"time": "2026-11-10T10:16:27.511741+00:00", "event": "claim_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "265db8ac-2d51-46fd-abcf-67ac703aefd0", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:15:58.873932842Z {"time": "2026-11-10T10:15:58.858279+00:00", "event": "worker_started", "owner": "e53aa18a-b690-4509-81fa-eb594db7328c"}
+worker-1  | 2026-11-10T10:16:26.331217174Z {"time": "2026-11-10T10:16:26.330983+00:00", "event": "claim_committed", "owner": "e53aa18a-b690-4509-81fa-eb594db7328c", "job_id": "adb3f5ad-ba44-406e-aeee-bd6d1972fb5d", "generation": 1, "attempt": 1}
+db-1      | 2026-11-10T10:16:44.992729627Z 2026-11-10 10:16:44.992 UTC [31] LOG:  database system was shut down at 2026-11-10 10:16:44 UTC
+db-1      | 2026-11-10T10:16:44.994676793Z 2026-11-10 10:16:44.994 UTC [1] LOG:  database system is ready to accept connections
+worker-1  | 2026-11-10T10:16:26.331240799Z {"time": "2026-11-10T10:16:26.331100+00:00", "event": "execution_started", "owner": "e53aa18a-b690-4509-81fa-eb594db7328c", "job_id": "adb3f5ad-ba44-406e-aeee-bd6d1972fb5d", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:16:27.512052716Z {"time": "2026-11-10T10:16:27.511824+00:00", "event": "execution_started", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "265db8ac-2d51-46fd-abcf-67ac703aefd0", "generation": 2, "attempt": 2}
+worker-4  | 2026-11-10T10:16:27.613791383Z {"time": "2026-11-10T10:16:27.612821+00:00", "event": "execution_finished", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "265db8ac-2d51-46fd-abcf-67ac703aefd0", "generation": 2, "attempt": 2}
+worker-4  | 2026-11-10T10:16:27.628009799Z {"time": "2026-11-10T10:16:27.627647+00:00", "event": "effect_committed", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d", "job_id": "265db8ac-2d51-46fd-abcf-67ac703aefd0", "generation": 2, "attempt": 2}
+worker-4  | 2026-11-10T10:16:27.840516758Z {"time": "2026-11-10T10:16:27.840324+00:00", "event": "worker_stopped", "owner": "9a58b0bd-e349-4b7d-ac77-e3d81652549d"}
+worker-4  | 2026-11-10T10:16:48.768817503Z {"time": "2026-11-10T10:16:48.768712+00:00", "event": "worker_started", "owner": "0a687d15-c62e-408c-83fa-8edadb503bd3"}
+worker-1  | 2026-11-10T10:16:26.352529257Z {"time": "2026-11-10T10:16:26.352371+00:00", "event": "execution_finished", "owner": "e53aa18a-b690-4509-81fa-eb594db7328c", "job_id": "adb3f5ad-ba44-406e-aeee-bd6d1972fb5d", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:16:26.358264924Z {"time": "2026-11-10T10:16:26.358183+00:00", "event": "effect_committed", "owner": "e53aa18a-b690-4509-81fa-eb594db7328c", "job_id": "adb3f5ad-ba44-406e-aeee-bd6d1972fb5d", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:16:27.841722549Z {"time": "2026-11-10T10:16:27.841246+00:00", "event": "worker_stopped", "owner": "e53aa18a-b690-4509-81fa-eb594db7328c"}
+worker-1  | 2026-11-10T10:16:28.742408675Z {"time": "2026-11-10T10:16:28.742329+00:00", "event": "worker_started", "owner": "7265d6a2-402a-43a7-9146-203f9a90cbc1"}
+worker-1  | 2026-11-10T10:16:28.756676467Z {"time": "2026-11-10T10:16:28.756594+00:00", "event": "claim_committed", "owner": "7265d6a2-402a-43a7-9146-203f9a90cbc1", "job_id": "7de561e0-312f-4d2b-92e1-ca684f6f571d", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:16:28.756687967Z {"time": "2026-11-10T10:16:28.756623+00:00", "event": "execution_started", "owner": "7265d6a2-402a-43a7-9146-203f9a90cbc1", "job_id": "7de561e0-312f-4d2b-92e1-ca684f6f571d", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:16:28.827458508Z {"time": "2026-11-10T10:16:28.827378+00:00", "event": "shutdown_released", "owner": "7265d6a2-402a-43a7-9146-203f9a90cbc1", "job_id": "7de561e0-312f-4d2b-92e1-ca684f6f571d", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:16:28.827474883Z {"time": "2026-11-10T10:16:28.827436+00:00", "event": "worker_stopped", "owner": "7265d6a2-402a-43a7-9146-203f9a90cbc1"}
+worker-1  | 2026-11-10T10:16:29.411635717Z {"time": "2026-11-10T10:16:29.411527+00:00", "event": "worker_started", "owner": "2503aa78-c8cb-4585-be5f-0de4cfe22db6"}
+worker-1  | 2026-11-10T10:16:29.837984217Z {"time": "2026-11-10T10:16:29.837833+00:00", "event": "claim_committed", "owner": "2503aa78-c8cb-4585-be5f-0de4cfe22db6", "job_id": "7de561e0-312f-4d2b-92e1-ca684f6f571d", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:16:29.838007009Z {"time": "2026-11-10T10:16:29.837875+00:00", "event": "execution_started", "owner": "2503aa78-c8cb-4585-be5f-0de4cfe22db6", "job_id": "7de561e0-312f-4d2b-92e1-ca684f6f571d", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:16:31.344207801Z {"time": "2026-11-10T10:16:31.343572+00:00", "event": "execution_finished", "owner": "2503aa78-c8cb-4585-be5f-0de4cfe22db6", "job_id": "7de561e0-312f-4d2b-92e1-ca684f6f571d", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:16:31.359706134Z {"time": "2026-11-10T10:16:31.359497+00:00", "event": "effect_committed", "owner": "2503aa78-c8cb-4585-be5f-0de4cfe22db6", "job_id": "7de561e0-312f-4d2b-92e1-ca684f6f571d", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:16:31.572744260Z {"time": "2026-11-10T10:16:31.572365+00:00", "event": "claim_committed", "owner": "2503aa78-c8cb-4585-be5f-0de4cfe22db6", "job_id": "c7963487-2164-4904-a083-09d23156fb50", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:16:31.572775718Z {"time": "2026-11-10T10:16:31.572470+00:00", "event": "execution_started", "owner": "2503aa78-c8cb-4585-be5f-0de4cfe22db6", "job_id": "c7963487-2164-4904-a083-09d23156fb50", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:16:32.317716302Z {"time": "2026-11-10T10:16:32.317628+00:00", "event": "worker_started", "owner": "aeb4b2fb-d97a-4006-a6e5-b83a681ab771"}
+worker-1  | 2026-11-10T10:16:41.586162500Z {"time": "2026-11-10T10:16:41.585946+00:00", "event": "recovered", "owner": "aeb4b2fb-d97a-4006-a6e5-b83a681ab771", "job_id": "c7963487-2164-4904-a083-09d23156fb50", "state": "queued", "generation": 1}
+worker-1  | 2026-11-10T10:16:42.636944959Z {"time": "2026-11-10T10:16:42.636810+00:00", "event": "claim_committed", "owner": "aeb4b2fb-d97a-4006-a6e5-b83a681ab771", "job_id": "c7963487-2164-4904-a083-09d23156fb50", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:16:42.636963167Z {"time": "2026-11-10T10:16:42.636878+00:00", "event": "execution_started", "owner": "aeb4b2fb-d97a-4006-a6e5-b83a681ab771", "job_id": "c7963487-2164-4904-a083-09d23156fb50", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:16:44.138426001Z {"time": "2026-11-10T10:16:44.137704+00:00", "event": "execution_finished", "owner": "aeb4b2fb-d97a-4006-a6e5-b83a681ab771", "job_id": "c7963487-2164-4904-a083-09d23156fb50", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:16:44.153779668Z {"time": "2026-11-10T10:16:44.153529+00:00", "event": "effect_committed", "owner": "aeb4b2fb-d97a-4006-a6e5-b83a681ab771", "job_id": "c7963487-2164-4904-a083-09d23156fb50", "generation": 2, "attempt": 2}

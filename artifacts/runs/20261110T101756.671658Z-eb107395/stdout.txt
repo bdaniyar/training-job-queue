@@ -1,0 +1,7 @@
+Current revision(s) for postgresql+asyncpg://queue:***@localhost:55432/queue_test:
+Rev: 0001 (head)
+Parent: <base>
+Path: /Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue/alembic/versions/0001_queue.py
+
+    Jobs, countable effects, and immutable identity/payload/terminal rows.
+

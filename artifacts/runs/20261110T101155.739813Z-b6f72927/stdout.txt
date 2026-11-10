@@ -1,0 +1,95 @@
+{"method": "GET", "path": "/health", "status": 200, "body": {"status": "ok"}}
+{"command": ["docker", "compose", "ps", "-q", "worker"]}
+d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172
+74b0c35a0281a75b9b6fc9422b82693b4fc5a33faf0a7e9f58f92eb9a35b3f9f
+c93dd7469396493a93f669fa17ced46d4e3f3df299d6847e73b4aee179ad1802
+33cbec4ffb7c297792fc8d5222e9f6d09d0ec4bfaa70a7fabb4c86c54e0fae2a
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "7bc2ea27-6c4e-4346-b553-1b0f1327520a", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.710824Z", "updated_at": "2026-11-10T10:11:56.710824Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "98a1eb1b-49ec-401d-a599-cb0c2b1c66a0", "payload": {"duration_ms": 20, "value": -1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.715317Z", "updated_at": "2026-11-10T10:11:56.715317Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "eee8d606-6aee-4961-84d0-0091d4fc4a33", "payload": {"duration_ms": 20, "value": 0, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.717885Z", "updated_at": "2026-11-10T10:11:56.717885Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "2d50e45a-d419-4fd8-9f96-be82e93bbd9c", "payload": {"duration_ms": 20, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.720338Z", "updated_at": "2026-11-10T10:11:56.720338Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "27216257-d8db-49e5-a4ef-b39ed146fac2", "payload": {"duration_ms": 20, "value": 2, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.722543Z", "updated_at": "2026-11-10T10:11:56.722543Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "3d954188-24a9-4031-aab4-c19b6bfb77df", "payload": {"duration_ms": 20, "value": 3, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.724579Z", "updated_at": "2026-11-10T10:11:56.724579Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 200, "body": {"id": "7bc2ea27-6c4e-4346-b553-1b0f1327520a", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.710824Z", "updated_at": "2026-11-10T10:11:56.710824Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 409, "body": {"detail": "idempotency key already used with a different payload"}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "3791fa3e-f5f4-4dc1-bd86-ae8f08f3cc7c", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 0, "fail_permanently": true}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.733352Z", "updated_at": "2026-11-10T10:11:56.733352Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "eaf7731c-b8fa-4d4d-acac-da63ca61dd15", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 1, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.735679Z", "updated_at": "2026-11-10T10:11:56.735679Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "4b6efc3f-9d9a-4acb-8dd9-8dfd05355517", "payload": {"duration_ms": 60000, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.737993Z", "updated_at": "2026-11-10T10:11:56.737993Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs/4b6efc3f-9d9a-4acb-8dd9-8dfd05355517/cancel", "status": 200, "body": {"id": "4b6efc3f-9d9a-4acb-8dd9-8dfd05355517", "payload": {"duration_ms": 60000, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "cancelled", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.737993Z", "updated_at": "2026-11-10T10:11:56.741599Z", "finished_at": "2026-11-10T10:11:56.741599Z", "result": null, "error": null}}
+{"observed": {"id": "7bc2ea27-6c4e-4346-b553-1b0f1327520a", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.710824Z", "updated_at": "2026-11-10T10:11:56.879967Z", "finished_at": "2026-11-10T10:11:56.879967Z", "result": {"squared_value": 4}, "error": null}}
+{"observed": {"id": "98a1eb1b-49ec-401d-a599-cb0c2b1c66a0", "payload": {"duration_ms": 20, "value": -1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.715317Z", "updated_at": "2026-11-10T10:11:56.880041Z", "finished_at": "2026-11-10T10:11:56.880041Z", "result": {"squared_value": 1}, "error": null}}
+{"observed": {"id": "eee8d606-6aee-4961-84d0-0091d4fc4a33", "payload": {"duration_ms": 20, "value": 0, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.717885Z", "updated_at": "2026-11-10T10:11:56.880730Z", "finished_at": "2026-11-10T10:11:56.880730Z", "result": {"squared_value": 0}, "error": null}}
+{"observed": {"id": "2d50e45a-d419-4fd8-9f96-be82e93bbd9c", "payload": {"duration_ms": 20, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.720338Z", "updated_at": "2026-11-10T10:11:56.888374Z", "finished_at": "2026-11-10T10:11:56.888374Z", "result": {"squared_value": 1}, "error": null}}
+{"observed": {"id": "27216257-d8db-49e5-a4ef-b39ed146fac2", "payload": {"duration_ms": 20, "value": 2, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.722543Z", "updated_at": "2026-11-10T10:11:56.923483Z", "finished_at": "2026-11-10T10:11:56.923483Z", "result": {"squared_value": 4}, "error": null}}
+{"observed": {"id": "3d954188-24a9-4031-aab4-c19b6bfb77df", "payload": {"duration_ms": 20, "value": 3, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.724579Z", "updated_at": "2026-11-10T10:11:56.926393Z", "finished_at": "2026-11-10T10:11:56.926393Z", "result": {"squared_value": 9}, "error": null}}
+{"observed": {"id": "3791fa3e-f5f4-4dc1-bd86-ae8f08f3cc7c", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 0, "fail_permanently": true}, "state": "failed", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.733352Z", "updated_at": "2026-11-10T10:11:57.008281Z", "finished_at": "2026-11-10T10:11:57.008281Z", "result": null, "error": "simulated permanent failure"}}
+{"observed": {"id": "eaf7731c-b8fa-4d4d-acac-da63ca61dd15", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 1, "fail_permanently": false}, "state": "succeeded", "attempts": 2, "generation": 2, "created_at": "2026-11-10T10:11:56.735679Z", "updated_at": "2026-11-10T10:11:58.163656Z", "finished_at": "2026-11-10T10:11:58.163656Z", "result": {"squared_value": 1}, "error": null}}
+{"observed": {"id": "4b6efc3f-9d9a-4acb-8dd9-8dfd05355517", "payload": {"duration_ms": 60000, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "cancelled", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:56.737993Z", "updated_at": "2026-11-10T10:11:56.741599Z", "finished_at": "2026-11-10T10:11:56.741599Z", "result": null, "error": null}}
+{"method": "GET", "path": "/jobs", "status": 200, "body": {"items": [{"id": "7bc2ea27-6c4e-4346-b553-1b0f1327520a", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.710824Z", "updated_at": "2026-11-10T10:11:56.879967Z", "finished_at": "2026-11-10T10:11:56.879967Z", "result": {"squared_value": 4}, "error": null}, {"id": "98a1eb1b-49ec-401d-a599-cb0c2b1c66a0", "payload": {"duration_ms": 20, "value": -1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.715317Z", "updated_at": "2026-11-10T10:11:56.880041Z", "finished_at": "2026-11-10T10:11:56.880041Z", "result": {"squared_value": 1}, "error": null}], "next_cursor": "eyJjcmVhdGVkX2F0IjoiMjAyNi0xMS0xMFQxMDoxMTo1Ni43MTUzMTdaIiwiaWQiOiI5OGExZWIxYi00OWVjLTQwMWQtYTU5OS1jYjBjMmIxYzY2YTAifQ=="}}
+{"command": ["docker", "compose", "stop", "worker"]}
+ Container training-job-queue-worker-2  Stopping
+ Container training-job-queue-worker-4  Stopping
+ Container training-job-queue-worker-3  Stopping
+ Container training-job-queue-worker-1  Stopping
+ Container training-job-queue-worker-3  Stopped
+ Container training-job-queue-worker-4  Stopped
+ Container training-job-queue-worker-2  Stopped
+ Container training-job-queue-worker-1  Stopped
+{"command": ["docker", "start", "d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172"]}
+d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "01f57eb3-8617-4a94-aafb-73dfcd8d2ee3", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:11:58.798276Z", "updated_at": "2026-11-10T10:11:58.798276Z", "finished_at": null, "result": null, "error": null}}
+{"observed": {"id": "01f57eb3-8617-4a94-aafb-73dfcd8d2ee3", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "running", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:58.798276Z", "updated_at": "2026-11-10T10:11:59.172562Z", "finished_at": null, "result": null, "error": null}}
+{"command": ["docker", "stop", "--time", "10", "d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172"]}
+Flag --time has been deprecated, use --timeout instead
+d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172
+{"observed": {"id": "01f57eb3-8617-4a94-aafb-73dfcd8d2ee3", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:58.798276Z", "updated_at": "2026-11-10T10:11:59.218983Z", "finished_at": null, "result": null, "error": "graceful worker shutdown"}}
+{"command": ["docker", "start", "d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172"]}
+d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172
+{"observed": {"id": "01f57eb3-8617-4a94-aafb-73dfcd8d2ee3", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 2, "generation": 2, "created_at": "2026-11-10T10:11:58.798276Z", "updated_at": "2026-11-10T10:12:01.952392Z", "finished_at": "2026-11-10T10:12:01.952392Z", "result": {"squared_value": 1}, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "e3ed7c30-0e21-443b-9a21-a07344a4dc39", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:12:01.983723Z", "updated_at": "2026-11-10T10:12:01.983723Z", "finished_at": null, "result": null, "error": null}}
+{"observed": {"id": "e3ed7c30-0e21-443b-9a21-a07344a4dc39", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "running", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:12:01.983723Z", "updated_at": "2026-11-10T10:12:02.183139Z", "finished_at": null, "result": null, "error": null}}
+{"command": ["docker", "inspect", "--format", "{{.RestartCount}}", "d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172"]}
+0
+{"command": ["docker", "exec", "d2288a8ea409f245a0dffd9eeb61468d70495e54c5a44d3a3f654c2c429b0172", "python", "-c", "import os, signal; os.kill(1, signal.SIGKILL)"]}
+{"method": "GET", "path": "/jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39", "status": 200, "body": {"id": "e3ed7c30-0e21-443b-9a21-a07344a4dc39", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "running", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:12:01.983723Z", "updated_at": "2026-11-10T10:12:02.183139Z", "finished_at": null, "result": null, "error": null}}
+{"observed": {"id": "e3ed7c30-0e21-443b-9a21-a07344a4dc39", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:12:01.983723Z", "updated_at": "2026-11-10T10:12:03.697605Z", "finished_at": "2026-11-10T10:12:03.697605Z", "result": {"squared_value": 1}, "error": null}}
+{"command": ["docker", "compose", "up", "-d", "--wait", "worker"]}
+ Container training-job-queue-db-1  Running
+ Container training-job-queue-migrate-1  Recreate
+ Container training-job-queue-migrate-1  Recreated
+ Container training-job-queue-worker-1  Recreate
+ Container training-job-queue-worker-4  Recreate
+ Container training-job-queue-worker-3  Recreate
+ Container training-job-queue-worker-2  Recreate
+ Container training-job-queue-worker-4  Recreated
+ Container training-job-queue-worker-2  Recreated
+ Container training-job-queue-worker-3  Recreated
+ Container training-job-queue-worker-1  Recreated
+ Container training-job-queue-db-1  Waiting
+ Container training-job-queue-db-1  Healthy
+ Container training-job-queue-migrate-1  Starting
+ Container training-job-queue-migrate-1  Started
+ Container training-job-queue-db-1  Waiting
+ Container training-job-queue-migrate-1  Waiting
+ Container training-job-queue-migrate-1  Exited
+ Container training-job-queue-db-1  Healthy
+ Container training-job-queue-worker-1  Starting
+ Container training-job-queue-worker-1  Started
+ Container training-job-queue-worker-2  Starting
+ Container training-job-queue-worker-2  Started
+ Container training-job-queue-worker-3  Starting
+ Container training-job-queue-worker-3  Started
+ Container training-job-queue-worker-4  Starting
+ Container training-job-queue-worker-4  Started
+ Container training-job-queue-worker-1  Waiting
+ Container training-job-queue-worker-2  Waiting
+ Container training-job-queue-worker-3  Waiting
+ Container training-job-queue-worker-4  Waiting
+ Container training-job-queue-db-1  Waiting
+ Container training-job-queue-migrate-1  Waiting
+ Container training-job-queue-migrate-1  Exited
+ Container training-job-queue-db-1  Healthy
+ Container training-job-queue-worker-1  Healthy
+ Container training-job-queue-worker-2  Healthy
+ Container training-job-queue-worker-3  Healthy
+ Container training-job-queue-worker-4  Healthy

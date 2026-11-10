@@ -1,0 +1,87 @@
+-- Read committed application data in one consistent snapshot, without mutating it.
+BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY;
+BEGIN
+SELECT version();
+                                                         version                                                          
+--------------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+(1 row)
+
+SELECT version_num FROM alembic_version;
+ version_num 
+-------------
+ 0001
+(1 row)
+
+SELECT state, count(*) AS jobs FROM jobs GROUP BY state ORDER BY state;
+   state   | jobs 
+-----------+------
+ cancelled |    4
+ failed    |    4
+ succeeded |   36
+(3 rows)
+
+SELECT count(*) AS jobs, count(e.job_id) AS effects,
+       count(*) FILTER (WHERE (j.state = 'succeeded') <> (e.job_id IS NOT NULL))
+           AS state_effect_mismatches,
+       count(*) FILTER (WHERE e.job_id IS NOT NULL AND
+           (e.generation <> j.generation OR e.result <> j.result)) AS stale_or_wrong_effects
+FROM jobs j LEFT JOIN job_effects e ON e.job_id = j.id;
+ jobs | effects | state_effect_mismatches | stale_or_wrong_effects 
+------+---------+-------------------------+------------------------
+   44 |      36 |                       0 |                      0
+(1 row)
+
+SELECT j.id, j.state, j.attempts, j.generation, count(e.job_id) AS effects
+FROM jobs j LEFT JOIN job_effects e ON e.job_id = j.id
+GROUP BY j.id ORDER BY j.created_at, j.id;
+                  id                  |   state   | attempts | generation | effects 
+--------------------------------------+-----------+----------+------------+---------
+ 7bc2ea27-6c4e-4346-b553-1b0f1327520a | succeeded |        1 |          1 |       1
+ 98a1eb1b-49ec-401d-a599-cb0c2b1c66a0 | succeeded |        1 |          1 |       1
+ eee8d606-6aee-4961-84d0-0091d4fc4a33 | succeeded |        1 |          1 |       1
+ 2d50e45a-d419-4fd8-9f96-be82e93bbd9c | succeeded |        1 |          1 |       1
+ 27216257-d8db-49e5-a4ef-b39ed146fac2 | succeeded |        1 |          1 |       1
+ 3d954188-24a9-4031-aab4-c19b6bfb77df | succeeded |        1 |          1 |       1
+ 3791fa3e-f5f4-4dc1-bd86-ae8f08f3cc7c | failed    |        1 |          1 |       0
+ eaf7731c-b8fa-4d4d-acac-da63ca61dd15 | succeeded |        2 |          2 |       1
+ 4b6efc3f-9d9a-4acb-8dd9-8dfd05355517 | cancelled |        0 |          0 |       0
+ 01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 | succeeded |        2 |          2 |       1
+ e3ed7c30-0e21-443b-9a21-a07344a4dc39 | succeeded |        1 |          1 |       1
+ 8e80ed77-ea27-465f-b878-caa979beb5f9 | succeeded |        1 |          1 |       1
+ 68e88f00-e658-4e8c-b039-4d8aa70a96f2 | succeeded |        1 |          1 |       1
+ b0820e91-c58b-45dc-814d-41f656a36038 | succeeded |        1 |          1 |       1
+ 38e95a7f-5eda-4293-a0e1-a743a4db16eb | succeeded |        1 |          1 |       1
+ 0ef9cc57-704d-45f7-b8da-a35c41da6f91 | succeeded |        1 |          1 |       1
+ 5bd88703-a9dc-4bb7-81bb-41f02c28f98d | succeeded |        1 |          1 |       1
+ c6797158-0ded-4db4-9474-b393fe4a87da | failed    |        1 |          1 |       0
+ e3a23fc8-4745-4e2c-abef-a73bb06f58c4 | succeeded |        2 |          2 |       1
+ 9eb3ebb8-fed8-409c-a924-b472495d8580 | cancelled |        0 |          0 |       0
+ f4babb6a-cc55-43cc-b2a6-dae70f02eb8c | succeeded |        2 |          2 |       1
+ bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b | succeeded |        2 |          2 |       1
+ 04b7c46a-a0ce-4eb6-b988-ad54aec2519e | succeeded |        1 |          1 |       1
+ b6b13504-136a-4f06-a401-a1656042203f | succeeded |        1 |          1 |       1
+ b66cdacb-8e7e-4e92-a92f-b2b6caa24193 | succeeded |        1 |          1 |       1
+ 1c52ad23-a54a-4531-9088-2d35b6cd7030 | succeeded |        1 |          1 |       1
+ cd06b625-c9df-41aa-99c6-33bf0bf5c912 | succeeded |        1 |          1 |       1
+ 315cc5c2-51f5-493d-984c-3840c001b9ab | succeeded |        1 |          1 |       1
+ 188fba50-2432-4a2f-ad3b-86ad14fdae6b | failed    |        1 |          1 |       0
+ 9c1a143c-35c7-45e2-bbc6-8313075d4ecb | succeeded |        2 |          2 |       1
+ 7cc92d88-f199-4feb-8d99-96f92e0492b0 | cancelled |        0 |          0 |       0
+ 3cffa454-f461-406e-9ff3-071c26fc5786 | succeeded |        2 |          2 |       1
+ 2b3d99ee-038c-4add-b7db-769740856e2c | succeeded |        2 |          2 |       1
+ 3c78b899-b08f-483c-92ca-909c43eae87c | succeeded |        1 |          1 |       1
+ d30f6aab-185f-4192-8a44-df34d71f530e | succeeded |        1 |          1 |       1
+ 9092a937-5bfa-429d-a8f1-97b01465fe25 | succeeded |        1 |          1 |       1
+ ac805330-b433-43f1-b60a-86e220abdb6f | succeeded |        1 |          1 |       1
+ adb3f5ad-ba44-406e-aeee-bd6d1972fb5d | succeeded |        1 |          1 |       1
+ d172e2ab-2b4c-44b7-859c-9505f5625cb4 | succeeded |        1 |          1 |       1
+ 514c36a5-fabb-4843-bda5-bbc76f06ac58 | failed    |        1 |          1 |       0
+ 265db8ac-2d51-46fd-abcf-67ac703aefd0 | succeeded |        2 |          2 |       1
+ ebabfc23-e091-44e5-a059-fdd2fb252edd | cancelled |        0 |          0 |       0
+ 7de561e0-312f-4d2b-92e1-ca684f6f571d | succeeded |        2 |          2 |       1
+ c7963487-2164-4904-a083-09d23156fb50 | succeeded |        2 |          2 |       1
+(44 rows)
+
+COMMIT;
+COMMIT

@@ -1,0 +1,44 @@
+E501 Line too long (103 > 100)
+  --> src/training_queue/execution.py:10:101
+   |
+ 8 | class SimulationError(Exception):
+ 9 |     def __init__(self, *, permanent: bool):
+10 |         super().__init__("simulated permanent failure" if permanent else "simulated transient failure")
+   |                                                                                                     ^^^
+11 |         self.permanent = permanent
+   |
+
+E501 Line too long (104 > 100)
+  --> src/training_queue/models.py:17:101
+   |
+15 |     __tablename__ = "jobs"
+16 |     __table_args__ = (
+17 |         CheckConstraint("state IN ('queued','running','succeeded','failed','cancelled')", name="state"),
+   |                                                                                                     ^^^^
+18 |         CheckConstraint("length(idempotency_key) BETWEEN 1 AND 200", name="key_length"),
+19 |         CheckConstraint("jsonb_typeof(payload) = 'object'", name="payload_object"),
+   |
+
+E501 Line too long (101 > 100)
+  --> src/training_queue/worker.py:65:101
+   |
+63 |                 else:
+64 |                     log("execution_finished", self.owner, job)
+65 |                     committed = await self.queue.complete(job.id, self.owner, job.generation, result)
+   |                                                                                                     ^
+66 |                     log("effect_committed" if committed else "ownership_lost", self.owner, job)
+67 |         except QueueUnavailable:
+   |
+
+E501 Line too long (101 > 100)
+   --> tests/test_queue.py:316:101
+    |
+314 |     with pytest.raises(IntegrityError):
+315 |         async with queue.sessions.begin() as session:
+316 |             await session.execute(update(Job).where(Job.id == job.id).values(payload={"changed": 1}))
+    |                                                                                                     ^
+317 |     await queue.cancel(job.id)
+318 |     with pytest.raises(IntegrityError):
+    |
+
+Found 15 errors (11 fixed, 4 remaining).

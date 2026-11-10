@@ -1,0 +1,87 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.30kB done
+#1 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 394B done
+#2 DONE 0.0s
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [api internal] load metadata for docker.io/library/python:3.11-slim
+#4 DONE 1.6s
+
+#5 [api internal] load .dockerignore
+#5 transferring context: 115B done
+#5 DONE 0.0s
+
+#6 [migrate internal] load build context
+#6 transferring context: 12.25kB done
+#6 DONE 0.0s
+
+#7 [worker 1/7] FROM docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535
+#7 resolve docker.io/library/python:3.11-slim@sha256:07d4824036af339fa1b6ef769cc99d9c10a141769538b52b3b597c84f7a7b535 0.0s done
+#7 DONE 0.0s
+
+#8 [migrate 2/7] WORKDIR /app
+#8 CACHED
+
+#9 [migrate 3/7] COPY requirements.lock ./
+#9 CACHED
+
+#10 [worker 4/7] RUN pip install --no-cache-dir --require-hashes -r requirements.lock
+#10 CACHED
+
+#11 [migrate 5/7] COPY src ./src
+#11 DONE 0.0s
+
+#12 [worker 6/7] COPY alembic.ini ./
+#12 DONE 0.0s
+
+#13 [api 7/7] COPY alembic ./alembic
+#13 DONE 0.0s
+
+#14 [migrate] exporting to image
+#14 exporting layers 0.1s done
+#14 exporting manifest sha256:f5f82ef169aa0efb768b32d10a0eba02a2a9673e1f0d08c2b49f7107748d60d3
+#14 exporting manifest sha256:f5f82ef169aa0efb768b32d10a0eba02a2a9673e1f0d08c2b49f7107748d60d3 0.7s done
+#14 exporting config sha256:5f98a7348ef0c7bb66e16fe21f9be8b8ebb1127b42aa4457977908d34808f252
+#14 ...
+
+#15 [worker] exporting to image
+#15 exporting layers 0.1s done
+#15 exporting manifest sha256:f5f82ef169aa0efb768b32d10a0eba02a2a9673e1f0d08c2b49f7107748d60d3 0.7s done
+#15 exporting config sha256:5f98a7348ef0c7bb66e16fe21f9be8b8ebb1127b42aa4457977908d34808f252 1.3s done
+#15 exporting attestation manifest sha256:abb415d7782570b52a236013a17e1be1b16d3f7b35af26a0bac841a3e8d057c8 0.0s done
+#15 exporting manifest list sha256:aa9ef17f42d867e6e4aef4f1edcfccbb914f72409d1757ee0f74884fc7020349 0.0s done
+#15 naming to docker.io/library/training-job-queue-worker:latest done
+#15 unpacking to docker.io/library/training-job-queue-worker:latest 0.0s done
+#15 DONE 2.2s
+
+#14 [migrate] exporting to image
+#14 exporting config sha256:5f98a7348ef0c7bb66e16fe21f9be8b8ebb1127b42aa4457977908d34808f252 1.3s done
+#14 exporting attestation manifest sha256:1812563fd73fbb252fa5288923651128b29ce32599f0492e3e3ddb30c77f1d16 0.0s done
+#14 exporting manifest list sha256:7fca753cd26e1b36a8b8ee45ab5525ca89d3fa7364ab58c868a1d8d7b3db78f2 done
+#14 naming to docker.io/library/training-job-queue-migrate:latest done
+#14 unpacking to docker.io/library/training-job-queue-migrate:latest 0.0s done
+#14 DONE 2.2s
+
+#16 [api] exporting to image
+#16 exporting layers 0.1s done
+#16 exporting manifest sha256:f5f82ef169aa0efb768b32d10a0eba02a2a9673e1f0d08c2b49f7107748d60d3 0.7s done
+#16 exporting config sha256:5f98a7348ef0c7bb66e16fe21f9be8b8ebb1127b42aa4457977908d34808f252 1.3s done
+#16 exporting attestation manifest sha256:38f9457289ca005974a961a1de6e04fb27dce103f60c0aec220642c3abb1f49a 0.0s done
+#16 exporting manifest list sha256:94a74be2efe8af04be34db18de082f9cb44c42ba2c5482f286393883ca0a4bc0 0.0s done
+#16 naming to docker.io/library/training-job-queue-api:latest done
+#16 unpacking to docker.io/library/training-job-queue-api:latest 0.0s done
+#16 DONE 2.2s
+
+#17 [api] resolving provenance for metadata file
+#17 DONE 0.0s
+
+#18 [worker] resolving provenance for metadata file
+#18 DONE 0.0s
+
+#19 [migrate] resolving provenance for metadata file
+#19 DONE 0.0s

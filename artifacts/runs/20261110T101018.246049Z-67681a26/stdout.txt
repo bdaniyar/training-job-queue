@@ -1,0 +1,20 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______________ test_zombie_fenced_even_if_process_owner_reused ________________
+
+queue = <training_queue.transitions.Queue object at 0x109d8e410>
+
+    async def test_zombie_fenced_even_if_process_owner_reused(queue):
+        await new_job(queue)
+        owner = uuid4()
+        first = await queue.claim(owner)
+        await expire(queue, first.id, ready=True)
+        second = await queue.claim(owner)
+        assert second.generation == first.generation + 1
+>       assert not await queue.complete(first.id, owner, first.generation, {"stale": True})
+E       assert not True
+
+tests/test_queue.py:139: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_queue.py::test_zombie_fenced_even_if_process_owner_reused
+1 failed in 0.16s

@@ -1,0 +1,194 @@
+I001 [*] Import block is un-sorted or un-formatted
+ --> alembic/env.py:1:1
+  |
+1 | / import asyncio
+2 | |
+3 | | from alembic import context
+4 | |
+5 | | from training_queue.config import Settings
+6 | | from training_queue.db import make_database
+7 | | from training_queue.models import Base
+  | |______________________________________^
+help: Organize imports
+  |
+3 | from alembic import context
+  -
+4 | from training_queue.config import Settings
+  |
+
+UP017 [*] Use `datetime.UTC` alias
+  --> scripts/record.py:24:28
+   |
+22 |     if not command:
+23 |         raise SystemExit("usage: python scripts/record.py COMMAND [ARG ...]")
+24 |     started = datetime.now(timezone.utc)
+   |                            ^^^^^^^^^^^^
+25 |     run = Path("artifacts/runs") / (
+26 |         started.strftime("%Y%m%dT%H%M%S.%fZ") + "-" + uuid.uuid4().hex[:8]
+   |
+help: Convert to `datetime.UTC` alias
+   |
+10 | import uuid
+   - from datetime import datetime, timezone
+11 + from datetime import datetime, timezone, UTC
+12 | from pathlib import Path
+--------------------------------------------------------------------------------
+23 |         raise SystemExit("usage: python scripts/record.py COMMAND [ARG ...]")
+   -     started = datetime.now(timezone.utc)
+24 +     started = datetime.now(UTC)
+25 |     run = Path("artifacts/runs") / (
+   |
+
+UP017 [*] Use `datetime.UTC` alias
+  --> scripts/record.py:82:65
+   |
+80 |             thread.join()
+81 |     (run / "result.json").write_text(
+82 |         json.dumps({"exit_code": code, "ended_at": datetime.now(timezone.utc).isoformat()})
+   |                                                                 ^^^^^^^^^^^^
+83 |         + "\n"
+84 |     )
+   |
+help: Convert to `datetime.UTC` alias
+   |
+10 | import uuid
+   - from datetime import datetime, timezone
+11 + from datetime import datetime, timezone, UTC
+12 | from pathlib import Path
+--------------------------------------------------------------------------------
+81 |     (run / "result.json").write_text(
+   -         json.dumps({"exit_code": code, "ended_at": datetime.now(timezone.utc).isoformat()})
+82 +         json.dumps({"exit_code": code, "ended_at": datetime.now(UTC).isoformat()})
+83 |         + "\n"
+   |
+
+E501 Line too long (103 > 100)
+  --> src/training_queue/execution.py:10:101
+   |
+ 8 | class SimulationError(Exception):
+ 9 |     def __init__(self, *, permanent: bool):
+10 |         super().__init__("simulated permanent failure" if permanent else "simulated transient failure")
+   |                                                                                                     ^^^
+11 |         self.permanent = permanent
+   |
+
+E501 Line too long (104 > 100)
+  --> src/training_queue/models.py:17:101
+   |
+15 |     __tablename__ = "jobs"
+16 |     __table_args__ = (
+17 |         CheckConstraint("state IN ('queued','running','succeeded','failed','cancelled')", name="state"),
+   |                                                                                                     ^^^^
+18 |         CheckConstraint("length(idempotency_key) BETWEEN 1 AND 200", name="key_length"),
+19 |         CheckConstraint("jsonb_typeof(payload) = 'object'", name="payload_object"),
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> src/training_queue/transitions.py:3:1
+   |
+ 1 |   """The only application write path. Locks, guards, and effects live together here."""
+ 2 |
+ 3 | / import asyncio
+ 4 | | import random
+ 5 | | from collections.abc import Awaitable, Callable
+ 6 | | from datetime import datetime, timedelta
+ 7 | | from typing import TypeVar
+ 8 | | from uuid import UUID, uuid4
+ 9 | |
+10 | | from sqlalchemy import func, select, tuple_
+11 | | from sqlalchemy.dialects.postgresql import insert
+12 | | from sqlalchemy.exc import DBAPIError, TimeoutError as PoolTimeout
+13 | | from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
+14 | |
+15 | | from training_queue.config import Settings
+16 | | from training_queue.models import Job, JobEffect
+17 | | from training_queue.schemas import Cursor, Payload
+   | |__________________________________________________^
+18 |
+19 |   T = TypeVar("T")
+   |
+help: Organize imports
+   |
+11 | from sqlalchemy.dialects.postgresql import insert
+   - from sqlalchemy.exc import DBAPIError, TimeoutError as PoolTimeout
+12 + from sqlalchemy.exc import DBAPIError
+13 + from sqlalchemy.exc import TimeoutError as PoolTimeout
+14 | from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
+   |
+
+UP017 [*] Use `datetime.UTC` alias
+  --> src/training_queue/worker.py:18:36
+   |
+17 | def log(event: str, owner: UUID, job: Job | None = None, **details):
+18 |     record = {"time": datetime.now(timezone.utc).isoformat(), "event": event, "owner": str(owner)}
+   |                                    ^^^^^^^^^^^^
+19 |     if job:
+20 |         record.update(job_id=str(job.id), generation=job.generation, attempt=job.attempts)
+   |
+help: Convert to `datetime.UTC` alias
+   |
+5  | import signal
+   - from datetime import datetime, timezone
+6  + from datetime import datetime, timezone, UTC
+7  | from uuid import UUID, uuid4
+--------------------------------------------------------------------------------
+17 | def log(event: str, owner: UUID, job: Job | None = None, **details):
+   -     record = {"time": datetime.now(timezone.utc).isoformat(), "event": event, "owner": str(owner)}
+18 +     record = {"time": datetime.now(UTC).isoformat(), "event": event, "owner": str(owner)}
+19 |     if job:
+   |
+
+E501 Line too long (101 > 100)
+  --> src/training_queue/worker.py:65:101
+   |
+63 |                 else:
+64 |                     log("execution_finished", self.owner, job)
+65 |                     committed = await self.queue.complete(job.id, self.owner, job.generation, result)
+   |                                                                                                     ^
+66 |                     log("effect_committed" if committed else "ownership_lost", self.owner, job)
+67 |         except QueueUnavailable:
+   |
+
+F401 [*] `datetime.datetime` imported but unused
+ --> tests/test_queue.py:2:22
+  |
+1 | import asyncio
+2 | from datetime import datetime, timezone
+  |                      ^^^^^^^^
+3 | from uuid import uuid4
+  |
+help: Remove unused import
+  |
+1 | import asyncio
+  - from datetime import datetime, timezone
+2 | from uuid import uuid4
+  |
+
+F401 [*] `datetime.timezone` imported but unused
+ --> tests/test_queue.py:2:32
+  |
+1 | import asyncio
+2 | from datetime import datetime, timezone
+  |                                ^^^^^^^^
+3 | from uuid import uuid4
+  |
+help: Remove unused import
+  |
+1 | import asyncio
+  - from datetime import datetime, timezone
+2 | from uuid import uuid4
+  |
+
+E501 Line too long (101 > 100)
+   --> tests/test_queue.py:317:101
+    |
+315 |     with pytest.raises(IntegrityError):
+316 |         async with queue.sessions.begin() as session:
+317 |             await session.execute(update(Job).where(Job.id == job.id).values(payload={"changed": 1}))
+    |                                                                                                     ^
+318 |     await queue.cancel(job.id)
+319 |     with pytest.raises(IntegrityError):
+    |
+
+Found 11 errors.
+[*] 7 fixable with `--fix`.

@@ -1,0 +1,8 @@
+NAME                           IMAGE                                                                                 COMMAND                  SERVICE   CREATED         STATUS                     PORTS
+training-job-queue-api-1       training-job-queue-api                                                                "uvicorn training_qu…"   api       3 minutes ago   Up 3 minutes (healthy)     127.0.0.1:8000->8000/tcp
+training-job-queue-db-1        postgres:18@sha256:e3d24f6906d0760bf4da0dae872415391ededefad23fd471c47dc53b0ddf3c42   "docker-entrypoint.s…"   db        3 minutes ago   Up 3 minutes (healthy)     127.0.0.1:55432->5432/tcp
+training-job-queue-migrate-1   training-job-queue-migrate                                                            "alembic upgrade head"   migrate   4 minutes ago   Exited (0) 2 minutes ago   
+training-job-queue-worker-1    training-job-queue-worker                                                             "python -m training_…"   worker    4 minutes ago   Up 3 minutes               
+training-job-queue-worker-2    training-job-queue-worker                                                             "python -m training_…"   worker    4 minutes ago   Up 3 minutes               
+training-job-queue-worker-3    training-job-queue-worker                                                             "python -m training_…"   worker    4 minutes ago   Up 3 minutes               
+training-job-queue-worker-4    training-job-queue-worker                                                             "python -m training_…"   worker    4 minutes ago   Up 3 minutes               

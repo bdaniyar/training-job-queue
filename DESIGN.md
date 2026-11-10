@@ -1,6 +1,6 @@
 # Training job queue: Phase 1 design
 
-**Proposal, not implemented or measured.** Python 3.11+, FastAPI, async SQLAlchemy,
+**Implemented in Phase 2; capacity remains unmeasured.** Python 3.11+, FastAPI, async SQLAlchemy,
 PostgreSQL, Alembic, pytest, Ruff; one modular monolith with independent worker
 processes. PostgreSQL provides row locking and atomic effect/state commits in one
 store; Redis/Celery would add another coordination boundary without a requirement.
@@ -89,6 +89,32 @@ decide ownership; DB clock jumps can affect recovery timing, while locking and
 fencing still prevent competing commits. Single-DB durability/failover and load
 capacity remain unproven. Structure, validation phases, and evidence policy follow
 in [README.md](README.md).
+
+## Phase 2 implementation details
+
+The architecture above is retained. The simulation payload is strict and immutable:
+`duration_ms` (0..60000, default 100), `value` (-1000000..1000000, default 1),
+`fail_attempts` (0..4, default 0), and `fail_permanently` (default false). Execution
+asynchronously waits, optionally reports a transient/permanent failure, and returns
+`squared_value`. It performs no durable writes; only guarded completion inserts
+the effect. This bounded simulation does not represent CPU/GPU training performance.
+
+Additional database guards reject changes to job identity, payload, creation time,
+or a terminal row. Checks require generation = attempts, running attempts > 0,
+queued attempts < 5, lease <= deadline, and result iff succeeded. These strengthen
+the approved invariants without moving concurrency decisions out of PostgreSQL.
+
+SIGTERM/SIGINT stop claims and cancel execution/heartbeat tasks, then attempt a
+guarded transient failure/requeue (or fail at attempt 5); abrupt death leaves the
+lease for recovery. Both consume the already-committed claim attempt. An uncertain
+claim is conservatively abandoned to recovery rather than executed; an uncertain
+completion is read back and logged. Only PostgreSQL-guaranteed transaction aborts
+are automatically retried. Session cleanup encloses transaction cleanup so a commit
+exception cannot bypass connection return. Queue timing settings are configurable,
+with heartbeat < half the lease and deadline >= lease; five claims remains a DB constraint.
+Compose uses `init: true` for signal forwarding/reaping. It also permits the smoke
+check to kill the Python child rather than signal a protected PID-namespace init
+or deliberately stop the container through Docker (which suppresses restart).
 
 Protocol references: PostgreSQL [queue locking](https://www.postgresql.org/docs/18/sql-select.html#SQL-FOR-UPDATE-SHARE),
 [READ COMMITTED conflict visibility](https://www.postgresql.org/docs/18/transaction-iso.html#XACT-READ-COMMITTED),

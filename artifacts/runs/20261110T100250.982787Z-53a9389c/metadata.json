@@ -1,0 +1,31 @@
+{
+  "command": [
+    "uv",
+    "sync"
+  ],
+  "started_at": "2026-11-10T10:02:50.982787+00:00",
+  "commit": "2c1177441e8d0efe19142b0f7e9f52486d7c1c71",
+  "branch": "feature/phase-2-core",
+  "status": "?? artifacts/\n?? pyproject.toml\n?? scripts/\n?? src/",
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 8,
+  "database": {
+    "host": null,
+    "port": null,
+    "database": ""
+  },
+  "source_sha256": {
+    "pyproject.toml": "61cbe874d62b8300f5c9a44fd1ebffe93d1024e938d1a480fbb0f2b52e03b459",
+    "scripts/record.py": "23989c66668e45603ba7ed5a1ef5257dddbba6f7c9e8b0c6d484d86d1baa1cce",
+    "src/training_queue/__init__.py": "42663fd86aabfdb9ac34f3e14d5f57e9b089ee8ac381e420ac34a13dc22db895",
+    "src/training_queue/config.py": "723acca008017d63d8bcd1012535d2ca459c195568cb2750eeb76c5c8e7f3f20",
+    "src/training_queue/db.py": "524a9d9b0ea1b18046214f85b73fa8019765eff08e0287d9f2f863ca3d463b38",
+    "src/training_queue/models.py": "bb0f6864c5f7e4c58e038424214fa09d29351b263dad07ea9259f2044be1428a",
+    "src/training_queue/schemas.py": "991e259f03116e153b612aa2201e254b4f00ff3bd785551b95deaeb87a536132",
+    ".gitignore": "114f3cdc2057d610cbc810f69cbc4f195acec0cd15dd54e9b154cf5f6657fc24",
+    "DESIGN.md": "4508e4a5bc9fcab64def44f63d727f5b684efbdafe6c16fce11fce3c449cfbea",
+    "README.md": "9e09a75ac0aaca510d336509390f78d32f994c08602f2e5074e20e2678521bc5"
+  }
+}

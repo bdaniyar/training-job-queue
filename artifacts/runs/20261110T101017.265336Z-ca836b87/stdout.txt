@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.9, pytest-9.2.0, pluggy-1.7.0 -- /Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0, asyncio-1.4.1.post1
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+collecting ... collected 31 items
+
+tests/test_api.py::test_concurrent_duplicate_posts_and_payload_canonicalization PASSED [  3%]
+tests/test_api.py::test_status_cancel_and_keyset_pagination PASSED       [  6%]
+tests/test_api.py::test_invalid_requests PASSED                          [  9%]
+tests/test_failures.py::test_ambiguous_create_commit_reconciles_by_key PASSED [ 12%]
+tests/test_failures.py::test_ambiguous_completion_commit_is_read_not_blindly_replayed PASSED [ 16%]
+tests/test_failures.py::test_server_disconnect_rolls_back_uncommitted_completion PASSED [ 19%]
+tests/test_failures.py::test_deadlock_retry_uses_new_transaction PASSED  [ 22%]
+tests/test_failures.py::test_retryable_failure_is_bounded PASSED         [ 25%]
+tests/test_failures.py::test_shutdown_cancels_heartbeat_and_execution_without_leaking_tasks PASSED [ 29%]
+tests/test_queue.py::test_parallel_claims_assign_each_job_once PASSED    [ 32%]
+tests/test_queue.py::test_claim_skips_locked_job PASSED                  [ 35%]
+tests/test_queue.py::test_idempotency_conflict_waits_and_reads_fresh_snapshot PASSED [ 38%]
+tests/test_queue.py::test_duplicate_completions_only_one_commit PASSED   [ 41%]
+tests/test_queue.py::test_wrong_owner_cannot_finish_or_heartbeat PASSED  [ 45%]
+tests/test_queue.py::test_zombie_fenced_even_if_process_owner_reused PASSED [ 48%]
+tests/test_queue.py::test_expired_lease_cannot_be_revived_or_completed PASSED [ 51%]
+tests/test_queue.py::test_cancel_then_complete_has_no_effect PASSED      [ 54%]
+tests/test_queue.py::test_complete_then_cancel_preserves_success PASSED  [ 58%]
+tests/test_queue.py::test_cancel_complete_race_observes_locked_winner[cancel] PASSED [ 61%]
+tests/test_queue.py::test_cancel_complete_race_observes_locked_winner[complete] PASSED [ 64%]
+tests/test_queue.py::test_multiple_recovery_sweepers_requeue_only_once PASSED [ 67%]
+tests/test_queue.py::test_retry_budget_exhaustion_and_backoff PASSED     [ 70%]
+tests/test_queue.py::test_reported_failures_retry_or_fail_permanently PASSED [ 74%]
+tests/test_queue.py::test_effect_insert_failure_rolls_back_state PASSED  [ 77%]
+tests/test_queue.py::test_state_write_failure_rolls_back_effect PASSED   [ 80%]
+tests/test_queue.py::test_database_clock_ignores_local_clock_and_caps_deadline PASSED [ 83%]
+tests/test_queue.py::test_clock_sample_after_waiting_for_lock PASSED     [ 87%]
+tests/test_queue.py::test_constraints_immutable_payload_and_terminal_state PASSED [ 90%]
+tests/test_queue.py::test_real_worker_executes_and_commits_once PASSED   [ 93%]
+tests/test_queue.py::test_worker_shutdown_releases_work_without_effect PASSED [ 96%]
+tests/test_queue.py::test_worker_observes_running_cancellation PASSED    [100%]
+
+============================== 31 passed in 1.83s ==============================
