@@ -88,6 +88,27 @@ async def test_claim_skips_locked_job(queue):
     assert (await queue.claim(uuid4())).id == first.id
 
 
+async def test_two_workers_one_job_only_locked_winner_claims(queue, monkeypatch):
+    original = await new_job(queue)
+    locked, release = asyncio.Event(), asyncio.Event()
+    original_clock = queue._clock
+
+    async def pause_after_lock(session):
+        locked.set()
+        await release.wait()
+        return await original_clock(session)
+
+    monkeypatch.setattr(queue, "_clock", pause_after_lock)
+    winner = asyncio.create_task(queue.claim(uuid4()))
+    await asyncio.wait_for(locked.wait(), 1)
+    try:
+        assert await queue.claim(uuid4()) is None
+    finally:
+        release.set()
+    assert (await winner).id == original.id
+    assert (await queue.get(original.id)).generation == 1
+
+
 async def test_idempotency_conflict_waits_and_reads_fresh_snapshot(queue):
     payload = Payload().model_dump()
     async with queue.sessions.begin() as session:
