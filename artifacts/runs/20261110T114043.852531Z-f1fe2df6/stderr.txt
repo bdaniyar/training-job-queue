@@ -1,0 +1,4 @@
+   Building training-job-queue @ file:///Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue
+      Built training-job-queue @ file:///Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue
+Uninstalled 1 package in 1ms
+Installed 1 package in 3ms

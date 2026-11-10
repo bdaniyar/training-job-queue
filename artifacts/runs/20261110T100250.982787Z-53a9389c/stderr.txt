@@ -1,0 +1,86 @@
+Using CPython 3.14.6 interpreter at: /opt/anaconda3/bin/python3
+Creating virtual environment at: .venv
+Resolved 34 packages in 2.36s
+   Building training-job-queue @ file:///Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue
+Downloading ruff (9.0MiB)
+Downloading sqlalchemy (2.1MiB)
+Downloading pydantic-core (2.0MiB)
+  × Failed to build `training-job-queue @
+  │ file:///Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue`
+  ├─▶ The build backend returned an error
+  ╰─▶ Call to `hatchling.build.build_editable` failed (exit status: 1)
+
+      [stderr]
+      Traceback (most recent call last):
+        File "<string>", line 11, in <module>
+          wheel_filename =
+      backend.build_editable("/Users/daniarboranov/.cache/uv/builds-v0/.tmp8ip4Nn",
+      {}, None)
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/build.py",
+      line 83, in build_editable
+          return os.path.basename(next(builder.build(directory=wheel_directory,
+      versions=["editable"])))
+      
+      ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/builders/plugin/interface.py",
+      line 166, in build
+          artifact = version_api[version](directory, **build_data)
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/builders/wheel.py",
+      line 547, in build_editable
+          return self.build_editable_detection(directory, **build_data)
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/builders/wheel.py",
+      line 559, in build_editable_detection
+          for included_file in self.recurse_selected_project_files():
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/builders/plugin/interface.py",
+      line 191, in recurse_selected_project_files
+          if self.config.only_include:
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.14/functools.py", line 1126, in
+      __get__
+          val = self.func(instance)
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/builders/config.py",
+      line 715, in only_include
+          only_include = only_include_config.get("only-include",
+      self.default_only_include()) or self.packages
+      
+      ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/builders/wheel.py",
+      line 293, in default_only_include
+          return self.default_file_selection_options.only_include
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/opt/anaconda3/lib/python3.14/functools.py", line 1126, in
+      __get__
+          val = self.func(instance)
+        File
+      "/Users/daniarboranov/.cache/uv/builds-v0/.tmpbbkGMK/lib/python3.14/site-packages/hatchling/builders/wheel.py",
+      line 281, in default_file_selection_options
+          raise ValueError(message)
+      ValueError: Unable to determine which files to ship
+      inside the wheel using the following heuristics:
+      https://hatch.pypa.io/latest/plugins/builder/wheel/#default-file-selection
+
+      The most likely cause of this is that there is no directory that matches
+      the name of your project (training_job_queue).
+
+      At least one file selection option must be defined
+      in the `tool.hatch.build.targets.wheel` table, see:
+      https://hatch.pypa.io/latest/config/build/
+
+      As an example, if you intend to ship a directory named `foo` that
+      resides within a `src` directory located at the root of your project,
+      you can define the following:
+
+      [tool.hatch.build.targets.wheel]
+      packages = ["src/foo"]
+
+
+hint: Build failures usually indicate a problem with the package or the build environment

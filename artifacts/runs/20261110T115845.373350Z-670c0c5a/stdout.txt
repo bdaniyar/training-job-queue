@@ -1,0 +1,12 @@
+NAME                     IMAGE                                                                                 COMMAND                  SERVICE   CREATED          STATUS                      PORTS
+queue-phase3-api-1       queue-phase3-api                                                                      "uvicorn training_qu…"   api       17 minutes ago   Up 17 minutes (healthy)     127.0.0.1:18000->8000/tcp
+queue-phase3-db-1        postgres:18@sha256:e3d24f6906d0760bf4da0dae872415391ededefad23fd471c47dc53b0ddf3c42   "docker-entrypoint.s…"   db        22 minutes ago   Up 22 minutes (healthy)     127.0.0.1:55433->5432/tcp
+queue-phase3-migrate-1   queue-phase3-migrate                                                                  "alembic upgrade head"   migrate   17 minutes ago   Exited (0) 17 minutes ago   
+queue-phase3-worker-1    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               
+queue-phase3-worker-2    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               
+queue-phase3-worker-3    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               
+queue-phase3-worker-4    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               
+queue-phase3-worker-5    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               
+queue-phase3-worker-6    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               
+queue-phase3-worker-7    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               
+queue-phase3-worker-8    queue-phase3-worker                                                                   "python -m training_…"   worker    17 minutes ago   Up 10 minutes               

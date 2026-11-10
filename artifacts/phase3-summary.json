@@ -1,0 +1,1331 @@
+[
+  {
+    "kind": "chaos",
+    "seed": 99,
+    "namespace": "chaos-99-fb03abec4b7f-",
+    "outcome": "PASS",
+    "started_at": "2026-11-10T11:41:19.570283+00:00",
+    "injection_seconds": 6.364475292008137,
+    "kills": 2,
+    "verified_restarts": 2,
+    "drain_seconds": 0.0036835000064456835,
+    "snapshot": "1685:1685:",
+    "intended_jobs": 300,
+    "jobs": 300,
+    "effects": 242,
+    "states": {
+      "succeeded": 242,
+      "cancelled": 55,
+      "failed": 3
+    },
+    "failed_reasons": {
+      "simulated permanent failure": 3
+    },
+    "committed_claims": 282,
+    "retries": 0,
+    "cancelled_acknowledgements": 55,
+    "worker_log_counts": {
+      "claim_committed": 282,
+      "execution_started": 282,
+      "execution_finished": 266,
+      "effect_committed": 242,
+      "failure_recorded": 10,
+      "ownership_lost": 27
+    },
+    "assertions_failed": [],
+    "ended_at": "2026-11-10T11:41:27.623596+00:00",
+    "requests": 577,
+    "operations": {
+      "create": 300,
+      "conflict": 44,
+      "replay": 175,
+      "cancel_queued": 37,
+      "cancel_running": 21
+    },
+    "statuses": {
+      "201": 300,
+      "409": 47,
+      "200": 230
+    },
+    "http_errors": [],
+    "latency_ms": {
+      "p50": 5.08629200339783,
+      "p95": 13.71283300977666,
+      "p99": 41.90766700776294
+    },
+    "dispatch_lag_ms": {
+      "p50": 0,
+      "p95": 0,
+      "p99": 0
+    },
+    "run_directory": "artifacts/runs/20261110T114119.333111Z-73ea0cab",
+    "max_active_depth": 10,
+    "max_app_connections": 11,
+    "max_idle_in_transaction": 0,
+    "max_lock_waiters": 0,
+    "monitor_errors": [],
+    "resources": {
+      "queue-phase3-worker-1": {
+        "max_cpu_percent": 4.62,
+        "memory_usage_samples": [
+          "45.31MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.31
+      },
+      "queue-phase3-worker-2": {
+        "max_cpu_percent": 4.66,
+        "memory_usage_samples": [
+          "46.15MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.15
+      },
+      "queue-phase3-worker-3": {
+        "max_cpu_percent": 1.65,
+        "memory_usage_samples": [
+          "45.29MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.29
+      },
+      "queue-phase3-worker-4": {
+        "max_cpu_percent": 5.64,
+        "memory_usage_samples": [
+          "45.75MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.75
+      },
+      "queue-phase3-worker-5": {
+        "max_cpu_percent": 6.85,
+        "memory_usage_samples": [
+          "46.15MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.15
+      },
+      "queue-phase3-worker-6": {
+        "max_cpu_percent": 1.21,
+        "memory_usage_samples": [
+          "45.45MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.45
+      },
+      "queue-phase3-worker-7": {
+        "max_cpu_percent": 0.5,
+        "memory_usage_samples": [
+          "45.63MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.63
+      },
+      "queue-phase3-worker-8": {
+        "max_cpu_percent": 0.3,
+        "memory_usage_samples": [
+          "45.46MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.46
+      }
+    },
+    "kill_intervals_seconds": {
+      "min": 1.9558639526367188,
+      "max": 1.9558639526367188,
+      "mean": 1.9558639526367188
+    },
+    "max_replacement_seconds": 0.856665208004415,
+    "killed_job_outcomes": {
+      "succeeded": 1
+    }
+  },
+  {
+    "kind": "chaos",
+    "seed": 1101,
+    "namespace": "chaos-1101-fea8d702847e-",
+    "outcome": "PASS",
+    "started_at": "2026-11-10T11:42:16.583624+00:00",
+    "injection_seconds": 51.073982582995086,
+    "kills": 25,
+    "verified_restarts": 25,
+    "drain_seconds": 82.74201212500338,
+    "snapshot": "32067:32067:",
+    "intended_jobs": 10000,
+    "jobs": 10000,
+    "effects": 9643,
+    "states": {
+      "succeeded": 9643,
+      "cancelled": 259,
+      "failed": 98
+    },
+    "failed_reasons": {
+      "simulated permanent failure": 98
+    },
+    "committed_claims": 10026,
+    "retries": 196,
+    "cancelled_acknowledgements": 259,
+    "worker_log_counts": {
+      "claim_committed": 10026,
+      "execution_started": 10026,
+      "execution_finished": 9691,
+      "effect_committed": 9643,
+      "failure_recorded": 296,
+      "ownership_lost": 62,
+      "recovered": 4
+    },
+    "assertions_failed": [],
+    "ended_at": "2026-11-10T11:44:32.911194+00:00",
+    "requests": 11847,
+    "operations": {
+      "create": 10000,
+      "conflict": 317,
+      "replay": 1266,
+      "cancel_queued": 176,
+      "cancel_running": 88
+    },
+    "statuses": {
+      "201": 10000,
+      "409": 322,
+      "200": 1525
+    },
+    "http_errors": [],
+    "latency_ms": {
+      "p50": 4.770041006850079,
+      "p95": 132.432541999151,
+      "p99": 404.6464169950923
+    },
+    "dispatch_lag_ms": {
+      "p50": 0,
+      "p95": 0,
+      "p99": 0
+    },
+    "run_directory": "artifacts/runs/20261110T114216.329047Z-1ad53347",
+    "max_active_depth": 6030,
+    "max_app_connections": 13,
+    "max_idle_in_transaction": 4,
+    "max_lock_waiters": 0,
+    "monitor_errors": [],
+    "resources": {
+      "queue-phase3-api-1": {
+        "max_cpu_percent": 51.14,
+        "memory_usage_samples": [
+          "58.69MiB / 7.654GiB",
+          "60.41MiB / 7.654GiB",
+          "61.02MiB / 7.654GiB",
+          "61.8MiB / 7.654GiB",
+          "62.12MiB / 7.654GiB",
+          "62.11MiB / 7.654GiB",
+          "62.11MiB / 7.654GiB",
+          "62.11MiB / 7.654GiB",
+          "62.12MiB / 7.654GiB",
+          "62.11MiB / 7.654GiB",
+          "62.11MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 62.12
+      },
+      "queue-phase3-db-1": {
+        "max_cpu_percent": 25.65,
+        "memory_usage_samples": [
+          "68.73MiB / 7.654GiB",
+          "63.99MiB / 7.654GiB",
+          "68.91MiB / 7.654GiB",
+          "70.73MiB / 7.654GiB",
+          "72.38MiB / 7.654GiB",
+          "73.2MiB / 7.654GiB",
+          "73.62MiB / 7.654GiB",
+          "73.82MiB / 7.654GiB",
+          "74.01MiB / 7.654GiB",
+          "74.64MiB / 7.654GiB",
+          "74.86MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 74.86
+      },
+      "queue-phase3-worker-1": {
+        "max_cpu_percent": 11.72,
+        "memory_usage_samples": [
+          "45.36MiB / 7.654GiB",
+          "45.39MiB / 7.654GiB",
+          "45.42MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.72MiB / 7.654GiB",
+          "45.51MiB / 7.654GiB",
+          "45.57MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.86MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.86
+      },
+      "queue-phase3-worker-2": {
+        "max_cpu_percent": 13.37,
+        "memory_usage_samples": [
+          "46.18MiB / 7.654GiB",
+          "46.23MiB / 7.654GiB",
+          "46.16MiB / 7.654GiB",
+          "0B / 0B",
+          "45.53MiB / 7.654GiB",
+          "45.55MiB / 7.654GiB",
+          "45.57MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.63MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.8MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.23
+      },
+      "queue-phase3-worker-3": {
+        "max_cpu_percent": 7.96,
+        "memory_usage_samples": [
+          "46.18MiB / 7.654GiB",
+          "45.48MiB / 7.654GiB",
+          "45.51MiB / 7.654GiB",
+          "45.55MiB / 7.654GiB",
+          "45.45MiB / 7.654GiB",
+          "45.51MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.56MiB / 7.654GiB",
+          "45.6MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.66MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.18
+      },
+      "queue-phase3-worker-4": {
+        "max_cpu_percent": 59.22,
+        "memory_usage_samples": [
+          "45.9MiB / 7.654GiB",
+          "45.48MiB / 7.654GiB",
+          "45.45MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.55MiB / 7.654GiB",
+          "45.6MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.9
+      },
+      "queue-phase3-worker-5": {
+        "max_cpu_percent": 14.73,
+        "memory_usage_samples": [
+          "46.18MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.48MiB / 7.654GiB",
+          "45.46MiB / 7.654GiB",
+          "45.76MiB / 7.654GiB",
+          "45.55MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.66MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.18
+      },
+      "queue-phase3-worker-6": {
+        "max_cpu_percent": 16.63,
+        "memory_usage_samples": [
+          "45.75MiB / 7.654GiB",
+          "7.094MiB / 7.654GiB",
+          "46.21MiB / 7.654GiB",
+          "46.52MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.55MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.69MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.52
+      },
+      "queue-phase3-worker-7": {
+        "max_cpu_percent": 11.0,
+        "memory_usage_samples": [
+          "45.82MiB / 7.654GiB",
+          "45.86MiB / 7.654GiB",
+          "45.88MiB / 7.654GiB",
+          "45.44MiB / 7.654GiB",
+          "45.43MiB / 7.654GiB",
+          "45.49MiB / 7.654GiB",
+          "45.53MiB / 7.654GiB",
+          "45.53MiB / 7.654GiB",
+          "45.58MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.88
+      },
+      "queue-phase3-worker-8": {
+        "max_cpu_percent": 8.78,
+        "memory_usage_samples": [
+          "45.53MiB / 7.654GiB",
+          "45.36MiB / 7.654GiB",
+          "45.46MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.53MiB / 7.654GiB",
+          "45.56MiB / 7.654GiB",
+          "45.58MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.83MiB / 7.654GiB",
+          "45.67MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.83
+      }
+    },
+    "kill_intervals_seconds": {
+      "min": 1.8177568912506104,
+      "max": 2.2314810752868652,
+      "mean": 1.999755173921585
+    },
+    "max_replacement_seconds": 1.2696908330108272,
+    "killed_job_outcomes": {
+      "cancelled": 14,
+      "succeeded": 4,
+      "new_generation": 3
+    }
+  },
+  {
+    "kind": "chaos",
+    "seed": 2202,
+    "namespace": "chaos-2202-d9104fd20bbd-",
+    "outcome": "PASS",
+    "started_at": "2026-11-10T11:44:48.005776+00:00",
+    "injection_seconds": 53.90767487499397,
+    "kills": 23,
+    "verified_restarts": 23,
+    "drain_seconds": 84.27840258399374,
+    "snapshot": "62754:62754:",
+    "intended_jobs": 10000,
+    "jobs": 10000,
+    "effects": 9794,
+    "states": {
+      "failed": 100,
+      "succeeded": 9794,
+      "cancelled": 106
+    },
+    "failed_reasons": {
+      "simulated permanent failure": 100
+    },
+    "committed_claims": 10139,
+    "retries": 208,
+    "cancelled_acknowledgements": 106,
+    "worker_log_counts": {
+      "claim_committed": 10139,
+      "execution_started": 10139,
+      "failure_recorded": 298,
+      "execution_finished": 9810,
+      "effect_committed": 9794,
+      "ownership_lost": 24,
+      "recovered": 11
+    },
+    "assertions_failed": [],
+    "ended_at": "2026-11-10T11:47:11.121876+00:00",
+    "requests": 10501,
+    "operations": {
+      "create": 10000,
+      "conflict": 73,
+      "replay": 292,
+      "cancel_queued": 88,
+      "cancel_running": 44,
+      "create_retry": 4
+    },
+    "statuses": {
+      "201": 10000,
+      "409": 99,
+      "200": 398,
+      "transport_error": 4
+    },
+    "http_errors": [
+      {
+        "operation": "create",
+        "error": "RemoteProtocolError"
+      },
+      {
+        "operation": "create",
+        "error": "RemoteProtocolError"
+      },
+      {
+        "operation": "create",
+        "error": "RemoteProtocolError"
+      },
+      {
+        "operation": "create",
+        "error": "RemoteProtocolError"
+      }
+    ],
+    "latency_ms": {
+      "p50": 121.37812499713618,
+      "p95": 538.1396250013495,
+      "p99": 902.247834004811
+    },
+    "dispatch_lag_ms": {
+      "p50": 0,
+      "p95": 0,
+      "p99": 0
+    },
+    "run_directory": "artifacts/runs/20261110T114447.707913Z-ee1a8fe5",
+    "max_active_depth": 6025,
+    "max_app_connections": 11,
+    "max_idle_in_transaction": 6,
+    "max_lock_waiters": 0,
+    "monitor_errors": [],
+    "resources": {
+      "queue-phase3-api-1": {
+        "max_cpu_percent": 74.79,
+        "memory_usage_samples": [
+          "62.43MiB / 7.654GiB",
+          "63.15MiB / 7.654GiB",
+          "63.16MiB / 7.654GiB",
+          "66.79MiB / 7.654GiB",
+          "66.37MiB / 7.654GiB",
+          "66.35MiB / 7.654GiB",
+          "66.35MiB / 7.654GiB",
+          "66.35MiB / 7.654GiB",
+          "75.3MiB / 7.654GiB",
+          "66.35MiB / 7.654GiB",
+          "66.35MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 75.3
+      },
+      "queue-phase3-db-1": {
+        "max_cpu_percent": 39.8,
+        "memory_usage_samples": [
+          "72.68MiB / 7.654GiB",
+          "72.87MiB / 7.654GiB",
+          "75.87MiB / 7.654GiB",
+          "78.45MiB / 7.654GiB",
+          "79.55MiB / 7.654GiB",
+          "92.98MiB / 7.654GiB",
+          "93.54MiB / 7.654GiB",
+          "93.88MiB / 7.654GiB",
+          "94.14MiB / 7.654GiB",
+          "96.23MiB / 7.654GiB",
+          "96.59MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 96.59
+      },
+      "queue-phase3-worker-1": {
+        "max_cpu_percent": 23.93,
+        "memory_usage_samples": [
+          "45.96MiB / 7.654GiB",
+          "45.73MiB / 7.654GiB",
+          "45.78MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.29MiB / 7.654GiB",
+          "45.36MiB / 7.654GiB",
+          "45.39MiB / 7.654GiB",
+          "45.41MiB / 7.654GiB",
+          "45.42MiB / 7.654GiB",
+          "45.45MiB / 7.654GiB",
+          "45.46MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.96
+      },
+      "queue-phase3-worker-2": {
+        "max_cpu_percent": 13.86,
+        "memory_usage_samples": [
+          "45.7MiB / 7.654GiB",
+          "45.51MiB / 7.654GiB",
+          "45.71MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.48MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.67MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.71
+      },
+      "queue-phase3-worker-3": {
+        "max_cpu_percent": 47.42,
+        "memory_usage_samples": [
+          "45.69MiB / 7.654GiB",
+          "45.75MiB / 7.654GiB",
+          "45.29MiB / 7.654GiB",
+          "18.54MiB / 7.654GiB",
+          "45.48MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.67MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.75
+      },
+      "queue-phase3-worker-4": {
+        "max_cpu_percent": 12.77,
+        "memory_usage_samples": [
+          "45.68MiB / 7.654GiB",
+          "45.32MiB / 7.654GiB",
+          "45.45MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "45.57MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.63MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.66MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.68
+      },
+      "queue-phase3-worker-5": {
+        "max_cpu_percent": 10.68,
+        "memory_usage_samples": [
+          "45.71MiB / 7.654GiB",
+          "45.73MiB / 7.654GiB",
+          "45.48MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.8MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.65MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB",
+          "45.73MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.8
+      },
+      "queue-phase3-worker-6": {
+        "max_cpu_percent": 15.76,
+        "memory_usage_samples": [
+          "45.72MiB / 7.654GiB",
+          "15.39MiB / 7.654GiB",
+          "45.32MiB / 7.654GiB",
+          "46.16MiB / 7.654GiB",
+          "46.21MiB / 7.654GiB",
+          "46.49MiB / 7.654GiB",
+          "46.27MiB / 7.654GiB",
+          "46.3MiB / 7.654GiB",
+          "46.33MiB / 7.654GiB",
+          "46.35MiB / 7.654GiB",
+          "46.37MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.49
+      },
+      "queue-phase3-worker-7": {
+        "max_cpu_percent": 12.02,
+        "memory_usage_samples": [
+          "45.66MiB / 7.654GiB",
+          "45.46MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "46.2MiB / 7.654GiB",
+          "45.75MiB / 7.654GiB",
+          "45.77MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "45.56MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.65MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.2
+      },
+      "queue-phase3-worker-8": {
+        "max_cpu_percent": 12.84,
+        "memory_usage_samples": [
+          "45.71MiB / 7.654GiB",
+          "45.78MiB / 7.654GiB",
+          "45.55MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.67MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB",
+          "45.71MiB / 7.654GiB",
+          "45.72MiB / 7.654GiB",
+          "45.92MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.92
+      }
+    },
+    "kill_intervals_seconds": {
+      "min": 1.6302690505981445,
+      "max": 3.7996881008148193,
+      "mean": 2.2195380384271797
+    },
+    "max_replacement_seconds": 2.9902870830119355,
+    "killed_job_outcomes": {
+      "succeeded": 7,
+      "new_generation": 6,
+      "cancelled": 7
+    }
+  },
+  {
+    "kind": "chaos",
+    "seed": 3303,
+    "namespace": "chaos-3303-14d08ab54888-",
+    "outcome": "PASS",
+    "started_at": "2026-11-10T11:47:48.907460+00:00",
+    "injection_seconds": 50.14103850000538,
+    "kills": 24,
+    "verified_restarts": 24,
+    "drain_seconds": 80.40496174999862,
+    "snapshot": "93123:93123:",
+    "intended_jobs": 10000,
+    "jobs": 10000,
+    "effects": 9637,
+    "states": {
+      "succeeded": 9637,
+      "cancelled": 265,
+      "failed": 98
+    },
+    "failed_reasons": {
+      "simulated permanent failure": 98
+    },
+    "committed_claims": 10020,
+    "retries": 194,
+    "cancelled_acknowledgements": 265,
+    "worker_log_counts": {
+      "claim_committed": 10020,
+      "execution_started": 10020,
+      "execution_finished": 9684,
+      "effect_committed": 9637,
+      "failure_recorded": 291,
+      "ownership_lost": 68,
+      "recovered": 5
+    },
+    "assertions_failed": [],
+    "ended_at": "2026-11-10T11:50:02.227553+00:00",
+    "requests": 11835,
+    "operations": {
+      "create": 10000,
+      "conflict": 313,
+      "replay": 1252,
+      "cancel_queued": 180,
+      "cancel_running": 90
+    },
+    "statuses": {
+      "201": 10000,
+      "409": 318,
+      "200": 1517
+    },
+    "http_errors": [],
+    "latency_ms": {
+      "p50": 5.477041995618492,
+      "p95": 51.022375002503395,
+      "p99": 125.93070800357964
+    },
+    "dispatch_lag_ms": {
+      "p50": 0,
+      "p95": 0,
+      "p99": 0
+    },
+    "run_directory": "artifacts/runs/20261110T114748.485476Z-04e89474",
+    "max_active_depth": 5643,
+    "max_app_connections": 11,
+    "max_idle_in_transaction": 4,
+    "max_lock_waiters": 1,
+    "monitor_errors": [],
+    "resources": {
+      "queue-phase3-api-1": {
+        "max_cpu_percent": 47.31,
+        "memory_usage_samples": [
+          "66.46MiB / 7.654GiB",
+          "66.87MiB / 7.654GiB",
+          "67.28MiB / 7.654GiB",
+          "67.15MiB / 7.654GiB",
+          "67.09MiB / 7.654GiB",
+          "67.07MiB / 7.654GiB",
+          "67.06MiB / 7.654GiB",
+          "67.07MiB / 7.654GiB",
+          "67.07MiB / 7.654GiB",
+          "67.06MiB / 7.654GiB",
+          "67.06MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 67.28
+      },
+      "queue-phase3-db-1": {
+        "max_cpu_percent": 17.92,
+        "memory_usage_samples": [
+          "96.37MiB / 7.654GiB",
+          "97.82MiB / 7.654GiB",
+          "99.63MiB / 7.654GiB",
+          "98.39MiB / 7.654GiB",
+          "102.8MiB / 7.654GiB",
+          "103MiB / 7.654GiB",
+          "103.2MiB / 7.654GiB",
+          "103.3MiB / 7.654GiB",
+          "103.4MiB / 7.654GiB",
+          "103.5MiB / 7.654GiB",
+          "103.6MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 103.6
+      },
+      "queue-phase3-worker-1": {
+        "max_cpu_percent": 11.01,
+        "memory_usage_samples": [
+          "46MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.66MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB",
+          "45.51MiB / 7.654GiB",
+          "45.53MiB / 7.654GiB",
+          "45.57MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB",
+          "45.71MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.0
+      },
+      "queue-phase3-worker-2": {
+        "max_cpu_percent": 5.2,
+        "memory_usage_samples": [
+          "45.69MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.51MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.58MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB",
+          "45.66MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB",
+          "45.69MiB / 7.654GiB",
+          "45.73MiB / 7.654GiB",
+          "45.74MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.74
+      },
+      "queue-phase3-worker-3": {
+        "max_cpu_percent": 10.25,
+        "memory_usage_samples": [
+          "45.74MiB / 7.654GiB",
+          "45.76MiB / 7.654GiB",
+          "45.81MiB / 7.654GiB",
+          "45.53MiB / 7.654GiB",
+          "46.2MiB / 7.654GiB",
+          "46.5MiB / 7.654GiB",
+          "46.28MiB / 7.654GiB",
+          "46.32MiB / 7.654GiB",
+          "46.34MiB / 7.654GiB",
+          "46.36MiB / 7.654GiB",
+          "46.57MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.57
+      },
+      "queue-phase3-worker-4": {
+        "max_cpu_percent": 9.89,
+        "memory_usage_samples": [
+          "45.71MiB / 7.654GiB",
+          "45.73MiB / 7.654GiB",
+          "0B / 0B",
+          "45.53MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "45.56MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.63MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.67MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.73
+      },
+      "queue-phase3-worker-5": {
+        "max_cpu_percent": 51.33,
+        "memory_usage_samples": [
+          "45.75MiB / 7.654GiB",
+          "45.46MiB / 7.654GiB",
+          "46.16MiB / 7.654GiB",
+          "45.46MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB",
+          "45.74MiB / 7.654GiB",
+          "45.95MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.16
+      },
+      "queue-phase3-worker-6": {
+        "max_cpu_percent": 8.29,
+        "memory_usage_samples": [
+          "46.4MiB / 7.654GiB",
+          "0B / 0B",
+          "45.5MiB / 7.654GiB",
+          "0B / 0B",
+          "45.47MiB / 7.654GiB",
+          "45.52MiB / 7.654GiB",
+          "45.56MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.63MiB / 7.654GiB",
+          "45.66MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.4
+      },
+      "queue-phase3-worker-7": {
+        "max_cpu_percent": 15.56,
+        "memory_usage_samples": [
+          "45.7MiB / 7.654GiB",
+          "45.27MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.42MiB / 7.654GiB",
+          "45.49MiB / 7.654GiB",
+          "45.53MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "45.57MiB / 7.654GiB",
+          "45.59MiB / 7.654GiB",
+          "45.6MiB / 7.654GiB",
+          "45.75MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.75
+      },
+      "queue-phase3-worker-8": {
+        "max_cpu_percent": 13.52,
+        "memory_usage_samples": [
+          "45.86MiB / 7.654GiB",
+          "45.96MiB / 7.654GiB",
+          "46MiB / 7.654GiB",
+          "45.35MiB / 7.654GiB",
+          "45.46MiB / 7.654GiB",
+          "45.5MiB / 7.654GiB",
+          "45.54MiB / 7.654GiB",
+          "45.56MiB / 7.654GiB",
+          "45.58MiB / 7.654GiB",
+          "45.61MiB / 7.654GiB",
+          "45.62MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.0
+      }
+    },
+    "kill_intervals_seconds": {
+      "min": 1.9624829292297363,
+      "max": 2.1673638820648193,
+      "mean": 2.0105124763820483
+    },
+    "max_replacement_seconds": 1.8209579169924837,
+    "killed_job_outcomes": {
+      "cancelled": 12,
+      "succeeded": 5,
+      "new_generation": 3
+    }
+  },
+  {
+    "kind": "zombie",
+    "seed": 5505,
+    "namespace": "zombie-5505-a37c77edf206-",
+    "outcome": "PASS",
+    "started_at": "2026-11-10T11:50:23.982927+00:00",
+    "drain_seconds": 4.108436333001009,
+    "snapshot": "93130:93130:",
+    "intended_jobs": 1,
+    "jobs": 1,
+    "effects": 1,
+    "states": {
+      "succeeded": 1
+    },
+    "failed_reasons": {},
+    "committed_claims": 2,
+    "retries": 1,
+    "cancelled_acknowledgements": 0,
+    "worker_log_counts": {
+      "claim_committed": 2,
+      "execution_started": 2,
+      "recovered": 1,
+      "execution_finished": 2,
+      "ownership_lost": 1,
+      "effect_committed": 1
+    },
+    "assertions_failed": [],
+    "old_generation": 1,
+    "winning_generation": 2,
+    "old_owner": "8030cf18-9630-4311-ac40-e8d9a88a874b",
+    "replacement_owner": "b44776de-e980-4941-8cdb-cc9973779cb8",
+    "ended_at": "2026-11-10T11:50:41.710991+00:00",
+    "requests": 1,
+    "operations": {
+      "create": 1
+    },
+    "statuses": {
+      "201": 1
+    },
+    "http_errors": [],
+    "latency_ms": {
+      "p50": 41.06725000019651,
+      "p95": 41.06725000019651,
+      "p99": 41.06725000019651
+    },
+    "dispatch_lag_ms": {
+      "p50": 0,
+      "p95": 0,
+      "p99": 0
+    },
+    "run_directory": "artifacts/runs/20261110T115023.609584Z-9a8763e9",
+    "max_active_depth": 1,
+    "max_app_connections": 11,
+    "max_idle_in_transaction": 0,
+    "max_lock_waiters": 0,
+    "monitor_errors": [],
+    "resources": {
+      "queue-phase3-api-1": {
+        "max_cpu_percent": 8.36,
+        "memory_usage_samples": [
+          "67.07MiB / 7.654GiB",
+          "79MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 79.0
+      },
+      "queue-phase3-db-1": {
+        "max_cpu_percent": 14.95,
+        "memory_usage_samples": [
+          "102.3MiB / 7.654GiB",
+          "102.5MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 102.5
+      },
+      "queue-phase3-worker-1": {
+        "max_cpu_percent": 2.66,
+        "memory_usage_samples": [
+          "45.72MiB / 7.654GiB",
+          "45.72MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.72
+      },
+      "queue-phase3-worker-2": {
+        "max_cpu_percent": 3.61,
+        "memory_usage_samples": [
+          "45.75MiB / 7.654GiB",
+          "45.76MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.76
+      },
+      "queue-phase3-worker-3": {
+        "max_cpu_percent": 2.25,
+        "memory_usage_samples": [
+          "46.59MiB / 7.654GiB",
+          "46.59MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.59
+      },
+      "queue-phase3-worker-4": {
+        "max_cpu_percent": 3.7,
+        "memory_usage_samples": [
+          "46.44MiB / 7.654GiB",
+          "46.46MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.46
+      },
+      "queue-phase3-worker-5": {
+        "max_cpu_percent": 2.63,
+        "memory_usage_samples": [
+          "45.77MiB / 7.654GiB",
+          "45.78MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.78
+      },
+      "queue-phase3-worker-6": {
+        "max_cpu_percent": 2.52,
+        "memory_usage_samples": [
+          "45.71MiB / 7.654GiB",
+          "45.89MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.89
+      },
+      "queue-phase3-worker-7": {
+        "max_cpu_percent": 2.58,
+        "memory_usage_samples": [
+          "45.64MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.64
+      },
+      "queue-phase3-worker-8": {
+        "max_cpu_percent": 2.67,
+        "memory_usage_samples": [
+          "45.63MiB / 7.654GiB",
+          "45.64MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.64
+      }
+    },
+    "kill_intervals_seconds": {
+      "min": 0,
+      "max": 0,
+      "mean": 0
+    },
+    "max_replacement_seconds": 0,
+    "killed_job_outcomes": {}
+  },
+  {
+    "kind": "load",
+    "seed": 4404,
+    "namespace": "load-4404-7cea0aa7061a-",
+    "outcome": "PASS",
+    "started_at": "2026-11-10T11:51:07.918363+00:00",
+    "offered_start": 90705.950404916,
+    "offered_seconds": 120,
+    "target_rps": 100,
+    "scheduled_requests": 12000,
+    "mix": {
+      "create": 40,
+      "status": 20,
+      "list": 10,
+      "cancel": 10,
+      "replay": 10,
+      "conflict": 10
+    },
+    "retries_count_toward_rps": true,
+    "drain_seconds": 1.0394354580057552,
+    "snapshot": "108791:108791:",
+    "intended_jobs": 4820,
+    "jobs": 4820,
+    "effects": 4809,
+    "states": {
+      "succeeded": 4809,
+      "cancelled": 11
+    },
+    "failed_reasons": {},
+    "committed_claims": 4818,
+    "retries": 0,
+    "cancelled_acknowledgements": 11,
+    "worker_log_counts": {
+      "claim_committed": 4818,
+      "execution_started": 4818,
+      "execution_finished": 4818,
+      "effect_committed": 4809,
+      "ownership_lost": 9
+    },
+    "assertions_failed": [],
+    "setup_requests": 20,
+    "measured_requests": 12000,
+    "dispatched": 12000,
+    "dropped": 0,
+    "dispatch_rps": 99.98155458379574,
+    "completed_rps": 99.98027236422733,
+    "successful_rps": 99.98027236422733,
+    "measured_statuses": {
+      "201": 4800,
+      "200": 4817,
+      "409": 2383
+    },
+    "unexpected": [],
+    "measured_latency_ms": {
+      "p50": 4.547000004095025,
+      "p95": 7.961750001413748,
+      "p99": 22.502624997287057
+    },
+    "measured_dispatch_lag_ms": {
+      "p50": 0.9053749963641167,
+      "p95": 1.6173339972738177,
+      "p99": 4.494708991842344
+    },
+    "backlog_growth_per_second": 0.11943906365211301,
+    "max_depth": 21,
+    "acceptance": {
+      "dispatched_99_percent": true,
+      "dispatch_rps_99_to_101": true,
+      "unexpected_error_ratio_under_1_percent": true,
+      "p95_under_250ms": true,
+      "p99_under_1000ms": true,
+      "dispatch_lag_p99_under_100ms": true,
+      "backlog_growth_at_most_1_per_second": true,
+      "max_depth_at_most_200": true,
+      "drain_within_60_seconds": true,
+      "database_invariants": true
+    },
+    "worker_terminal_rps": 39.94464799065257,
+    "worker_effect_rps": 39.88407335115202,
+    "ended_at": "2026-11-10T11:53:12.007744+00:00",
+    "requests": 12020,
+    "operations": {
+      "create": 4820,
+      "status": 2400,
+      "list": 1200,
+      "cancel": 1200,
+      "replay": 1200,
+      "conflict": 1200
+    },
+    "statuses": {
+      "201": 4820,
+      "200": 4817,
+      "409": 2383
+    },
+    "http_errors": [],
+    "latency_ms": {
+      "p50": 4.546541997115128,
+      "p95": 7.979999994859099,
+      "p99": 23.083499996573664
+    },
+    "dispatch_lag_ms": {
+      "p50": 0.9035420080181211,
+      "p95": 1.616833993466571,
+      "p99": 4.494708991842344
+    },
+    "run_directory": "artifacts/runs/20261110T115107.525639Z-92097597",
+    "max_active_depth": 21,
+    "max_app_connections": 11,
+    "max_idle_in_transaction": 4,
+    "max_lock_waiters": 0,
+    "monitor_errors": [],
+    "resources": {
+      "queue-phase3-api-1": {
+        "max_cpu_percent": 39.6,
+        "memory_usage_samples": [
+          "67.34MiB / 7.654GiB",
+          "67.09MiB / 7.654GiB",
+          "67.34MiB / 7.654GiB",
+          "67.79MiB / 7.654GiB",
+          "67.33MiB / 7.654GiB",
+          "67.35MiB / 7.654GiB",
+          "67.58MiB / 7.654GiB",
+          "67.39MiB / 7.654GiB",
+          "67.78MiB / 7.654GiB",
+          "67.53MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 67.79
+      },
+      "queue-phase3-db-1": {
+        "max_cpu_percent": 12.13,
+        "memory_usage_samples": [
+          "100.4MiB / 7.654GiB",
+          "101.4MiB / 7.654GiB",
+          "101.1MiB / 7.654GiB",
+          "101.8MiB / 7.654GiB",
+          "102.2MiB / 7.654GiB",
+          "102.1MiB / 7.654GiB",
+          "102.5MiB / 7.654GiB",
+          "102.8MiB / 7.654GiB",
+          "103MiB / 7.654GiB",
+          "102.9MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 103.0
+      },
+      "queue-phase3-worker-1": {
+        "max_cpu_percent": 6.58,
+        "memory_usage_samples": [
+          "45.73MiB / 7.654GiB",
+          "45.75MiB / 7.654GiB",
+          "45.77MiB / 7.654GiB",
+          "45.78MiB / 7.654GiB",
+          "45.79MiB / 7.654GiB",
+          "45.8MiB / 7.654GiB",
+          "45.81MiB / 7.654GiB",
+          "45.82MiB / 7.654GiB",
+          "45.83MiB / 7.654GiB",
+          "45.84MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.84
+      },
+      "queue-phase3-worker-2": {
+        "max_cpu_percent": 5.09,
+        "memory_usage_samples": [
+          "45.77MiB / 7.654GiB",
+          "45.78MiB / 7.654GiB",
+          "45.8MiB / 7.654GiB",
+          "45.8MiB / 7.654GiB",
+          "45.81MiB / 7.654GiB",
+          "45.82MiB / 7.654GiB",
+          "45.83MiB / 7.654GiB",
+          "45.84MiB / 7.654GiB",
+          "45.84MiB / 7.654GiB",
+          "45.86MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.86
+      },
+      "queue-phase3-worker-3": {
+        "max_cpu_percent": 4.48,
+        "memory_usage_samples": [
+          "46.6MiB / 7.654GiB",
+          "46.61MiB / 7.654GiB",
+          "46.62MiB / 7.654GiB",
+          "46.63MiB / 7.654GiB",
+          "46.66MiB / 7.654GiB",
+          "46.65MiB / 7.654GiB",
+          "46.66MiB / 7.654GiB",
+          "46.67MiB / 7.654GiB",
+          "46.68MiB / 7.654GiB",
+          "46.69MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.69
+      },
+      "queue-phase3-worker-4": {
+        "max_cpu_percent": 6.01,
+        "memory_usage_samples": [
+          "46.5MiB / 7.654GiB",
+          "46.52MiB / 7.654GiB",
+          "46.53MiB / 7.654GiB",
+          "46.53MiB / 7.654GiB",
+          "46.54MiB / 7.654GiB",
+          "46.8MiB / 7.654GiB",
+          "46.56MiB / 7.654GiB",
+          "46.57MiB / 7.654GiB",
+          "46.58MiB / 7.654GiB",
+          "46.59MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.8
+      },
+      "queue-phase3-worker-5": {
+        "max_cpu_percent": 4.17,
+        "memory_usage_samples": [
+          "46.04MiB / 7.654GiB",
+          "45.81MiB / 7.654GiB",
+          "45.83MiB / 7.654GiB",
+          "46.07MiB / 7.654GiB",
+          "45.84MiB / 7.654GiB",
+          "45.85MiB / 7.654GiB",
+          "45.86MiB / 7.654GiB",
+          "45.86MiB / 7.654GiB",
+          "45.88MiB / 7.654GiB",
+          "45.89MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 46.07
+      },
+      "queue-phase3-worker-6": {
+        "max_cpu_percent": 6.96,
+        "memory_usage_samples": [
+          "45.92MiB / 7.654GiB",
+          "45.93MiB / 7.654GiB",
+          "45.93MiB / 7.654GiB",
+          "45.93MiB / 7.654GiB",
+          "45.95MiB / 7.654GiB",
+          "45.96MiB / 7.654GiB",
+          "45.96MiB / 7.654GiB",
+          "45.98MiB / 7.654GiB",
+          "45.98MiB / 7.654GiB",
+          "45.99MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.99
+      },
+      "queue-phase3-worker-7": {
+        "max_cpu_percent": 7.1,
+        "memory_usage_samples": [
+          "45.65MiB / 7.654GiB",
+          "45.67MiB / 7.654GiB",
+          "45.67MiB / 7.654GiB",
+          "45.68MiB / 7.654GiB",
+          "45.69MiB / 7.654GiB",
+          "45.93MiB / 7.654GiB",
+          "45.94MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB",
+          "45.71MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.94
+      },
+      "queue-phase3-worker-8": {
+        "max_cpu_percent": 4.85,
+        "memory_usage_samples": [
+          "45.68MiB / 7.654GiB",
+          "45.7MiB / 7.654GiB",
+          "45.73MiB / 7.654GiB",
+          "45.74MiB / 7.654GiB",
+          "45.75MiB / 7.654GiB",
+          "45.76MiB / 7.654GiB",
+          "45.77MiB / 7.654GiB",
+          "45.79MiB / 7.654GiB",
+          "45.8MiB / 7.654GiB",
+          "45.8MiB / 7.654GiB"
+        ],
+        "max_memory_mib": 45.8
+      }
+    },
+    "kill_intervals_seconds": {
+      "min": 0,
+      "max": 0,
+      "mean": 0
+    },
+    "max_replacement_seconds": 0,
+    "killed_job_outcomes": {}
+  }
+]

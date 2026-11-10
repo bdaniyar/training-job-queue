@@ -1,0 +1,21 @@
+B905 `zip()` without an explicit `strict=` parameter
+  --> scripts/summarize_experiments.py:63:35
+   |
+61 |         kills = json.loads(kills_path.read_text())
+62 |         times = [datetime.fromisoformat(k["time"]).timestamp() for k in kills]
+63 |         gaps = [b - a for a, b in zip(times, times[1:])]
+   |                                   ^^^^^^^^^^^^^^^^^^^^^
+64 |         result["kill_intervals_seconds"] = {
+65 |             "min": min(gaps, default=0),
+   |
+help: Add explicit value for parameter `strict=`
+   |
+62 |         times = [datetime.fromisoformat(k["time"]).timestamp() for k in kills]
+   -         gaps = [b - a for a, b in zip(times, times[1:])]
+63 +         gaps = [b - a for a, b in zip(times, times[1:], strict=False)]
+64 |         result["kill_intervals_seconds"] = {
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 1 error.
+1 unsafe fix available with `--fix --unsafe-fixes`.

@@ -1,0 +1,1034 @@
+{"method": "GET", "path": "/health", "status": 200, "body": {"status": "ok"}}
+{"command": ["docker", "compose", "ps", "-q", "worker"]}
+a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82
+f463efb60137012a525452c524bb6496f7ca151ed7cc3851e3fd18da78709c0c
+59046e26c97b73ee6ed7f02bcbc91b52af2b8d05b3bab64869a288dfd7c9c531
+c062ba311e763c945f572e0fde6ac792c6e4d6a5621a5d2ededf5073d8d7066c
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "8e80ed77-ea27-465f-b878-caa979beb5f9", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.874352Z", "updated_at": "2026-11-10T10:13:14.874352Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "68e88f00-e658-4e8c-b039-4d8aa70a96f2", "payload": {"duration_ms": 20, "value": -1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.878313Z", "updated_at": "2026-11-10T10:13:14.878313Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "b0820e91-c58b-45dc-814d-41f656a36038", "payload": {"duration_ms": 20, "value": 0, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.880967Z", "updated_at": "2026-11-10T10:13:14.880967Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "38e95a7f-5eda-4293-a0e1-a743a4db16eb", "payload": {"duration_ms": 20, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.883301Z", "updated_at": "2026-11-10T10:13:14.883301Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "0ef9cc57-704d-45f7-b8da-a35c41da6f91", "payload": {"duration_ms": 20, "value": 2, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.888186Z", "updated_at": "2026-11-10T10:13:14.888186Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "5bd88703-a9dc-4bb7-81bb-41f02c28f98d", "payload": {"duration_ms": 20, "value": 3, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.893246Z", "updated_at": "2026-11-10T10:13:14.893246Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 200, "body": {"id": "8e80ed77-ea27-465f-b878-caa979beb5f9", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.874352Z", "updated_at": "2026-11-10T10:13:14.874352Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 409, "body": {"detail": "idempotency key already used with a different payload"}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "c6797158-0ded-4db4-9474-b393fe4a87da", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 0, "fail_permanently": true}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.906198Z", "updated_at": "2026-11-10T10:13:14.906198Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 1, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.908283Z", "updated_at": "2026-11-10T10:13:14.908283Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "9eb3ebb8-fed8-409c-a924-b472495d8580", "payload": {"duration_ms": 60000, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.910262Z", "updated_at": "2026-11-10T10:13:14.910262Z", "finished_at": null, "result": null, "error": null}}
+{"method": "POST", "path": "/jobs/9eb3ebb8-fed8-409c-a924-b472495d8580/cancel", "status": 200, "body": {"id": "9eb3ebb8-fed8-409c-a924-b472495d8580", "payload": {"duration_ms": 60000, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "cancelled", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.910262Z", "updated_at": "2026-11-10T10:13:14.912780Z", "finished_at": "2026-11-10T10:13:14.912780Z", "result": null, "error": null}}
+{"observed": {"id": "8e80ed77-ea27-465f-b878-caa979beb5f9", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:14.874352Z", "updated_at": "2026-11-10T10:13:15.118691Z", "finished_at": "2026-11-10T10:13:15.118691Z", "result": {"squared_value": 4}, "error": null}}
+{"observed": {"id": "68e88f00-e658-4e8c-b039-4d8aa70a96f2", "payload": {"duration_ms": 20, "value": -1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:14.878313Z", "updated_at": "2026-11-10T10:13:15.118757Z", "finished_at": "2026-11-10T10:13:15.118757Z", "result": {"squared_value": 1}, "error": null}}
+{"observed": {"id": "b0820e91-c58b-45dc-814d-41f656a36038", "payload": {"duration_ms": 20, "value": 0, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:14.880967Z", "updated_at": "2026-11-10T10:13:15.118645Z", "finished_at": "2026-11-10T10:13:15.118645Z", "result": {"squared_value": 0}, "error": null}}
+{"observed": {"id": "38e95a7f-5eda-4293-a0e1-a743a4db16eb", "payload": {"duration_ms": 20, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:14.883301Z", "updated_at": "2026-11-10T10:13:15.119394Z", "finished_at": "2026-11-10T10:13:15.119394Z", "result": {"squared_value": 1}, "error": null}}
+{"observed": {"id": "0ef9cc57-704d-45f7-b8da-a35c41da6f91", "payload": {"duration_ms": 20, "value": 2, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:14.888186Z", "updated_at": "2026-11-10T10:13:15.152524Z", "finished_at": "2026-11-10T10:13:15.152524Z", "result": {"squared_value": 4}, "error": null}}
+{"observed": {"id": "5bd88703-a9dc-4bb7-81bb-41f02c28f98d", "payload": {"duration_ms": 20, "value": 3, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:14.893246Z", "updated_at": "2026-11-10T10:13:15.152407Z", "finished_at": "2026-11-10T10:13:15.152407Z", "result": {"squared_value": 9}, "error": null}}
+{"observed": {"id": "c6797158-0ded-4db4-9474-b393fe4a87da", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 0, "fail_permanently": true}, "state": "failed", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:14.906198Z", "updated_at": "2026-11-10T10:13:15.233067Z", "finished_at": "2026-11-10T10:13:15.233067Z", "result": null, "error": "simulated permanent failure"}}
+{"observed": {"id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "payload": {"duration_ms": 100, "value": 1, "fail_attempts": 1, "fail_permanently": false}, "state": "succeeded", "attempts": 2, "generation": 2, "created_at": "2026-11-10T10:13:14.908283Z", "updated_at": "2026-11-10T10:13:16.408153Z", "finished_at": "2026-11-10T10:13:16.408153Z", "result": {"squared_value": 1}, "error": null}}
+{"observed": {"id": "9eb3ebb8-fed8-409c-a924-b472495d8580", "payload": {"duration_ms": 60000, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "cancelled", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:14.910262Z", "updated_at": "2026-11-10T10:13:14.912780Z", "finished_at": "2026-11-10T10:13:14.912780Z", "result": null, "error": null}}
+{"method": "GET", "path": "/jobs", "status": 200, "body": {"items": [{"id": "7bc2ea27-6c4e-4346-b553-1b0f1327520a", "payload": {"duration_ms": 20, "value": -2, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.710824Z", "updated_at": "2026-11-10T10:11:56.879967Z", "finished_at": "2026-11-10T10:11:56.879967Z", "result": {"squared_value": 4}, "error": null}, {"id": "98a1eb1b-49ec-401d-a599-cb0c2b1c66a0", "payload": {"duration_ms": 20, "value": -1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:11:56.715317Z", "updated_at": "2026-11-10T10:11:56.880041Z", "finished_at": "2026-11-10T10:11:56.880041Z", "result": {"squared_value": 1}, "error": null}], "next_cursor": "eyJjcmVhdGVkX2F0IjoiMjAyNi0xMS0xMFQxMDoxMTo1Ni43MTUzMTdaIiwiaWQiOiI5OGExZWIxYi00OWVjLTQwMWQtYTU5OS1jYjBjMmIxYzY2YTAifQ=="}}
+{"command": ["docker", "compose", "stop", "worker"]}
+ Container training-job-queue-worker-4  Stopping
+ Container training-job-queue-worker-1  Stopping
+ Container training-job-queue-worker-3  Stopping
+ Container training-job-queue-worker-2  Stopping
+ Container training-job-queue-worker-4  Stopped
+ Container training-job-queue-worker-1  Stopped
+ Container training-job-queue-worker-3  Stopped
+ Container training-job-queue-worker-2  Stopped
+{"command": ["docker", "start", "a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82"]}
+a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:17.018499Z", "updated_at": "2026-11-10T10:13:17.018499Z", "finished_at": null, "result": null, "error": null}}
+{"observed": {"id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "running", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:17.018499Z", "updated_at": "2026-11-10T10:13:17.417872Z", "finished_at": null, "result": null, "error": null}}
+{"command": ["docker", "stop", "--timeout", "10", "a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82"]}
+a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82
+{"observed": {"id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:17.018499Z", "updated_at": "2026-11-10T10:13:17.498999Z", "finished_at": null, "result": null, "error": "graceful worker shutdown"}}
+{"command": ["docker", "start", "a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82"]}
+a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82
+{"observed": {"id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "succeeded", "attempts": 2, "generation": 2, "created_at": "2026-11-10T10:13:17.018499Z", "updated_at": "2026-11-10T10:13:20.236429Z", "finished_at": "2026-11-10T10:13:20.236429Z", "result": {"squared_value": 1}, "error": null}}
+{"method": "POST", "path": "/jobs", "status": 201, "body": {"id": "bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "queued", "attempts": 0, "generation": 0, "created_at": "2026-11-10T10:13:20.252761Z", "updated_at": "2026-11-10T10:13:20.252761Z", "finished_at": null, "result": null, "error": null}}
+{"observed": {"id": "bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "running", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:20.252761Z", "updated_at": "2026-11-10T10:13:20.460112Z", "finished_at": null, "result": null, "error": null}}
+{"command": ["docker", "inspect", "--format", "{{.RestartCount}}", "a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82"]}
+0
+{"command": ["docker", "kill", "--signal", "KILL", "a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82"]}
+a2ce299f47d15e395017cc3e2a99a9dd67437828c46e535a4e89b974f127cd82
+{"method": "GET", "path": "/jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b", "status": 200, "body": {"id": "bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b", "payload": {"duration_ms": 1500, "value": 1, "fail_attempts": 0, "fail_permanently": false}, "state": "running", "attempts": 1, "generation": 1, "created_at": "2026-11-10T10:13:20.252761Z", "updated_at": "2026-11-10T10:13:20.460112Z", "finished_at": null, "result": null, "error": null}}
+{"command": ["docker", "compose", "logs", "--timestamps", "--no-color"]}
+worker-2  | 2026-11-10T10:12:06.141632095Z {"time": "2026-11-10T10:12:06.141493+00:00", "event": "worker_started", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745"}
+worker-2  | 2026-11-10T10:13:15.090356127Z {"time": "2026-11-10T10:13:15.089437+00:00", "event": "claim_committed", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745", "job_id": "38e95a7f-5eda-4293-a0e1-a743a4db16eb", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:13:15.090390627Z {"time": "2026-11-10T10:13:15.089700+00:00", "event": "execution_started", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745", "job_id": "38e95a7f-5eda-4293-a0e1-a743a4db16eb", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:13:15.114317418Z {"time": "2026-11-10T10:13:15.114039+00:00", "event": "execution_finished", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745", "job_id": "38e95a7f-5eda-4293-a0e1-a743a4db16eb", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:13:15.125206085Z {"time": "2026-11-10T10:13:15.125078+00:00", "event": "effect_committed", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745", "job_id": "38e95a7f-5eda-4293-a0e1-a743a4db16eb", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:13:15.130162377Z {"time": "2026-11-10T10:13:15.130067+00:00", "event": "claim_committed", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745", "job_id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:13:15.130172002Z {"time": "2026-11-10T10:13:15.130119+00:00", "event": "execution_started", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745", "job_id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:13:15.236131627Z {"time": "2026-11-10T10:13:15.236013+00:00", "event": "failure_recorded", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745", "job_id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "generation": 1, "attempt": 1}
+worker-2  | 2026-11-10T10:13:16.552455211Z {"time": "2026-11-10T10:13:16.552100+00:00", "event": "worker_stopped", "owner": "4e69c12e-dc36-4e2f-a1bd-683b00bb2745"}
+worker-3  | 2026-11-10T10:12:06.237660137Z {"time": "2026-11-10T10:12:06.237544+00:00", "event": "worker_started", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac"}
+worker-3  | 2026-11-10T10:13:15.089840585Z {"time": "2026-11-10T10:13:15.089234+00:00", "event": "claim_committed", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "b0820e91-c58b-45dc-814d-41f656a36038", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:15.089881960Z {"time": "2026-11-10T10:13:15.089591+00:00", "event": "execution_started", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "b0820e91-c58b-45dc-814d-41f656a36038", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:15.113430293Z {"time": "2026-11-10T10:13:15.113116+00:00", "event": "execution_finished", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "b0820e91-c58b-45dc-814d-41f656a36038", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:15.124864918Z {"time": "2026-11-10T10:13:15.124599+00:00", "event": "effect_committed", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "b0820e91-c58b-45dc-814d-41f656a36038", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:15.129738002Z {"time": "2026-11-10T10:13:15.129557+00:00", "event": "claim_committed", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "0ef9cc57-704d-45f7-b8da-a35c41da6f91", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:15.129759877Z {"time": "2026-11-10T10:13:15.129617+00:00", "event": "execution_started", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "0ef9cc57-704d-45f7-b8da-a35c41da6f91", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:15.151299752Z {"time": "2026-11-10T10:13:15.151199+00:00", "event": "execution_finished", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "0ef9cc57-704d-45f7-b8da-a35c41da6f91", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:15.154262127Z {"time": "2026-11-10T10:13:15.154183+00:00", "event": "effect_committed", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac", "job_id": "0ef9cc57-704d-45f7-b8da-a35c41da6f91", "generation": 1, "attempt": 1}
+worker-3  | 2026-11-10T10:13:16.552438419Z {"time": "2026-11-10T10:13:16.552052+00:00", "event": "worker_stopped", "owner": "a10daca8-5baa-4361-a2ad-bba41f5204ac"}
+db-1      | 2026-11-10T10:09:17.988793545Z The files belonging to this database system will be owned by user "postgres".
+db-1      | 2026-11-10T10:09:17.989009003Z This user must also own the server process.
+db-1      | 2026-11-10T10:09:17.989015253Z 
+db-1      | 2026-11-10T10:09:17.989016336Z The database cluster will be initialized with locale "en_US.utf8".
+db-1      | 2026-11-10T10:09:17.989017211Z The default database encoding has accordingly been set to "UTF8".
+db-1      | 2026-11-10T10:09:17.989018170Z The default text search configuration will be set to "english".
+db-1      | 2026-11-10T10:09:17.989018961Z 
+db-1      | 2026-11-10T10:09:17.989019545Z Data page checksums are enabled.
+db-1      | 2026-11-10T10:09:17.989027253Z 
+db-1      | 2026-11-10T10:09:17.989036503Z fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+db-1      | 2026-11-10T10:09:17.990734545Z creating subdirectories ... ok
+db-1      | 2026-11-10T10:09:17.990745295Z selecting dynamic shared memory implementation ... posix
+db-1      | 2026-11-10T10:09:18.003054045Z selecting default "max_connections" ... 100
+db-1      | 2026-11-10T10:09:18.023187503Z selecting default "shared_buffers" ... 128MB
+db-1      | 2026-11-10T10:09:18.031622587Z selecting default time zone ... Etc/UTC
+db-1      | 2026-11-10T10:09:18.031636753Z creating configuration files ... ok
+db-1      | 2026-11-10T10:09:18.103174628Z running bootstrap script ... ok
+db-1      | 2026-11-10T10:09:18.351764878Z performing post-bootstrap initialization ... ok
+db-1      | 2026-11-10T10:09:18.432447837Z syncing data to disk ... ok
+db-1      | 2026-11-10T10:09:18.432475712Z 
+db-1      | 2026-11-10T10:09:18.432477628Z 
+db-1      | 2026-11-10T10:09:18.432478545Z Success. You can now start the database server using:
+db-1      | 2026-11-10T10:09:18.432479378Z 
+db-1      | 2026-11-10T10:09:18.432480003Z     pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+db-1      | 2026-11-10T10:09:18.432480753Z 
+db-1      | 2026-11-10T10:09:18.432480212Z initdb: warning: enabling "trust" authentication for local connections
+db-1      | 2026-11-10T10:09:18.432488670Z initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1      | 2026-11-10T10:09:18.451931962Z waiting for server to start....2026-11-10 10:09:18.451 UTC [52] LOG:  starting PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-1      | 2026-11-10T10:09:18.452847003Z 2026-11-10 10:09:18.452 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1      | 2026-11-10T10:09:18.456381212Z 2026-11-10 10:09:18.456 UTC [58] LOG:  database system was shut down at 2026-11-10 10:09:18 UTC
+db-1      | 2026-11-10T10:09:18.458422878Z 2026-11-10 10:09:18.458 UTC [52] LOG:  database system is ready to accept connections
+db-1      | 2026-11-10T10:09:18.550256920Z  done
+db-1      | 2026-11-10T10:09:18.550278378Z server started
+db-1      | 2026-11-10T10:09:18.656985545Z CREATE DATABASE
+db-1      | 2026-11-10T10:09:18.657247712Z 
+db-1      | 2026-11-10T10:09:18.657301878Z 
+db-1      | 2026-11-10T10:09:18.657305337Z /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db-1      | 2026-11-10T10:09:18.657307670Z 
+db-1      | 2026-11-10T10:09:18.657842962Z waiting for server to shut down....2026-11-10 10:09:18.657 UTC [52] LOG:  received fast shutdown request
+db-1      | 2026-11-10T10:09:18.658825337Z 2026-11-10 10:09:18.658 UTC [52] LOG:  aborting any active transactions
+db-1      | 2026-11-10T10:09:18.659526087Z 2026-11-10 10:09:18.659 UTC [52] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
+db-1      | 2026-11-10T10:09:18.659818962Z 2026-11-10 10:09:18.659 UTC [56] LOG:  shutting down
+db-1      | 2026-11-10T10:09:18.660374420Z 2026-11-10 10:09:18.660 UTC [56] LOG:  checkpoint starting: shutdown immediate
+db-1      | 2026-11-10T10:09:18.680697045Z 2026-11-10 10:09:18.680 UTC [56] LOG:  checkpoint complete: wrote 943 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.013 s, total=0.021 s; sync files=303, longest=0.006 s, average=0.001 s; distance=4352 kB, estimate=4352 kB; lsn=0/1BA1BE0, redo lsn=0/1BA1BE0
+db-1      | 2026-11-10T10:09:18.684428128Z 2026-11-10 10:09:18.684 UTC [52] LOG:  database system is shut down
+db-1      | 2026-11-10T10:09:18.760349837Z  done
+db-1      | 2026-11-10T10:09:18.760366504Z server stopped
+db-1      | 2026-11-10T10:09:18.761727337Z 
+db-1      | 2026-11-10T10:09:18.761735504Z PostgreSQL init process complete; ready for start up.
+db-1      | 2026-11-10T10:09:18.761736712Z 
+db-1      | 2026-11-10T10:09:18.771872754Z 2026-11-10 10:09:18.771 UTC [1] LOG:  starting PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-1      | 2026-11-10T10:09:18.772001087Z 2026-11-10 10:09:18.771 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1      | 2026-11-10T10:09:18.772004087Z 2026-11-10 10:09:18.771 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1      | 2026-11-10T10:09:18.773005170Z 2026-11-10 10:09:18.772 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1      | 2026-11-10T10:09:18.775274295Z 2026-11-10 10:09:18.775 UTC [74] LOG:  database system was shut down at 2026-11-10 10:09:18 UTC
+db-1      | 2026-11-10T10:09:18.776715087Z 2026-11-10 10:09:18.776 UTC [1] LOG:  database system is ready to accept connections
+db-1      | 2026-11-10T10:09:48.680506962Z 2026-11-10 10:09:48.680 UTC [210] FATAL:  terminating connection due to administrator command
+db-1      | 2026-11-10T10:09:48.709551128Z 2026-11-10 10:09:48.709 UTC [214] ERROR:  deadlock_detected
+db-1      | 2026-11-10T10:09:48.709565503Z 2026-11-10 10:09:48.709 UTC [214] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:09:48.709567045Z 2026-11-10 10:09:48.709 UTC [214] STATEMENT:  DO $$ BEGIN RAISE deadlock_detected; END $$
+db-1      | 2026-11-10T10:09:48.755797254Z 2026-11-10 10:09:48.755 UTC [215] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:09:48.755812879Z 2026-11-10 10:09:48.755 UTC [215] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:09:48.755814337Z 2026-11-10 10:09:48.755 UTC [215] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:09:48.785227795Z 2026-11-10 10:09:48.785 UTC [215] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:09:48.785254879Z 2026-11-10 10:09:48.785 UTC [215] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:09:48.785256420Z 2026-11-10 10:09:48.785 UTC [215] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:09:48.857373379Z 2026-11-10 10:09:48.857 UTC [215] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:09:48.857400462Z 2026-11-10 10:09:48.857 UTC [215] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:09:48.857402170Z 2026-11-10 10:09:48.857 UTC [215] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:09:49.702224379Z 2026-11-10 10:09:49.702 UTC [255] ERROR:  duplicate key value violates unique constraint "job_effects_pkey"
+db-1      | 2026-11-10T10:09:49.702262754Z 2026-11-10 10:09:49.702 UTC [255] DETAIL:  Key (job_id)=(c77eed2e-debd-4e43-83cc-966f46e8cb0e) already exists.
+db-1      | 2026-11-10T10:09:49.702264921Z 2026-11-10 10:09:49.702 UTC [255] STATEMENT:  INSERT INTO job_effects (job_id, generation, result) VALUES ($1::UUID, $2::INTEGER, $3::JSONB) RETURNING job_effects.created_at
+db-1      | 2026-11-10T10:09:49.740725879Z 2026-11-10 10:09:49.740 UTC [256] ERROR:  new row for relation "jobs" violates check constraint "injected_no_success"
+db-1      | 2026-11-10T10:09:49.740737671Z 2026-11-10 10:09:49.740 UTC [256] DETAIL:  Failing row contains (8b7784d1-8681-43f8-b999-3f03a89f415c, cb2567cd-7e8e-431c-add4-85704cf2698b, {"value": 1, "duration_ms": 100, "fail_attempts": 0, "fail_perma..., succeeded, 1, 1, null, null, null, 2026-11-10 10:09:49.730166+00, 2026-11-10 10:09:49.730166+00, 2026-11-10 10:09:49.739781+00, 2026-11-10 10:09:49.739781+00, {}, null).
+db-1      | 2026-11-10T10:09:49.740740296Z 2026-11-10 10:09:49.740 UTC [256] STATEMENT:  UPDATE jobs SET state=$1::VARCHAR, owner=$2::UUID, lease_until=$3::TIMESTAMP WITH TIME ZONE, attempt_deadline=$4::TIMESTAMP WITH TIME ZONE, updated_at=$5::TIMESTAMP WITH TIME ZONE, finished_at=$6::TIMESTAMP WITH TIME ZONE, result=$7::JSONB WHERE jobs.id = $8::UUID
+db-1      | 2026-11-10T10:09:49.843252337Z 2026-11-10 10:09:49.843 UTC [261] ERROR:  job identity and payload are immutable
+db-1      | 2026-11-10T10:09:49.843264004Z 2026-11-10 10:09:49.843 UTC [261] CONTEXT:  PL/pgSQL function guard_job_update() line 7 at RAISE
+db-1      | 2026-11-10T10:09:49.843265379Z 2026-11-10 10:09:49.843 UTC [261] STATEMENT:  UPDATE jobs SET payload=$1::JSONB WHERE jobs.id = $2::UUID
+db-1      | 2026-11-10T10:09:49.849428129Z 2026-11-10 10:09:49.849 UTC [261] ERROR:  terminal jobs are immutable
+db-1      | 2026-11-10T10:09:49.849436754Z 2026-11-10 10:09:49.849 UTC [261] CONTEXT:  PL/pgSQL function guard_job_update() line 10 at RAISE
+db-1      | 2026-11-10T10:09:49.849439546Z 2026-11-10 10:09:49.849 UTC [261] STATEMENT:  UPDATE jobs SET state=$1::VARCHAR, finished_at=$2::TIMESTAMP WITH TIME ZONE WHERE jobs.id = $3::UUID
+db-1      | 2026-11-10T10:09:49.851733379Z 2026-11-10 10:09:49.851 UTC [261] ERROR:  new row for relation "jobs" violates check constraint "ownership"
+db-1      | 2026-11-10T10:09:49.851739671Z 2026-11-10 10:09:49.851 UTC [261] DETAIL:  Failing row contains (30a64dfa-3e99-4bd4-bf8e-73edae9a8586, bad, {}, running, 0, 0, null, null, null, 2026-11-10 10:09:49.851635+00, 2026-11-10 10:09:49.851635+00, 2026-11-10 10:09:49.851635+00, null, null, null).
+db-1      | 2026-11-10T10:09:49.851747546Z 2026-11-10 10:09:49.851 UTC [261] STATEMENT:  INSERT INTO jobs (id, idempotency_key, payload, state, owner, lease_until, attempt_deadline, finished_at, result, error) VALUES ($1::UUID, $2::VARCHAR, $3::JSONB, $4::VARCHAR, $5::UUID, $6::TIMESTAMP WITH TIME ZONE, $7::TIMESTAMP WITH TIME ZONE, $8::TIMESTAMP WITH TIME ZONE, $9::JSONB, $10::VARCHAR) RETURNING jobs.attempts, jobs.generation, jobs.available_at, jobs.created_at, jobs.updated_at
+db-1      | 2026-11-10T10:10:19.160997254Z 2026-11-10 10:10:19.160 UTC [394] FATAL:  terminating connection due to administrator command
+db-1      | 2026-11-10T10:10:19.194881754Z 2026-11-10 10:10:19.194 UTC [398] ERROR:  deadlock_detected
+db-1      | 2026-11-10T10:10:19.194899670Z 2026-11-10 10:10:19.194 UTC [398] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:19.194901254Z 2026-11-10 10:10:19.194 UTC [398] STATEMENT:  DO $$ BEGIN RAISE deadlock_detected; END $$
+db-1      | 2026-11-10T10:10:19.234690045Z 2026-11-10 10:10:19.234 UTC [399] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:10:19.234701670Z 2026-11-10 10:10:19.234 UTC [399] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:19.234703129Z 2026-11-10 10:10:19.234 UTC [399] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:10:19.267787295Z 2026-11-10 10:10:19.267 UTC [399] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:10:19.267804962Z 2026-11-10 10:10:19.267 UTC [399] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:19.267806337Z 2026-11-10 10:10:19.267 UTC [399] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:10:19.360587295Z 2026-11-10 10:10:19.360 UTC [399] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:10:19.360607379Z 2026-11-10 10:10:19.360 UTC [399] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:19.360608962Z 2026-11-10 10:10:19.360 UTC [399] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:10:20.270396713Z 2026-11-10 10:10:20.270 UTC [439] ERROR:  duplicate key value violates unique constraint "job_effects_pkey"
+db-1      | 2026-11-10T10:10:20.270482629Z 2026-11-10 10:10:20.270 UTC [439] DETAIL:  Key (job_id)=(9c5bb3f1-20af-4292-be93-e49c263ca5e5) already exists.
+db-1      | 2026-11-10T10:10:20.270488046Z 2026-11-10 10:10:20.270 UTC [439] STATEMENT:  INSERT INTO job_effects (job_id, generation, result) VALUES ($1::UUID, $2::INTEGER, $3::JSONB) RETURNING job_effects.created_at
+db-1      | 2026-11-10T10:10:20.363607463Z 2026-11-10 10:10:20.363 UTC [440] ERROR:  new row for relation "jobs" violates check constraint "injected_no_success"
+db-1      | 2026-11-10T10:10:20.363654879Z 2026-11-10 10:10:20.363 UTC [440] DETAIL:  Failing row contains (6f68534d-f536-44ae-a901-f28e135bedaf, 4e28eae5-5934-41f5-b8ee-3589c241196e, {"value": 1, "duration_ms": 100, "fail_attempts": 0, "fail_perma..., succeeded, 1, 1, null, null, null, 2026-11-10 10:10:20.343574+00, 2026-11-10 10:10:20.343574+00, 2026-11-10 10:10:20.362277+00, 2026-11-10 10:10:20.362277+00, {}, null).
+db-1      | 2026-11-10T10:10:20.363658838Z 2026-11-10 10:10:20.363 UTC [440] STATEMENT:  UPDATE jobs SET state=$1::VARCHAR, owner=$2::UUID, lease_until=$3::TIMESTAMP WITH TIME ZONE, attempt_deadline=$4::TIMESTAMP WITH TIME ZONE, updated_at=$5::TIMESTAMP WITH TIME ZONE, finished_at=$6::TIMESTAMP WITH TIME ZONE, result=$7::JSONB WHERE jobs.id = $8::UUID
+db-1      | 2026-11-10T10:10:20.479642838Z 2026-11-10 10:10:20.479 UTC [445] ERROR:  job identity and payload are immutable
+db-1      | 2026-11-10T10:10:20.479662004Z 2026-11-10 10:10:20.479 UTC [445] CONTEXT:  PL/pgSQL function guard_job_update() line 7 at RAISE
+db-1      | 2026-11-10T10:10:20.479663963Z 2026-11-10 10:10:20.479 UTC [445] STATEMENT:  UPDATE jobs SET payload=$1::JSONB WHERE jobs.id = $2::UUID
+db-1      | 2026-11-10T10:10:20.485320338Z 2026-11-10 10:10:20.485 UTC [445] ERROR:  terminal jobs are immutable
+db-1      | 2026-11-10T10:10:20.485331546Z 2026-11-10 10:10:20.485 UTC [445] CONTEXT:  PL/pgSQL function guard_job_update() line 10 at RAISE
+db-1      | 2026-11-10T10:10:20.485333129Z 2026-11-10 10:10:20.485 UTC [445] STATEMENT:  UPDATE jobs SET state=$1::VARCHAR, finished_at=$2::TIMESTAMP WITH TIME ZONE WHERE jobs.id = $3::UUID
+db-1      | 2026-11-10T10:10:20.489293213Z 2026-11-10 10:10:20.489 UTC [445] ERROR:  new row for relation "jobs" violates check constraint "ownership"
+db-1      | 2026-11-10T10:10:20.489299838Z 2026-11-10 10:10:20.489 UTC [445] DETAIL:  Failing row contains (352a761b-f483-4f6e-bd80-147b3074dcb0, bad, {}, running, 0, 0, null, null, null, 2026-11-10 10:10:20.489173+00, 2026-11-10 10:10:20.489173+00, 2026-11-10 10:10:20.489173+00, null, null, null).
+db-1      | 2026-11-10T10:10:20.489302171Z 2026-11-10 10:10:20.489 UTC [445] STATEMENT:  INSERT INTO jobs (id, idempotency_key, payload, state, owner, lease_until, attempt_deadline, finished_at, result, error) VALUES ($1::UUID, $2::VARCHAR, $3::JSONB, $4::VARCHAR, $5::UUID, $6::TIMESTAMP WITH TIME ZONE, $7::TIMESTAMP WITH TIME ZONE, $8::TIMESTAMP WITH TIME ZONE, $9::JSONB, $10::VARCHAR) RETURNING jobs.attempts, jobs.generation, jobs.available_at, jobs.created_at, jobs.updated_at
+db-1      | 2026-11-10T10:10:26.037254007Z 2026-11-10 10:10:26.037 UTC [482] FATAL:  terminating connection due to administrator command
+db-1      | 2026-11-10T10:10:26.068277799Z 2026-11-10 10:10:26.068 UTC [486] ERROR:  deadlock_detected
+worker-1  | 2026-11-10T10:12:06.087010053Z {"time": "2026-11-10T10:12:06.086761+00:00", "event": "worker_started", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81"}
+db-1      | 2026-11-10T10:10:26.068289340Z 2026-11-10 10:10:26.068 UTC [486] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:26.068290674Z 2026-11-10 10:10:26.068 UTC [486] STATEMENT:  DO $$ BEGIN RAISE deadlock_detected; END $$
+worker-1  | 2026-11-10T10:13:15.089594252Z {"time": "2026-11-10T10:13:15.088981+00:00", "event": "claim_committed", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "8e80ed77-ea27-465f-b878-caa979beb5f9", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:15.089656668Z {"time": "2026-11-10T10:13:15.089212+00:00", "event": "execution_started", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "8e80ed77-ea27-465f-b878-caa979beb5f9", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:15.113409043Z {"time": "2026-11-10T10:13:15.113089+00:00", "event": "execution_finished", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "8e80ed77-ea27-465f-b878-caa979beb5f9", "generation": 1, "attempt": 1}
+db-1      | 2026-11-10T10:10:26.103670757Z 2026-11-10 10:10:26.103 UTC [487] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:10:26.103681924Z 2026-11-10 10:10:26.103 UTC [487] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:26.103683299Z 2026-11-10 10:10:26.103 UTC [487] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:10:26.127367174Z 2026-11-10 10:10:26.127 UTC [487] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:10:26.127380799Z 2026-11-10 10:10:26.127 UTC [487] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:26.127382465Z 2026-11-10 10:10:26.127 UTC [487] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:10:26.222710715Z 2026-11-10 10:10:26.222 UTC [487] ERROR:  serialization_failure
+db-1      | 2026-11-10T10:10:26.222765174Z 2026-11-10 10:10:26.222 UTC [487] CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+db-1      | 2026-11-10T10:10:26.222770132Z 2026-11-10 10:10:26.222 UTC [487] STATEMENT:  DO $$ BEGIN RAISE serialization_failure; END $$
+db-1      | 2026-11-10T10:10:27.004107132Z 2026-11-10 10:10:27.004 UTC [519] ERROR:  duplicate key value violates unique constraint "job_effects_pkey"
+db-1      | 2026-11-10T10:10:27.004122174Z 2026-11-10 10:10:27.004 UTC [519] DETAIL:  Key (job_id)=(67b1f712-74f6-4b42-8bde-7cad8e1a0af1) already exists.
+db-1      | 2026-11-10T10:10:27.004123507Z 2026-11-10 10:10:27.004 UTC [519] STATEMENT:  INSERT INTO job_effects (job_id, generation, result) VALUES ($1::UUID, $2::INTEGER, $3::JSONB) RETURNING job_effects.created_at
+db-1      | 2026-11-10T10:10:27.036093091Z 2026-11-10 10:10:27.036 UTC [520] ERROR:  new row for relation "jobs" violates check constraint "injected_no_success"
+db-1      | 2026-11-10T10:10:27.036105591Z 2026-11-10 10:10:27.036 UTC [520] DETAIL:  Failing row contains (1f731809-d366-4338-9d80-84af6dcd4f55, 034b4005-4ef3-4ff6-a7d0-9cb09a8ddf31, {"value": 1, "duration_ms": 100, "fail_attempts": 0, "fail_perma..., succeeded, 1, 1, null, null, null, 2026-11-10 10:10:27.024977+00, 2026-11-10 10:10:27.024977+00, 2026-11-10 10:10:27.03519+00, 2026-11-10 10:10:27.03519+00, {}, null).
+db-1      | 2026-11-10T10:10:27.036107549Z 2026-11-10 10:10:27.036 UTC [520] STATEMENT:  UPDATE jobs SET state=$1::VARCHAR, owner=$2::UUID, lease_until=$3::TIMESTAMP WITH TIME ZONE, attempt_deadline=$4::TIMESTAMP WITH TIME ZONE, updated_at=$5::TIMESTAMP WITH TIME ZONE, finished_at=$6::TIMESTAMP WITH TIME ZONE, result=$7::JSONB WHERE jobs.id = $8::UUID
+db-1      | 2026-11-10T10:10:27.148212508Z 2026-11-10 10:10:27.148 UTC [525] ERROR:  job identity and payload are immutable
+db-1      | 2026-11-10T10:10:27.148225466Z 2026-11-10 10:10:27.148 UTC [525] CONTEXT:  PL/pgSQL function guard_job_update() line 7 at RAISE
+db-1      | 2026-11-10T10:10:27.148226799Z 2026-11-10 10:10:27.148 UTC [525] STATEMENT:  UPDATE jobs SET payload=$1::JSONB WHERE jobs.id = $2::UUID
+db-1      | 2026-11-10T10:10:27.153712299Z 2026-11-10 10:10:27.153 UTC [525] ERROR:  terminal jobs are immutable
+db-1      | 2026-11-10T10:10:27.153721133Z 2026-11-10 10:10:27.153 UTC [525] CONTEXT:  PL/pgSQL function guard_job_update() line 10 at RAISE
+db-1      | 2026-11-10T10:10:27.153722383Z 2026-11-10 10:10:27.153 UTC [525] STATEMENT:  UPDATE jobs SET state=$1::VARCHAR, finished_at=$2::TIMESTAMP WITH TIME ZONE WHERE jobs.id = $3::UUID
+db-1      | 2026-11-10T10:10:27.157567424Z 2026-11-10 10:10:27.157 UTC [525] ERROR:  new row for relation "jobs" violates check constraint "ownership"
+db-1      | 2026-11-10T10:10:27.157576216Z 2026-11-10 10:10:27.157 UTC [525] DETAIL:  Failing row contains (1fc2e8ea-2247-4ca2-b09c-99d8fc41ed31, bad, {}, running, 0, 0, null, null, null, 2026-11-10 10:10:27.157449+00, 2026-11-10 10:10:27.157449+00, 2026-11-10 10:10:27.157449+00, null, null, null).
+db-1      | 2026-11-10T10:10:27.157577758Z 2026-11-10 10:10:27.157 UTC [525] STATEMENT:  INSERT INTO jobs (id, idempotency_key, payload, state, owner, lease_until, attempt_deadline, finished_at, result, error) VALUES ($1::UUID, $2::VARCHAR, $3::JSONB, $4::VARCHAR, $5::UUID, $6::TIMESTAMP WITH TIME ZONE, $7::TIMESTAMP WITH TIME ZONE, $8::TIMESTAMP WITH TIME ZONE, $9::JSONB, $10::VARCHAR) RETURNING jobs.attempts, jobs.generation, jobs.available_at, jobs.created_at, jobs.updated_at
+worker-1  | 2026-11-10T10:13:15.124994210Z {"time": "2026-11-10T10:13:15.124841+00:00", "event": "effect_committed", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "8e80ed77-ea27-465f-b878-caa979beb5f9", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:15.129949377Z {"time": "2026-11-10T10:13:15.129795+00:00", "event": "claim_committed", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "c6797158-0ded-4db4-9474-b393fe4a87da", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:15.129962460Z {"time": "2026-11-10T10:13:15.129849+00:00", "event": "execution_started", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "c6797158-0ded-4db4-9474-b393fe4a87da", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:15.235951710Z {"time": "2026-11-10T10:13:15.235802+00:00", "event": "failure_recorded", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "c6797158-0ded-4db4-9474-b393fe4a87da", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:16.299924919Z {"time": "2026-11-10T10:13:16.299445+00:00", "event": "claim_committed", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:16.299977169Z {"time": "2026-11-10T10:13:16.299742+00:00", "event": "execution_started", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:16.403832627Z {"time": "2026-11-10T10:13:16.403498+00:00", "event": "execution_finished", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:16.415637336Z {"time": "2026-11-10T10:13:16.415305+00:00", "event": "effect_committed", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81", "job_id": "e3a23fc8-4745-4e2c-abef-a73bb06f58c4", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:16.552445919Z {"time": "2026-11-10T10:13:16.552064+00:00", "event": "worker_stopped", "owner": "9479ae28-9b00-4b25-ac1a-b9406ddd1b81"}
+worker-1  | 2026-11-10T10:13:17.403201461Z {"time": "2026-11-10T10:13:17.403093+00:00", "event": "worker_started", "owner": "6a43deee-1281-42e5-a3c2-8e51a4d9bb72"}
+worker-1  | 2026-11-10T10:13:17.420421003Z {"time": "2026-11-10T10:13:17.420331+00:00", "event": "claim_committed", "owner": "6a43deee-1281-42e5-a3c2-8e51a4d9bb72", "job_id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:17.420442961Z {"time": "2026-11-10T10:13:17.420364+00:00", "event": "execution_started", "owner": "6a43deee-1281-42e5-a3c2-8e51a4d9bb72", "job_id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:17.500161545Z {"time": "2026-11-10T10:13:17.500088+00:00", "event": "shutdown_released", "owner": "6a43deee-1281-42e5-a3c2-8e51a4d9bb72", "job_id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:17.500194086Z {"time": "2026-11-10T10:13:17.500138+00:00", "event": "worker_stopped", "owner": "6a43deee-1281-42e5-a3c2-8e51a4d9bb72"}
+worker-1  | 2026-11-10T10:13:18.069610170Z {"time": "2026-11-10T10:13:18.069516+00:00", "event": "worker_started", "owner": "eef60652-68b0-4e95-99aa-1f7111b17883"}
+worker-1  | 2026-11-10T10:13:18.720454628Z {"time": "2026-11-10T10:13:18.720235+00:00", "event": "claim_committed", "owner": "eef60652-68b0-4e95-99aa-1f7111b17883", "job_id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:18.720470253Z {"time": "2026-11-10T10:13:18.720355+00:00", "event": "execution_started", "owner": "eef60652-68b0-4e95-99aa-1f7111b17883", "job_id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:20.225160088Z {"time": "2026-11-10T10:13:20.224652+00:00", "event": "execution_finished", "owner": "eef60652-68b0-4e95-99aa-1f7111b17883", "job_id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:20.245508379Z {"time": "2026-11-10T10:13:20.245301+00:00", "event": "effect_committed", "owner": "eef60652-68b0-4e95-99aa-1f7111b17883", "job_id": "f4babb6a-cc55-43cc-b2a6-dae70f02eb8c", "generation": 2, "attempt": 2}
+worker-1  | 2026-11-10T10:13:20.463792171Z {"time": "2026-11-10T10:13:20.463573+00:00", "event": "claim_committed", "owner": "eef60652-68b0-4e95-99aa-1f7111b17883", "job_id": "bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b", "generation": 1, "attempt": 1}
+worker-1  | 2026-11-10T10:13:20.463817713Z {"time": "2026-11-10T10:13:20.463668+00:00", "event": "execution_started", "owner": "eef60652-68b0-4e95-99aa-1f7111b17883", "job_id": "bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b", "generation": 1, "attempt": 1}
+api-1     | 2026-11-10T10:11:34.695707844Z INFO:     Started server process [1]
+api-1     | 2026-11-10T10:11:34.695735803Z INFO:     Waiting for application startup.
+api-1     | 2026-11-10T10:11:34.708300136Z INFO:     Application startup complete.
+api-1     | 2026-11-10T10:11:34.708391844Z INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1     | 2026-11-10T10:11:39.284363555Z INFO:     127.0.0.1:55794 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:44.463319001Z INFO:     127.0.0.1:44856 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:49.636907212Z INFO:     127.0.0.1:44862 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:54.876454048Z INFO:     127.0.0.1:39186 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.435691215Z INFO:     172.23.0.1:58638 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.712859341Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.715993674Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.718489549Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.720926841Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.723065716Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.725130674Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.728872799Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.731862382Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 409 Conflict
+api-1     | 2026-11-10T10:11:56.733959049Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.736405966Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.738556382Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:56.744685132Z INFO:     172.23.0.1:58638 - "POST /jobs/4b6efc3f-9d9a-4acb-8dd9-8dfd05355517/cancel HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.747468132Z INFO:     172.23.0.1:58638 - "GET /jobs/7bc2ea27-6c4e-4346-b553-1b0f1327520a HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.802145799Z INFO:     172.23.0.1:58638 - "GET /jobs/7bc2ea27-6c4e-4346-b553-1b0f1327520a HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.858089216Z INFO:     172.23.0.1:58638 - "GET /jobs/7bc2ea27-6c4e-4346-b553-1b0f1327520a HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.912933216Z INFO:     172.23.0.1:58638 - "GET /jobs/7bc2ea27-6c4e-4346-b553-1b0f1327520a HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.915216382Z INFO:     172.23.0.1:58638 - "GET /jobs/98a1eb1b-49ec-401d-a599-cb0c2b1c66a0 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.917111132Z INFO:     172.23.0.1:58638 - "GET /jobs/eee8d606-6aee-4961-84d0-0091d4fc4a33 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.920504674Z INFO:     172.23.0.1:58638 - "GET /jobs/2d50e45a-d419-4fd8-9f96-be82e93bbd9c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.923366216Z INFO:     172.23.0.1:58638 - "GET /jobs/27216257-d8db-49e5-a4ef-b39ed146fac2 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.977408091Z INFO:     172.23.0.1:58638 - "GET /jobs/27216257-d8db-49e5-a4ef-b39ed146fac2 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.979903632Z INFO:     172.23.0.1:58638 - "GET /jobs/3d954188-24a9-4031-aab4-c19b6bfb77df HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:56.982673591Z INFO:     172.23.0.1:58638 - "GET /jobs/3791fa3e-f5f4-4dc1-bd86-ae8f08f3cc7c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.037320799Z INFO:     172.23.0.1:58638 - "GET /jobs/3791fa3e-f5f4-4dc1-bd86-ae8f08f3cc7c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.039588966Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.093390966Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.148819716Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.204435549Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.260829966Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.316686633Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.373678466Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.429675883Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.485651883Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.545124841Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.607182591Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.670548758Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.734172799Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.797217091Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.858943966Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.920631591Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:57.983496466Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.041665300Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.100331050Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.156944300Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.214075425Z INFO:     172.23.0.1:58638 - "GET /jobs/eaf7731c-b8fa-4d4d-acac-da63ca61dd15 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.218131675Z INFO:     172.23.0.1:58638 - "GET /jobs/4b6efc3f-9d9a-4acb-8dd9-8dfd05355517 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.223335341Z INFO:     172.23.0.1:58638 - "GET /jobs?limit=2 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.799601842Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:11:58.803901258Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+worker-4  | 2026-11-10T10:12:06.306095304Z {"time": "2026-11-10T10:12:06.305984+00:00", "event": "worker_started", "owner": "a1237447-b961-4e12-8bcd-ddc803238689"}
+api-1     | 2026-11-10T10:11:58.859058383Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.915691675Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:58.970466550Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.025279592Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.080051633Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.134580383Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.188875675Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.346235175Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.458245634Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.513106175Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.566591550Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.620913092Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.674829300Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.729118175Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+worker-4  | 2026-11-10T10:13:15.090157668Z {"time": "2026-11-10T10:13:15.089710+00:00", "event": "claim_committed", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "68e88f00-e658-4e8c-b039-4d8aa70a96f2", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:15.090267502Z {"time": "2026-11-10T10:13:15.090011+00:00", "event": "execution_started", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "68e88f00-e658-4e8c-b039-4d8aa70a96f2", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:15.113325085Z {"time": "2026-11-10T10:13:15.113066+00:00", "event": "execution_finished", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "68e88f00-e658-4e8c-b039-4d8aa70a96f2", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:15.124945502Z {"time": "2026-11-10T10:13:15.124818+00:00", "event": "effect_committed", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "68e88f00-e658-4e8c-b039-4d8aa70a96f2", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:15.129973043Z {"time": "2026-11-10T10:13:15.129786+00:00", "event": "claim_committed", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "5bd88703-a9dc-4bb7-81bb-41f02c28f98d", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:15.129978002Z {"time": "2026-11-10T10:13:15.129870+00:00", "event": "execution_started", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "5bd88703-a9dc-4bb7-81bb-41f02c28f98d", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:15.151113043Z {"time": "2026-11-10T10:13:15.151017+00:00", "event": "execution_finished", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "5bd88703-a9dc-4bb7-81bb-41f02c28f98d", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:15.154142877Z {"time": "2026-11-10T10:13:15.154027+00:00", "event": "effect_committed", "owner": "a1237447-b961-4e12-8bcd-ddc803238689", "job_id": "5bd88703-a9dc-4bb7-81bb-41f02c28f98d", "generation": 1, "attempt": 1}
+worker-4  | 2026-11-10T10:13:16.552320419Z {"time": "2026-11-10T10:13:16.552027+00:00", "event": "worker_stopped", "owner": "a1237447-b961-4e12-8bcd-ddc803238689"}
+api-1     | 2026-11-10T10:11:59.785286009Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.840067925Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.895551175Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:11:59.950845675Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.006066551Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.021439176Z INFO:     127.0.0.1:39200 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.060899176Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.114717634Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.171894676Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.229042676Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.291859801Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.365951884Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.428869509Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.488054301Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.548253801Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.611017551Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.678521676Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.742610593Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.807630051Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.885322801Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.942727509Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:00.998299343Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.051865426Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.108534926Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.164701093Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.222262634Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.283175468Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.345104259Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.409245343Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.474156593Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.537794426Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.600982010Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.663156176Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.727199718Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.790678260Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.854588843Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.919524468Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.978137926Z INFO:     172.23.0.1:58638 - "GET /jobs/01f57eb3-8617-4a94-aafb-73dfcd8d2ee3 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:01.985240176Z INFO:     172.23.0.1:58638 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:12:01.989111885Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.049220260Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.109301010Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.181522218Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.239444218Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.384336385Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.388236510Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.442887885Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.500963302Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.563541052Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.624260010Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.685267010Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.745632427Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.806070219Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.866201552Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.926589219Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:02.985094594Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.041274385Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.096747010Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.154723594Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.215785635Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.276101302Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.337528260Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.401318052Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.467508844Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.529869094Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.592703261Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.659507802Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:03.718136094Z INFO:     172.23.0.1:58638 - "GET /jobs/e3ed7c30-0e21-443b-9a21-a07344a4dc39 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:05.166880845Z INFO:     127.0.0.1:41730 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:10.335644305Z INFO:     127.0.0.1:41734 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:15.479271419Z INFO:     127.0.0.1:42294 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:20.636876713Z INFO:     127.0.0.1:42310 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:25.788741715Z INFO:     127.0.0.1:36248 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:31.088666468Z INFO:     127.0.0.1:36258 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:36.235762512Z INFO:     127.0.0.1:51194 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:41.415516458Z INFO:     127.0.0.1:51196 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:46.558787502Z INFO:     127.0.0.1:34996 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:51.732321672Z INFO:     127.0.0.1:35002 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:12:56.884143966Z INFO:     127.0.0.1:59698 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:02.071449010Z INFO:     127.0.0.1:59706 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:07.232899054Z INFO:     127.0.0.1:40284 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:12.405712042Z INFO:     127.0.0.1:40296 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:14.614523752Z INFO:     172.23.0.1:59662 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:14.876183085Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.879329418Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.881574585Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.883885502Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.889165460Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.894006793Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.901869460Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:14.904671793Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 409 Conflict
+api-1     | 2026-11-10T10:13:14.906846627Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.908786918Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.910958710Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:14.913941293Z INFO:     172.23.0.1:59662 - "POST /jobs/9eb3ebb8-fed8-409c-a924-b472495d8580/cancel HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:14.915894210Z INFO:     172.23.0.1:59662 - "GET /jobs/8e80ed77-ea27-465f-b878-caa979beb5f9 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:14.969528710Z INFO:     172.23.0.1:59662 - "GET /jobs/8e80ed77-ea27-465f-b878-caa979beb5f9 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.030155335Z INFO:     172.23.0.1:59662 - "GET /jobs/8e80ed77-ea27-465f-b878-caa979beb5f9 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.091944085Z INFO:     172.23.0.1:59662 - "GET /jobs/8e80ed77-ea27-465f-b878-caa979beb5f9 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.148061252Z INFO:     172.23.0.1:59662 - "GET /jobs/8e80ed77-ea27-465f-b878-caa979beb5f9 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.152562502Z INFO:     172.23.0.1:59662 - "GET /jobs/68e88f00-e658-4e8c-b039-4d8aa70a96f2 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.156663210Z INFO:     172.23.0.1:59662 - "GET /jobs/b0820e91-c58b-45dc-814d-41f656a36038 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.159782043Z INFO:     172.23.0.1:59662 - "GET /jobs/38e95a7f-5eda-4293-a0e1-a743a4db16eb HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.162653335Z INFO:     172.23.0.1:59662 - "GET /jobs/0ef9cc57-704d-45f7-b8da-a35c41da6f91 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.165913210Z INFO:     172.23.0.1:59662 - "GET /jobs/5bd88703-a9dc-4bb7-81bb-41f02c28f98d HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.169092752Z INFO:     172.23.0.1:59662 - "GET /jobs/c6797158-0ded-4db4-9474-b393fe4a87da HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.224535543Z INFO:     172.23.0.1:59662 - "GET /jobs/c6797158-0ded-4db4-9474-b393fe4a87da HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.283969002Z INFO:     172.23.0.1:59662 - "GET /jobs/c6797158-0ded-4db4-9474-b393fe4a87da HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.292034002Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.346201669Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.418377919Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.473329085Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.528790710Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.583537877Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.643081669Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.711419044Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.773846252Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.836957544Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.902151169Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:15.969578919Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.034643211Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.098362627Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.162652127Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.227984461Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.292224252Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.355465919Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.418922752Z INFO:     172.23.0.1:59662 - "GET /jobs/e3a23fc8-4745-4e2c-abef-a73bb06f58c4 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.425843752Z INFO:     172.23.0.1:59662 - "GET /jobs/9eb3ebb8-fed8-409c-a924-b472495d8580 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:16.432213669Z INFO:     172.23.0.1:59662 - "GET /jobs?limit=2 HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.019845003Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:17.025012878Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.084695461Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.139911669Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.194897753Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.249445669Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.304475794Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.358705128Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.413141420Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.469299836Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.556423045Z INFO:     127.0.0.1:54500 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.620000961Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.725510628Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.781053295Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.835546295Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.889961211Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.943985961Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:17.997404086Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.051608920Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.105778337Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.160130128Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.216550670Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.275901170Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.330348670Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.384346295Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.438821837Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.494795337Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.554251087Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.617269628Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.682746795Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.742791503Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.807299379Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.872252337Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.936341379Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:18.997941545Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.059404879Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.135423295Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.193412670Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.262347170Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.330561045Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.390496087Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.445189754Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.500520671Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.556949171Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.619162254Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.682957837Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.740864629Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.798433754Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.863450879Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.928190337Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:19.991947712Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.055477837Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.119953337Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.186509671Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.246472338Z INFO:     172.23.0.1:59662 - "GET /jobs/f4babb6a-cc55-43cc-b2a6-dae70f02eb8c HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.254336421Z INFO:     172.23.0.1:59662 - "POST /jobs HTTP/1.1" 201 Created
+api-1     | 2026-11-10T10:13:20.258853921Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.321521004Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.388385588Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.452410504Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.512599129Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.686701463Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.692108088Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.748940921Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.805164921Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.860928004Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.916857296Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:20.971957130Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.027889505Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.088652463Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.153837463Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.220719005Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.284419505Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.349733296Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.413383296Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.471416380Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.527473755Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.583756213Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.644855338Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.709037963Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.773703172Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.837749880Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.902249297Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:21.965858880Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.028754922Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.093290005Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.156746588Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.218597213Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.280940005Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.342185297Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.405815464Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.470074047Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.533747422Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.593219630Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.648826547Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.704040130Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.727405089Z INFO:     127.0.0.1:60380 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.758346297Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.813199589Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.869346422Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.930299464Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:22.991703797Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.054813631Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.118662881Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.182121547Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.246051131Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.311565381Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.375753256Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.451408881Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.510803214Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.570297422Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.628828131Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.685718006Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.745446381Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.807291798Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.871656881Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.934338548Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:23.995551798Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.056708298Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.118727673Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.182444339Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.248594256Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.311688756Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.374760048Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.436985965Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.495961590Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.550752506Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.605584923Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.661065506Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.718852423Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.780820548Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.843856340Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.907978548Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:24.971617173Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.033697048Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.095030757Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.158018090Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.220627340Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.282903715Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.347417007Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.411889965Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.484319173Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.545273590Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.606032298Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.664962548Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.721242798Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.777162423Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.840554549Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.917475299Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:25.982832674Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.047669257Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.112198090Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.178619799Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.242618924Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.304831049Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.367662465Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.429476257Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.493097007Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.557271924Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.622133632Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.685816549Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.751065466Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.816322591Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.881107882Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:26.944815799Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.008821674Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.072528216Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.137737216Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.200669091Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.259510424Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.320290049Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.385346008Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.447719049Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.525836008Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.585611049Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.644653591Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.703458966Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.759302424Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.814459258Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.869313383Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.876373633Z INFO:     127.0.0.1:60386 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.924173758Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:27.979346758Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.035346341Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.094103675Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.154898050Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.221194883Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.278127883Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.333732091Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.389245716Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.444502258Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.500289800Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.558133883Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.619535383Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.682042550Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.743591550Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.807417967Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.870462967Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.932393758Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:28.995474258Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.058529717Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.121155717Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.185380467Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.249541717Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.315906217Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.376659175Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.434175717Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.491656009Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.552016634Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.612057134Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.671130425Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.732992467Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.792054175Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.848296634Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.903790425Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:29.960785717Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.023409967Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.086570259Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.148785134Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.211830592Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.276829634Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.339174301Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.403022676Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.472710092Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.537377467Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.600062967Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.665025426Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.730721676Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.795212426Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.859945718Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.918456093Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:30.978159343Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.033525676Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.091414218Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.149325134Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.212271759Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.277115926Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.345051259Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.409954885Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.475296176Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.538122135Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.605768968Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.663305301Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.723412760Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.787524468Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.847308843Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.902854760Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:31.958615093Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.013531051Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.069157843Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.126784635Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.192081177Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.251439260Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.312851510Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.376627593Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.441205635Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.503896385Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.567066843Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.630813468Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.693862760Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.757516802Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.820611677Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.886156135Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:32.946310510Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.002547135Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.047658135Z INFO:     127.0.0.1:47198 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.056277510Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.110290802Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.165242344Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.221743010Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.282219260Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.346696885Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.412464635Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.476552302Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.539920636Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.603260427Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.665793219Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.724889344Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.788002802Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.852353677Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.911409219Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:33.967556886Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.022800094Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.081719052Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.146160802Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.211263636Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.276286428Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.341015344Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.405733928Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.469388719Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.533756594Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.596494344Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.660039136Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.723859928Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.785743928Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.848877678Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.913238761Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:34.977790303Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.040491261Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.101918470Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.162913428Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.225352803Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.289108470Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.352350928Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.419906386Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.484710761Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.547737095Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.612289345Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.687713345Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.745039595Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.804264553Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.867435720Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.932235012Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:35.991982678Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.049022178Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.105487220Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.165866595Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.229695762Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.293625512Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.357157137Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.419390262Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.482709429Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.546763220Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.609583054Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.673224304Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.736613470Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.800683887Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.865866720Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.930088137Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:36.993385721Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.056927762Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.121242221Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.185934429Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.249438596Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.322255554Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.390194971Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.451937346Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.516518679Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.580056762Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.643669346Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.716041971Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.775573721Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.833024763Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.897809888Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:37.960431096Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.025265638Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.083040971Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.138530013Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.192466263Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.199155763Z INFO:     127.0.0.1:47202 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.250996721Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.307917554Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.362320888Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.416828680Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.472996763Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.529765763Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.592073055Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.657250721Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.723061013Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.789173930Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.853515846Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.917259846Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:38.980660555Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.043280930Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.101106347Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.156694513Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.211492722Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.267198180Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.331932263Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.397788347Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.456573013Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.515018055Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.575587430Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.637850680Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.699161680Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.771441014Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.827140722Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.881635639Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.937939930Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:39.997228222Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.059987305Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.117918180Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.173645139Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.229543139Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.288593222Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.350310180Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.412093833Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.478794958Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.542236833Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.600364875Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.655678458Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.710415041Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.765508541Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.821864458Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.878447708Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.934185250Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:40.989512583Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.044926166Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.100774041Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.161910333Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.225368167Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.289522875Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.354186958Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.418765167Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.483109667Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.547209333Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.611253917Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.675194375Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.738742875Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.810197834Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.868985667Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.930246834Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:41.992153834Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.054845875Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.118989042Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.178185917Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.234321834Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.289527709Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.350457542Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.414305042Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.477510709Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.546450167Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.610118542Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.675233417Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.740428459Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.805228251Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.869210751Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.934652709Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:42.998464209Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.062112626Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.125308584Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.188638626Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.247702001Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.303191001Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.357183001Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.375648543Z INFO:     127.0.0.1:48000 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.412007834Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.466018668Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.521349751Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.581663376Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.643908834Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.706858751Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.769658751Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.849857626Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.908473085Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:43.969535168Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.033044126Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.096438835Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.159519793Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.225384668Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.284364501Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.340811251Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.399217418Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.460653251Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.524289335Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.587109460Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.651091252Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.714779460Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.778057752Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.840742502Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.905708502Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:44.970115085Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.034038752Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.097293085Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.160689960Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.224081460Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.288316543Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.352544544Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.417312252Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.481893835Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.545872085Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.609806960Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.672875585Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.736277460Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.799039252Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.862438002Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.920777085Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:45.978273585Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.040524502Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.104847336Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.168011294Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.230873086Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.294587669Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.354857086Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.412172919Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.472440961Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.536965211Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.601976336Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.667829336Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.733910336Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.799286044Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.864372169Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.929641669Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:46.993584294Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.057626419Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.120741919Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.185085378Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.248577336Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.314969294Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.379048336Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.443092920Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.506778503Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.570646920Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.633919253Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.696432586Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.760580295Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.822801586Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.887498211Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:47.946419295Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.002983711Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.064498628Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.127720253Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.190380503Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.247394045Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.302971712Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.359548420Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.414801545Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.468713128Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.498544962Z INFO:     127.0.0.1:48008 - "GET /health HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.523222337Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.577462420Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.632008920Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.688079087Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.748591753Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.813083504Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.878552045Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:48.941219420Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.004972795Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.068544545Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.131573045Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.195823462Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.261285587Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.324869879Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.386614712Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.447010129Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.504641712Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.564513171Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.627547754Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.691718254Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.754806712Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.819216254Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.883046462Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:49.966238754Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.024144921Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.085559712Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.149697046Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.214263838Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.275166713Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.338439546Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.400935129Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.458776046Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.514939838Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.571237754Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+api-1     | 2026-11-10T10:13:50.631184338Z INFO:     172.23.0.1:59662 - "GET /jobs/bb9a6dd6-27a7-43ff-8dc8-740563ff3b4b HTTP/1.1" 200 OK
+{"command": ["docker", "compose", "up", "-d", "--wait", "worker"]}
+ Container training-job-queue-db-1  Running
+ Container training-job-queue-db-1  Waiting
+ Container training-job-queue-db-1  Healthy
+ Container training-job-queue-migrate-1  Starting
+ Container training-job-queue-migrate-1  Started
+ Container training-job-queue-db-1  Waiting
+ Container training-job-queue-migrate-1  Waiting
+ Container training-job-queue-migrate-1  Exited
+ Container training-job-queue-db-1  Healthy
+ Container training-job-queue-worker-1  Starting
+ Container training-job-queue-worker-1  Started
+ Container training-job-queue-worker-2  Starting
+ Container training-job-queue-worker-2  Started
+ Container training-job-queue-worker-3  Starting
+ Container training-job-queue-worker-3  Started
+ Container training-job-queue-worker-4  Starting
+ Container training-job-queue-worker-4  Started
+ Container training-job-queue-worker-1  Waiting
+ Container training-job-queue-worker-2  Waiting
+ Container training-job-queue-worker-3  Waiting
+ Container training-job-queue-worker-4  Waiting
+ Container training-job-queue-db-1  Waiting
+ Container training-job-queue-migrate-1  Waiting
+ Container training-job-queue-migrate-1  Exited
+ Container training-job-queue-worker-1  Healthy
+ Container training-job-queue-worker-2  Healthy
+ Container training-job-queue-worker-3  Healthy
+ Container training-job-queue-worker-4  Healthy
+ Container training-job-queue-db-1  Healthy

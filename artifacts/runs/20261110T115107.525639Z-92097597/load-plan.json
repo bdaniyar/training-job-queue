@@ -1,0 +1,20 @@
+{
+  "kind": "load",
+  "seed": 4404,
+  "namespace": "load-4404-7cea0aa7061a-",
+  "outcome": "FAIL",
+  "started_at": "2026-11-10T11:51:07.918363+00:00",
+  "offered_start": 90705.950404916,
+  "offered_seconds": 120,
+  "target_rps": 100,
+  "scheduled_requests": 12000,
+  "mix": {
+    "create": 40,
+    "status": 20,
+    "list": 10,
+    "cancel": 10,
+    "replay": 10,
+    "conflict": 10
+  },
+  "retries_count_toward_rps": true
+}

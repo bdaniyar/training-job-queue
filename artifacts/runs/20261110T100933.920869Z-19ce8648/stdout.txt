@@ -1,0 +1,665 @@
+worker-2  | 2026-11-10T10:09:22.243335922Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:22.243393547Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-2  | 2026-11-10T10:09:22.243396589Z   File "<frozen runpy>", line 88, in _run_code
+worker-2  | 2026-11-10T10:09:22.243398089Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-2  | 2026-11-10T10:09:22.243399464Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-2  | 2026-11-10T10:09:22.243400839Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:22.243402172Z     class Queue:
+worker-2  | 2026-11-10T10:09:22.243403547Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-2  | 2026-11-10T10:09:22.243410339Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-2  | 2026-11-10T10:09:22.243412089Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-2  | 2026-11-10T10:09:22.243413297Z TypeError: 'function' object is not subscriptable
+worker-2  | 2026-11-10T10:09:23.267495672Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:23.267588839Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-2  | 2026-11-10T10:09:23.267591381Z   File "<frozen runpy>", line 88, in _run_code
+worker-2  | 2026-11-10T10:09:23.267592672Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-2  | 2026-11-10T10:09:23.267593839Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-2  | 2026-11-10T10:09:23.267594839Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:23.267596131Z     class Queue:
+worker-2  | 2026-11-10T10:09:23.267597172Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-2  | 2026-11-10T10:09:23.267598131Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-2  | 2026-11-10T10:09:23.267599172Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-2  | 2026-11-10T10:09:23.267600214Z TypeError: 'function' object is not subscriptable
+worker-2  | 2026-11-10T10:09:24.281728423Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:24.281751381Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-2  | 2026-11-10T10:09:24.281754339Z   File "<frozen runpy>", line 88, in _run_code
+worker-2  | 2026-11-10T10:09:24.281756464Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-2  | 2026-11-10T10:09:24.281758464Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-2  | 2026-11-10T10:09:24.281760214Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:24.281763173Z     class Queue:
+worker-2  | 2026-11-10T10:09:24.281764881Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-2  | 2026-11-10T10:09:24.281790173Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-2  | 2026-11-10T10:09:24.281818631Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-2  | 2026-11-10T10:09:24.281836798Z TypeError: 'function' object is not subscriptable
+worker-2  | 2026-11-10T10:09:25.485457548Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:25.485482923Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-2  | 2026-11-10T10:09:25.485486132Z   File "<frozen runpy>", line 88, in _run_code
+worker-2  | 2026-11-10T10:09:25.485488173Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-2  | 2026-11-10T10:09:25.485490132Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-2  | 2026-11-10T10:09:25.485491840Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:25.485493840Z     class Queue:
+worker-2  | 2026-11-10T10:09:25.485495423Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-2  | 2026-11-10T10:09:25.485497132Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-2  | 2026-11-10T10:09:25.485498882Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-2  | 2026-11-10T10:09:25.485500632Z TypeError: 'function' object is not subscriptable
+worker-2  | 2026-11-10T10:09:26.940749299Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:26.940902716Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-2  | 2026-11-10T10:09:26.940908591Z   File "<frozen runpy>", line 88, in _run_code
+worker-2  | 2026-11-10T10:09:26.940911007Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-2  | 2026-11-10T10:09:26.940913216Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-2  | 2026-11-10T10:09:26.940918174Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:26.940920216Z     class Queue:
+db-1      | 2026-11-10T10:09:17.988793545Z The files belonging to this database system will be owned by user "postgres".
+db-1      | 2026-11-10T10:09:17.989009003Z This user must also own the server process.
+db-1      | 2026-11-10T10:09:17.989015253Z 
+db-1      | 2026-11-10T10:09:17.989016336Z The database cluster will be initialized with locale "en_US.utf8".
+db-1      | 2026-11-10T10:09:17.989017211Z The default database encoding has accordingly been set to "UTF8".
+db-1      | 2026-11-10T10:09:17.989018170Z The default text search configuration will be set to "english".
+db-1      | 2026-11-10T10:09:17.989018961Z 
+db-1      | 2026-11-10T10:09:17.989019545Z Data page checksums are enabled.
+db-1      | 2026-11-10T10:09:17.989027253Z 
+db-1      | 2026-11-10T10:09:17.989036503Z fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+db-1      | 2026-11-10T10:09:17.990734545Z creating subdirectories ... ok
+db-1      | 2026-11-10T10:09:17.990745295Z selecting dynamic shared memory implementation ... posix
+db-1      | 2026-11-10T10:09:18.003054045Z selecting default "max_connections" ... 100
+db-1      | 2026-11-10T10:09:18.023187503Z selecting default "shared_buffers" ... 128MB
+db-1      | 2026-11-10T10:09:18.031622587Z selecting default time zone ... Etc/UTC
+db-1      | 2026-11-10T10:09:18.031636753Z creating configuration files ... ok
+worker-3  | 2026-11-10T10:09:22.580934172Z Traceback (most recent call last):
+worker-3  | 2026-11-10T10:09:22.580960922Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:22.580962380Z   File "<frozen runpy>", line 88, in _run_code
+worker-3  | 2026-11-10T10:09:22.580963339Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+db-1      | 2026-11-10T10:09:18.103174628Z running bootstrap script ... ok
+worker-3  | 2026-11-10T10:09:22.580966797Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-3  | 2026-11-10T10:09:22.580968964Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+db-1      | 2026-11-10T10:09:18.351764878Z performing post-bootstrap initialization ... ok
+worker-3  | 2026-11-10T10:09:22.580997089Z     class Queue:
+db-1      | 2026-11-10T10:09:18.432447837Z syncing data to disk ... ok
+db-1      | 2026-11-10T10:09:18.432475712Z 
+db-1      | 2026-11-10T10:09:18.432477628Z 
+db-1      | 2026-11-10T10:09:18.432478545Z Success. You can now start the database server using:
+db-1      | 2026-11-10T10:09:18.432479378Z 
+db-1      | 2026-11-10T10:09:18.432480003Z     pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+db-1      | 2026-11-10T10:09:18.432480753Z 
+db-1      | 2026-11-10T10:09:18.432480212Z initdb: warning: enabling "trust" authentication for local connections
+db-1      | 2026-11-10T10:09:18.432488670Z initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1      | 2026-11-10T10:09:18.451931962Z waiting for server to start....2026-11-10 10:09:18.451 UTC [52] LOG:  starting PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-1      | 2026-11-10T10:09:18.452847003Z 2026-11-10 10:09:18.452 UTC [52] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1      | 2026-11-10T10:09:18.456381212Z 2026-11-10 10:09:18.456 UTC [58] LOG:  database system was shut down at 2026-11-10 10:09:18 UTC
+db-1      | 2026-11-10T10:09:18.458422878Z 2026-11-10 10:09:18.458 UTC [52] LOG:  database system is ready to accept connections
+db-1      | 2026-11-10T10:09:18.550256920Z  done
+db-1      | 2026-11-10T10:09:18.550278378Z server started
+db-1      | 2026-11-10T10:09:18.656985545Z CREATE DATABASE
+db-1      | 2026-11-10T10:09:18.657247712Z 
+db-1      | 2026-11-10T10:09:18.657301878Z 
+db-1      | 2026-11-10T10:09:18.657305337Z /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db-1      | 2026-11-10T10:09:18.657307670Z 
+db-1      | 2026-11-10T10:09:18.657842962Z waiting for server to shut down....2026-11-10 10:09:18.657 UTC [52] LOG:  received fast shutdown request
+db-1      | 2026-11-10T10:09:18.658825337Z 2026-11-10 10:09:18.658 UTC [52] LOG:  aborting any active transactions
+db-1      | 2026-11-10T10:09:18.659526087Z 2026-11-10 10:09:18.659 UTC [52] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
+db-1      | 2026-11-10T10:09:18.659818962Z 2026-11-10 10:09:18.659 UTC [56] LOG:  shutting down
+db-1      | 2026-11-10T10:09:18.660374420Z 2026-11-10 10:09:18.660 UTC [56] LOG:  checkpoint starting: shutdown immediate
+db-1      | 2026-11-10T10:09:18.680697045Z 2026-11-10 10:09:18.680 UTC [56] LOG:  checkpoint complete: wrote 943 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.013 s, total=0.021 s; sync files=303, longest=0.006 s, average=0.001 s; distance=4352 kB, estimate=4352 kB; lsn=0/1BA1BE0, redo lsn=0/1BA1BE0
+db-1      | 2026-11-10T10:09:18.684428128Z 2026-11-10 10:09:18.684 UTC [52] LOG:  database system is shut down
+db-1      | 2026-11-10T10:09:18.760349837Z  done
+db-1      | 2026-11-10T10:09:18.760366504Z server stopped
+db-1      | 2026-11-10T10:09:18.761727337Z 
+db-1      | 2026-11-10T10:09:18.761735504Z PostgreSQL init process complete; ready for start up.
+db-1      | 2026-11-10T10:09:18.761736712Z 
+worker-2  | 2026-11-10T10:09:26.940921841Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+db-1      | 2026-11-10T10:09:18.771872754Z 2026-11-10 10:09:18.771 UTC [1] LOG:  starting PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+worker-2  | 2026-11-10T10:09:26.940923549Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:22.580998672Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-2  | 2026-11-10T10:09:26.940925382Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-3  | 2026-11-10T10:09:22.581055255Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:22.581056672Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-2  | 2026-11-10T10:09:26.940952382Z TypeError: 'function' object is not subscriptable
+worker-2  | 2026-11-10T10:09:29.210185425Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:29.210234300Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-2  | 2026-11-10T10:09:29.210253758Z   File "<frozen runpy>", line 88, in _run_code
+worker-2  | 2026-11-10T10:09:29.210256633Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-2  | 2026-11-10T10:09:29.210259008Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-2  | 2026-11-10T10:09:29.210260883Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:29.210262758Z     class Queue:
+worker-2  | 2026-11-10T10:09:29.210264467Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-2  | 2026-11-10T10:09:29.210269008Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-2  | 2026-11-10T10:09:29.210276675Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-2  | 2026-11-10T10:09:29.210278133Z TypeError: 'function' object is not subscriptable
+worker-2  | 2026-11-10T10:09:33.097036760Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:33.098343469Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:22.581058547Z TypeError: 'function' object is not subscriptable
+worker-3  | 2026-11-10T10:09:23.569452464Z Traceback (most recent call last):
+worker-3  | 2026-11-10T10:09:23.569473547Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-4  | 2026-11-10T10:09:22.303717547Z Traceback (most recent call last):
+worker-4  | 2026-11-10T10:09:22.303759130Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:23.569475214Z   File "<frozen runpy>", line 88, in _run_code
+db-1      | 2026-11-10T10:09:18.772001087Z 2026-11-10 10:09:18.771 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+worker-3  | 2026-11-10T10:09:23.569476214Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+db-1      | 2026-11-10T10:09:18.772004087Z 2026-11-10 10:09:18.771 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+worker-4  | 2026-11-10T10:09:22.303763464Z   File "<frozen runpy>", line 88, in _run_code
+worker-4  | 2026-11-10T10:09:22.303765047Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:22.303766464Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:22.303767880Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:22.303769255Z     class Queue:
+worker-4  | 2026-11-10T10:09:22.303770422Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-4  | 2026-11-10T10:09:22.303771672Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-4  | 2026-11-10T10:09:22.303773922Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:22.303775130Z TypeError: 'function' object is not subscriptable
+worker-4  | 2026-11-10T10:09:23.336113714Z Traceback (most recent call last):
+worker-4  | 2026-11-10T10:09:23.336148589Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-4  | 2026-11-10T10:09:23.336151381Z   File "<frozen runpy>", line 88, in _run_code
+worker-4  | 2026-11-10T10:09:23.336153464Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:23.336155422Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:23.336157256Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:23.336159089Z     class Queue:
+worker-2  | 2026-11-10T10:09:33.098360927Z   File "<frozen runpy>", line 88, in _run_code
+worker-2  | 2026-11-10T10:09:33.098363385Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:23.336160756Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-3  | 2026-11-10T10:09:23.569477214Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:23.336162464Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:23.569478089Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:33.098365427Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-3  | 2026-11-10T10:09:23.569479047Z     class Queue:
+worker-2  | 2026-11-10T10:09:33.098367135Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-2  | 2026-11-10T10:09:33.098368969Z     class Queue:
+worker-3  | 2026-11-10T10:09:23.569479839Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-3  | 2026-11-10T10:09:23.569480756Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:23.569481672Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-3  | 2026-11-10T10:09:23.569482464Z TypeError: 'function' object is not subscriptable
+worker-3  | 2026-11-10T10:09:24.723604090Z Traceback (most recent call last):
+worker-2  | 2026-11-10T10:09:33.098370635Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-2  | 2026-11-10T10:09:33.098372385Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-2  | 2026-11-10T10:09:33.098374219Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-2  | 2026-11-10T10:09:33.098375885Z TypeError: 'function' object is not subscriptable
+worker-4  | 2026-11-10T10:09:23.336164214Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:23.336165839Z TypeError: 'function' object is not subscriptable
+worker-4  | 2026-11-10T10:09:24.367011090Z Traceback (most recent call last):
+db-1      | 2026-11-10T10:09:18.773005170Z 2026-11-10 10:09:18.772 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+worker-3  | 2026-11-10T10:09:24.723838131Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:24.723841256Z   File "<frozen runpy>", line 88, in _run_code
+db-1      | 2026-11-10T10:09:18.775274295Z 2026-11-10 10:09:18.775 UTC [74] LOG:  database system was shut down at 2026-11-10 10:09:18 UTC
+worker-3  | 2026-11-10T10:09:24.723842506Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+db-1      | 2026-11-10T10:09:18.776715087Z 2026-11-10 10:09:18.776 UTC [1] LOG:  database system is ready to accept connections
+worker-3  | 2026-11-10T10:09:24.723843548Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-3  | 2026-11-10T10:09:24.723844506Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-3  | 2026-11-10T10:09:24.723845465Z     class Queue:
+worker-4  | 2026-11-10T10:09:24.367038715Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:24.723846215Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-3  | 2026-11-10T10:09:24.723847048Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:24.723849673Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:24.367040715Z   File "<frozen runpy>", line 88, in _run_code
+worker-3  | 2026-11-10T10:09:24.723857881Z TypeError: 'function' object is not subscriptable
+worker-3  | 2026-11-10T10:09:25.954698840Z Traceback (most recent call last):
+worker-3  | 2026-11-10T10:09:25.954733965Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:25.954737007Z   File "<frozen runpy>", line 88, in _run_code
+worker-3  | 2026-11-10T10:09:25.954739007Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-3  | 2026-11-10T10:09:25.954740965Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-3  | 2026-11-10T10:09:25.954742799Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:24.367041923Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:24.367043173Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:24.367044131Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:24.367045381Z     class Queue:
+worker-4  | 2026-11-10T10:09:24.367046256Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-4  | 2026-11-10T10:09:24.367047173Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-4  | 2026-11-10T10:09:24.367048090Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:24.367056131Z TypeError: 'function' object is not subscriptable
+worker-4  | 2026-11-10T10:09:25.513468048Z Traceback (most recent call last):
+worker-3  | 2026-11-10T10:09:25.954744632Z     class Queue:
+worker-3  | 2026-11-10T10:09:25.954746257Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-3  | 2026-11-10T10:09:25.954748090Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:25.954749882Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-3  | 2026-11-10T10:09:25.954751549Z TypeError: 'function' object is not subscriptable
+worker-3  | 2026-11-10T10:09:27.473873424Z Traceback (most recent call last):
+worker-4  | 2026-11-10T10:09:25.513499548Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-4  | 2026-11-10T10:09:25.513502632Z   File "<frozen runpy>", line 88, in _run_code
+worker-4  | 2026-11-10T10:09:25.513504673Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:25.513506548Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:25.513508382Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:25.513510132Z     class Queue:
+worker-4  | 2026-11-10T10:09:25.513511798Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-4  | 2026-11-10T10:09:25.513513840Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-4  | 2026-11-10T10:09:25.513515798Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:25.513517423Z TypeError: 'function' object is not subscriptable
+worker-4  | 2026-11-10T10:09:26.943561299Z Traceback (most recent call last):
+worker-4  | 2026-11-10T10:09:26.943588091Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-4  | 2026-11-10T10:09:26.943591174Z   File "<frozen runpy>", line 88, in _run_code
+worker-4  | 2026-11-10T10:09:26.943592966Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:26.943594841Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:26.943596549Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:26.943598424Z     class Queue:
+worker-4  | 2026-11-10T10:09:26.943600049Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-4  | 2026-11-10T10:09:26.943601841Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-4  | 2026-11-10T10:09:26.943603549Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:26.943605174Z TypeError: 'function' object is not subscriptable
+worker-4  | 2026-11-10T10:09:29.204225633Z Traceback (most recent call last):
+worker-4  | 2026-11-10T10:09:29.204236217Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-4  | 2026-11-10T10:09:29.204240592Z   File "<frozen runpy>", line 88, in _run_code
+worker-4  | 2026-11-10T10:09:29.204242217Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:29.204243425Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:29.204296508Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:29.204316675Z     class Queue:
+worker-4  | 2026-11-10T10:09:29.204319425Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-4  | 2026-11-10T10:09:29.204324008Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-4  | 2026-11-10T10:09:29.204367133Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:29.204371300Z TypeError: 'function' object is not subscriptable
+worker-4  | 2026-11-10T10:09:33.096253677Z Traceback (most recent call last):
+worker-4  | 2026-11-10T10:09:33.096271052Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-4  | 2026-11-10T10:09:33.096272969Z   File "<frozen runpy>", line 88, in _run_code
+worker-4  | 2026-11-10T10:09:33.096273927Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-4  | 2026-11-10T10:09:33.096274885Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-4  | 2026-11-10T10:09:33.096343177Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-4  | 2026-11-10T10:09:33.096464302Z     class Queue:
+worker-4  | 2026-11-10T10:09:33.096478552Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-4  | 2026-11-10T10:09:33.096483719Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-4  | 2026-11-10T10:09:33.096504260Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-4  | 2026-11-10T10:09:33.096508969Z TypeError: 'function' object is not subscriptable
+worker-3  | 2026-11-10T10:09:27.473905966Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:27.473908841Z   File "<frozen runpy>", line 88, in _run_code
+worker-3  | 2026-11-10T10:09:27.473911049Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-3  | 2026-11-10T10:09:27.473912966Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-3  | 2026-11-10T10:09:27.473914716Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-3  | 2026-11-10T10:09:27.474148049Z     class Queue:
+worker-3  | 2026-11-10T10:09:27.474159633Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-3  | 2026-11-10T10:09:27.474161383Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:27.474162591Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-3  | 2026-11-10T10:09:27.474163758Z TypeError: 'function' object is not subscriptable
+worker-3  | 2026-11-10T10:09:29.766788800Z Traceback (most recent call last):
+worker-3  | 2026-11-10T10:09:29.766831009Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:29.766834300Z   File "<frozen runpy>", line 88, in _run_code
+worker-3  | 2026-11-10T10:09:29.766836384Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-3  | 2026-11-10T10:09:29.766838425Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-3  | 2026-11-10T10:09:29.766840134Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-3  | 2026-11-10T10:09:29.766841967Z     class Queue:
+worker-3  | 2026-11-10T10:09:29.766843592Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-3  | 2026-11-10T10:09:29.766845300Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:29.766861134Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-3  | 2026-11-10T10:09:29.766862592Z TypeError: 'function' object is not subscriptable
+worker-3  | 2026-11-10T10:09:33.632832344Z Traceback (most recent call last):
+worker-3  | 2026-11-10T10:09:33.632854802Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-3  | 2026-11-10T10:09:33.632856761Z   File "<frozen runpy>", line 88, in _run_code
+worker-3  | 2026-11-10T10:09:33.632857802Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-3  | 2026-11-10T10:09:33.632858969Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-3  | 2026-11-10T10:09:33.632859844Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-3  | 2026-11-10T10:09:33.632863719Z     class Queue:
+worker-3  | 2026-11-10T10:09:33.632864969Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-3  | 2026-11-10T10:09:33.632896594Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-3  | 2026-11-10T10:09:33.632917969Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-3  | 2026-11-10T10:09:33.632970636Z TypeError: 'function' object is not subscriptable
+worker-1  | 2026-11-10T10:09:22.406538005Z Traceback (most recent call last):
+worker-1  | 2026-11-10T10:09:22.406580339Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-1  | 2026-11-10T10:09:22.406583172Z   File "<frozen runpy>", line 88, in _run_code
+worker-1  | 2026-11-10T10:09:22.406584672Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-1  | 2026-11-10T10:09:22.406586255Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-1  | 2026-11-10T10:09:22.406587547Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:22.324456880Z Traceback (most recent call last):
+api-1     | 2026-11-10T10:09:22.324485089Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+api-1     | 2026-11-10T10:09:22.324524797Z     sys.exit(main())
+api-1     | 2026-11-10T10:09:22.324536839Z              ^^^^^^
+api-1     | 2026-11-10T10:09:22.324538589Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+api-1     | 2026-11-10T10:09:22.324630422Z     return self.main(*args, **kwargs)
+api-1     | 2026-11-10T10:09:22.324635547Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.324684297Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1560, in main
+api-1     | 2026-11-10T10:09:22.324784505Z     rv = self.invoke(ctx)
+api-1     | 2026-11-10T10:09:22.324787880Z          ^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.324788672Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+api-1     | 2026-11-10T10:09:22.324951505Z     return ctx.invoke(self.callback, **ctx.params)
+api-1     | 2026-11-10T10:09:22.324953880Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.324954797Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+api-1     | 2026-11-10T10:09:22.325009922Z     return callback(*args, **kwargs)
+api-1     | 2026-11-10T10:09:22.325015380Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.325084214Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 448, in main
+api-1     | 2026-11-10T10:09:22.325167505Z     run(
+api-1     | 2026-11-10T10:09:22.325171380Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 620, in run
+api-1     | 2026-11-10T10:09:22.325172630Z     config.load_app()
+api-1     | 2026-11-10T10:09:22.325173422Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 434, in load_app
+api-1     | 2026-11-10T10:09:22.325248839Z     return import_from_string(self.app)
+api-1     | 2026-11-10T10:09:22.325261130Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.325262964Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+api-1     | 2026-11-10T10:09:22.325264672Z     module = importlib.import_module(module_str)
+api-1     | 2026-11-10T10:09:22.325268714Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.325270172Z   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+api-1     | 2026-11-10T10:09:22.325454714Z     return _bootstrap._gcd_import(name[level:], package, level)
+api-1     | 2026-11-10T10:09:22.325457130Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.325458047Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+api-1     | 2026-11-10T10:09:22.325458922Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+api-1     | 2026-11-10T10:09:22.325459630Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+api-1     | 2026-11-10T10:09:22.325460380Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+api-1     | 2026-11-10T10:09:22.325465880Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+api-1     | 2026-11-10T10:09:22.325466714Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+api-1     | 2026-11-10T10:09:22.325467547Z   File "/app/src/training_queue/api.py", line 12, in <module>
+api-1     | 2026-11-10T10:09:22.325468339Z     from training_queue.transitions import Conflict, NotFound, Queue, QueueUnavailable
+api-1     | 2026-11-10T10:09:22.325469089Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:22.325469839Z     class Queue:
+api-1     | 2026-11-10T10:09:22.325470505Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+api-1     | 2026-11-10T10:09:22.325496380Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+api-1     | 2026-11-10T10:09:22.325498172Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:22.325498922Z TypeError: 'function' object is not subscriptable
+api-1     | 2026-11-10T10:09:23.632819006Z Traceback (most recent call last):
+api-1     | 2026-11-10T10:09:23.632849423Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+api-1     | 2026-11-10T10:09:23.632852673Z     sys.exit(main())
+api-1     | 2026-11-10T10:09:23.632854548Z              ^^^^^^
+api-1     | 2026-11-10T10:09:23.632856214Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+api-1     | 2026-11-10T10:09:23.632858173Z     return self.main(*args, **kwargs)
+api-1     | 2026-11-10T10:09:23.632859798Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.632891214Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1560, in main
+api-1     | 2026-11-10T10:09:23.632895756Z     rv = self.invoke(ctx)
+api-1     | 2026-11-10T10:09:23.632897839Z          ^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.632899589Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+api-1     | 2026-11-10T10:09:23.633075506Z     return ctx.invoke(self.callback, **ctx.params)
+api-1     | 2026-11-10T10:09:23.633943756Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.633974423Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+worker-1  | 2026-11-10T10:09:22.406588839Z     class Queue:
+worker-1  | 2026-11-10T10:09:22.406589964Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-1  | 2026-11-10T10:09:22.406591380Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-1  | 2026-11-10T10:09:22.406592672Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  | 2026-11-10T10:09:22.406593880Z TypeError: 'function' object is not subscriptable
+worker-1  | 2026-11-10T10:09:23.468875714Z Traceback (most recent call last):
+worker-1  | 2026-11-10T10:09:23.468899547Z   File "<frozen runpy>", line 198, in _run_module_as_main
+api-1     | 2026-11-10T10:09:23.633976756Z     return callback(*args, **kwargs)
+api-1     | 2026-11-10T10:09:23.633977798Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.633978631Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 448, in main
+api-1     | 2026-11-10T10:09:23.633979548Z     run(
+api-1     | 2026-11-10T10:09:23.633980464Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 620, in run
+api-1     | 2026-11-10T10:09:23.633981339Z     config.load_app()
+api-1     | 2026-11-10T10:09:23.633982131Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 434, in load_app
+api-1     | 2026-11-10T10:09:23.634872006Z     return import_from_string(self.app)
+api-1     | 2026-11-10T10:09:23.634899339Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.634901298Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+worker-1  | 2026-11-10T10:09:23.468986672Z   File "<frozen runpy>", line 88, in _run_code
+worker-1  | 2026-11-10T10:09:23.468990214Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-1  | 2026-11-10T10:09:23.468992464Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-1  | 2026-11-10T10:09:23.468994339Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-1  | 2026-11-10T10:09:23.468996131Z     class Queue:
+worker-1  | 2026-11-10T10:09:23.469002381Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-1  | 2026-11-10T10:09:23.469004422Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-1  | 2026-11-10T10:09:23.469006256Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  | 2026-11-10T10:09:23.469007964Z TypeError: 'function' object is not subscriptable
+worker-1  | 2026-11-10T10:09:24.498191965Z Traceback (most recent call last):
+worker-1  | 2026-11-10T10:09:24.498223506Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-1  | 2026-11-10T10:09:24.498226256Z   File "<frozen runpy>", line 88, in _run_code
+worker-1  | 2026-11-10T10:09:24.498228173Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-1  | 2026-11-10T10:09:24.498230090Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-1  | 2026-11-10T10:09:24.498231965Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-1  | 2026-11-10T10:09:24.498233756Z     class Queue:
+worker-1  | 2026-11-10T10:09:24.498235340Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-1  | 2026-11-10T10:09:24.498237131Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-1  | 2026-11-10T10:09:24.498244715Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  | 2026-11-10T10:09:24.498270131Z TypeError: 'function' object is not subscriptable
+worker-1  | 2026-11-10T10:09:25.779100674Z Traceback (most recent call last):
+worker-1  | 2026-11-10T10:09:25.779122924Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-1  | 2026-11-10T10:09:25.779124799Z   File "<frozen runpy>", line 88, in _run_code
+worker-1  | 2026-11-10T10:09:25.779125965Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-1  | 2026-11-10T10:09:25.779127215Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-1  | 2026-11-10T10:09:25.779128174Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-1  | 2026-11-10T10:09:25.779129132Z     class Queue:
+worker-1  | 2026-11-10T10:09:25.779130007Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-1  | 2026-11-10T10:09:25.779130882Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-1  | 2026-11-10T10:09:25.779131840Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  | 2026-11-10T10:09:25.779132715Z TypeError: 'function' object is not subscriptable
+worker-1  | 2026-11-10T10:09:27.261115924Z Traceback (most recent call last):
+worker-1  | 2026-11-10T10:09:27.261138258Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-1  | 2026-11-10T10:09:27.261140174Z   File "<frozen runpy>", line 88, in _run_code
+worker-1  | 2026-11-10T10:09:27.261141383Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-1  | 2026-11-10T10:09:27.261142549Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-1  | 2026-11-10T10:09:27.261143508Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-1  | 2026-11-10T10:09:27.261144466Z     class Queue:
+worker-1  | 2026-11-10T10:09:27.261145258Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-1  | 2026-11-10T10:09:27.261146133Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-1  | 2026-11-10T10:09:27.261147008Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  | 2026-11-10T10:09:27.261147883Z TypeError: 'function' object is not subscriptable
+worker-1  | 2026-11-10T10:09:29.541271509Z Traceback (most recent call last):
+worker-1  | 2026-11-10T10:09:29.541300509Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-1  | 2026-11-10T10:09:29.541303300Z   File "<frozen runpy>", line 88, in _run_code
+worker-1  | 2026-11-10T10:09:29.541305384Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-1  | 2026-11-10T10:09:29.541993967Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-1  | 2026-11-10T10:09:29.542008425Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-1  | 2026-11-10T10:09:29.542010634Z     class Queue:
+worker-1  | 2026-11-10T10:09:29.542012342Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-1  | 2026-11-10T10:09:29.542014217Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-1  | 2026-11-10T10:09:29.542025509Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  | 2026-11-10T10:09:29.542026884Z TypeError: 'function' object is not subscriptable
+worker-1  | 2026-11-10T10:09:33.436259719Z Traceback (most recent call last):
+worker-1  | 2026-11-10T10:09:33.436286261Z   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-1  | 2026-11-10T10:09:33.436302094Z   File "<frozen runpy>", line 88, in _run_code
+worker-1  | 2026-11-10T10:09:33.436304427Z   File "/app/src/training_queue/worker.py", line 14, in <module>
+worker-1  | 2026-11-10T10:09:33.436306469Z     from training_queue.transitions import Queue, QueueUnavailable
+worker-1  | 2026-11-10T10:09:33.436308261Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+worker-1  | 2026-11-10T10:09:33.436332386Z     class Queue:
+worker-1  | 2026-11-10T10:09:33.436344802Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+worker-1  | 2026-11-10T10:09:33.436346427Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+worker-1  | 2026-11-10T10:09:33.436373344Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+worker-1  | 2026-11-10T10:09:33.436377636Z TypeError: 'function' object is not subscriptable
+api-1     | 2026-11-10T10:09:23.634902839Z     module = importlib.import_module(module_str)
+api-1     | 2026-11-10T10:09:23.634904256Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.634905423Z   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+api-1     | 2026-11-10T10:09:23.634906756Z     return _bootstrap._gcd_import(name[level:], package, level)
+api-1     | 2026-11-10T10:09:23.634907964Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.634909298Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+api-1     | 2026-11-10T10:09:23.634910839Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+api-1     | 2026-11-10T10:09:23.634912131Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+api-1     | 2026-11-10T10:09:23.634913423Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+api-1     | 2026-11-10T10:09:23.634914673Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+api-1     | 2026-11-10T10:09:23.634915964Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+api-1     | 2026-11-10T10:09:23.634917256Z   File "/app/src/training_queue/api.py", line 12, in <module>
+api-1     | 2026-11-10T10:09:23.634918589Z     from training_queue.transitions import Conflict, NotFound, Queue, QueueUnavailable
+api-1     | 2026-11-10T10:09:23.634919881Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:23.634921214Z     class Queue:
+api-1     | 2026-11-10T10:09:23.634922339Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+api-1     | 2026-11-10T10:09:23.634923589Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+api-1     | 2026-11-10T10:09:23.634924839Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:23.634926048Z TypeError: 'function' object is not subscriptable
+api-1     | 2026-11-10T10:09:24.903186215Z Traceback (most recent call last):
+api-1     | 2026-11-10T10:09:24.903203381Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+api-1     | 2026-11-10T10:09:24.903208506Z     sys.exit(main())
+api-1     | 2026-11-10T10:09:24.903209798Z              ^^^^^^
+api-1     | 2026-11-10T10:09:24.903212465Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+api-1     | 2026-11-10T10:09:24.903745173Z     return self.main(*args, **kwargs)
+api-1     | 2026-11-10T10:09:24.903752090Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.903753215Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1560, in main
+api-1     | 2026-11-10T10:09:24.903754256Z     rv = self.invoke(ctx)
+api-1     | 2026-11-10T10:09:24.903755923Z          ^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.903762340Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+api-1     | 2026-11-10T10:09:24.903763256Z     return ctx.invoke(self.callback, **ctx.params)
+api-1     | 2026-11-10T10:09:24.903764006Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.903764798Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+api-1     | 2026-11-10T10:09:24.904154631Z     return callback(*args, **kwargs)
+api-1     | 2026-11-10T10:09:24.904158756Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.904159965Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 448, in main
+api-1     | 2026-11-10T10:09:24.904160965Z     run(
+api-1     | 2026-11-10T10:09:24.904161715Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 620, in run
+api-1     | 2026-11-10T10:09:24.904162548Z     config.load_app()
+api-1     | 2026-11-10T10:09:24.904163215Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 434, in load_app
+api-1     | 2026-11-10T10:09:24.904164006Z     return import_from_string(self.app)
+api-1     | 2026-11-10T10:09:24.904164715Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.904165381Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+api-1     | 2026-11-10T10:09:24.904166215Z     module = importlib.import_module(module_str)
+api-1     | 2026-11-10T10:09:24.904166965Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.904167631Z   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+api-1     | 2026-11-10T10:09:24.904168381Z     return _bootstrap._gcd_import(name[level:], package, level)
+api-1     | 2026-11-10T10:09:24.904169090Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.904169798Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+api-1     | 2026-11-10T10:09:24.904170631Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+api-1     | 2026-11-10T10:09:24.904171423Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+api-1     | 2026-11-10T10:09:24.904172215Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+api-1     | 2026-11-10T10:09:24.904172923Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+api-1     | 2026-11-10T10:09:24.904173673Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+api-1     | 2026-11-10T10:09:24.904174465Z   File "/app/src/training_queue/api.py", line 12, in <module>
+api-1     | 2026-11-10T10:09:24.905277173Z     from training_queue.transitions import Conflict, NotFound, Queue, QueueUnavailable
+api-1     | 2026-11-10T10:09:24.905282965Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:24.905284090Z     class Queue:
+api-1     | 2026-11-10T10:09:24.905284923Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+api-1     | 2026-11-10T10:09:24.905289465Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+api-1     | 2026-11-10T10:09:24.905290298Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:24.905291048Z TypeError: 'function' object is not subscriptable
+api-1     | 2026-11-10T10:09:26.268642382Z Traceback (most recent call last):
+api-1     | 2026-11-10T10:09:26.268667882Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+api-1     | 2026-11-10T10:09:26.268669882Z     sys.exit(main())
+api-1     | 2026-11-10T10:09:26.268671007Z              ^^^^^^
+api-1     | 2026-11-10T10:09:26.268672340Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+api-1     | 2026-11-10T10:09:26.268807507Z     return self.main(*args, **kwargs)
+api-1     | 2026-11-10T10:09:26.268824632Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.268827174Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1560, in main
+api-1     | 2026-11-10T10:09:26.268889299Z     rv = self.invoke(ctx)
+api-1     | 2026-11-10T10:09:26.268899257Z          ^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.268901882Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+api-1     | 2026-11-10T10:09:26.269104507Z     return ctx.invoke(self.callback, **ctx.params)
+api-1     | 2026-11-10T10:09:26.269153757Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.269193590Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+api-1     | 2026-11-10T10:09:26.269339715Z     return callback(*args, **kwargs)
+api-1     | 2026-11-10T10:09:26.269347174Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.269349049Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 448, in main
+api-1     | 2026-11-10T10:09:26.269453965Z     run(
+api-1     | 2026-11-10T10:09:26.269461632Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 620, in run
+api-1     | 2026-11-10T10:09:26.269528174Z     config.load_app()
+api-1     | 2026-11-10T10:09:26.269533507Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 434, in load_app
+api-1     | 2026-11-10T10:09:26.269659299Z     return import_from_string(self.app)
+api-1     | 2026-11-10T10:09:26.269663674Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.269664757Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+api-1     | 2026-11-10T10:09:26.269779174Z     module = importlib.import_module(module_str)
+api-1     | 2026-11-10T10:09:26.269782090Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.269783132Z   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+api-1     | 2026-11-10T10:09:26.269784215Z     return _bootstrap._gcd_import(name[level:], package, level)
+api-1     | 2026-11-10T10:09:26.269785132Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.269785882Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+api-1     | 2026-11-10T10:09:26.269795632Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+api-1     | 2026-11-10T10:09:26.269796590Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+api-1     | 2026-11-10T10:09:26.269797340Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+api-1     | 2026-11-10T10:09:26.269798090Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+api-1     | 2026-11-10T10:09:26.269798882Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+api-1     | 2026-11-10T10:09:26.269799757Z   File "/app/src/training_queue/api.py", line 12, in <module>
+api-1     | 2026-11-10T10:09:26.269831715Z     from training_queue.transitions import Conflict, NotFound, Queue, QueueUnavailable
+api-1     | 2026-11-10T10:09:26.269852590Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:26.269853715Z     class Queue:
+api-1     | 2026-11-10T10:09:26.269854382Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+api-1     | 2026-11-10T10:09:26.269909757Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+api-1     | 2026-11-10T10:09:26.269948299Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:26.269950465Z TypeError: 'function' object is not subscriptable
+api-1     | 2026-11-10T10:09:27.794522216Z Traceback (most recent call last):
+api-1     | 2026-11-10T10:09:27.794544674Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+api-1     | 2026-11-10T10:09:27.794546716Z     sys.exit(main())
+api-1     | 2026-11-10T10:09:27.794547799Z              ^^^^^^
+api-1     | 2026-11-10T10:09:27.794548716Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+api-1     | 2026-11-10T10:09:27.794675799Z     return self.main(*args, **kwargs)
+api-1     | 2026-11-10T10:09:27.794681883Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.794683341Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1560, in main
+api-1     | 2026-11-10T10:09:27.794813299Z     rv = self.invoke(ctx)
+api-1     | 2026-11-10T10:09:27.794819883Z          ^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.794821466Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+api-1     | 2026-11-10T10:09:27.794928466Z     return ctx.invoke(self.callback, **ctx.params)
+api-1     | 2026-11-10T10:09:27.794932924Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.794934008Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+api-1     | 2026-11-10T10:09:27.795028841Z     return callback(*args, **kwargs)
+api-1     | 2026-11-10T10:09:27.795031966Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.795032966Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 448, in main
+api-1     | 2026-11-10T10:09:27.795123174Z     run(
+api-1     | 2026-11-10T10:09:27.795125966Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 620, in run
+api-1     | 2026-11-10T10:09:27.795192216Z     config.load_app()
+api-1     | 2026-11-10T10:09:27.795194508Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 434, in load_app
+api-1     | 2026-11-10T10:09:27.795249924Z     return import_from_string(self.app)
+api-1     | 2026-11-10T10:09:27.795252966Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.795262341Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+api-1     | 2026-11-10T10:09:27.795296841Z     module = importlib.import_module(module_str)
+api-1     | 2026-11-10T10:09:27.795301008Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.795302049Z   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+api-1     | 2026-11-10T10:09:27.795350591Z     return _bootstrap._gcd_import(name[level:], package, level)
+api-1     | 2026-11-10T10:09:27.795363758Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.795367133Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+api-1     | 2026-11-10T10:09:27.795368133Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+api-1     | 2026-11-10T10:09:27.795368966Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+api-1     | 2026-11-10T10:09:27.795369716Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+api-1     | 2026-11-10T10:09:27.795370716Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+api-1     | 2026-11-10T10:09:27.795371466Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+api-1     | 2026-11-10T10:09:27.795389716Z   File "/app/src/training_queue/api.py", line 12, in <module>
+api-1     | 2026-11-10T10:09:27.795393966Z     from training_queue.transitions import Conflict, NotFound, Queue, QueueUnavailable
+api-1     | 2026-11-10T10:09:27.795409466Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:27.795442299Z     class Queue:
+api-1     | 2026-11-10T10:09:27.795443966Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+api-1     | 2026-11-10T10:09:27.795476841Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+api-1     | 2026-11-10T10:09:27.795484466Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:27.795499133Z TypeError: 'function' object is not subscriptable
+api-1     | 2026-11-10T10:09:30.111477509Z Traceback (most recent call last):
+api-1     | 2026-11-10T10:09:30.111498259Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+api-1     | 2026-11-10T10:09:30.111499967Z     sys.exit(main())
+api-1     | 2026-11-10T10:09:30.111500842Z              ^^^^^^
+api-1     | 2026-11-10T10:09:30.111501926Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+api-1     | 2026-11-10T10:09:30.111605259Z     return self.main(*args, **kwargs)
+api-1     | 2026-11-10T10:09:30.111613884Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.111614717Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1560, in main
+api-1     | 2026-11-10T10:09:30.111741301Z     rv = self.invoke(ctx)
+api-1     | 2026-11-10T10:09:30.111745926Z          ^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.111747051Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+api-1     | 2026-11-10T10:09:30.111855134Z     return ctx.invoke(self.callback, **ctx.params)
+api-1     | 2026-11-10T10:09:30.111857801Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.111860592Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+api-1     | 2026-11-10T10:09:30.111943801Z     return callback(*args, **kwargs)
+api-1     | 2026-11-10T10:09:30.111946051Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.111948176Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 448, in main
+api-1     | 2026-11-10T10:09:30.112016801Z     run(
+api-1     | 2026-11-10T10:09:30.112018884Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 620, in run
+api-1     | 2026-11-10T10:09:30.112070926Z     config.load_app()
+api-1     | 2026-11-10T10:09:30.112076009Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 434, in load_app
+api-1     | 2026-11-10T10:09:30.112122759Z     return import_from_string(self.app)
+api-1     | 2026-11-10T10:09:30.112124717Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.112125467Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+api-1     | 2026-11-10T10:09:30.112145884Z     module = importlib.import_module(module_str)
+api-1     | 2026-11-10T10:09:30.112154717Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.112157342Z   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+api-1     | 2026-11-10T10:09:30.112207842Z     return _bootstrap._gcd_import(name[level:], package, level)
+api-1     | 2026-11-10T10:09:30.112215634Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.112224926Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+api-1     | 2026-11-10T10:09:30.112228592Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+api-1     | 2026-11-10T10:09:30.112229384Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+api-1     | 2026-11-10T10:09:30.112230176Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+api-1     | 2026-11-10T10:09:30.112231759Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+api-1     | 2026-11-10T10:09:30.112233676Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+api-1     | 2026-11-10T10:09:30.112236259Z   File "/app/src/training_queue/api.py", line 12, in <module>
+api-1     | 2026-11-10T10:09:30.112319926Z     from training_queue.transitions import Conflict, NotFound, Queue, QueueUnavailable
+api-1     | 2026-11-10T10:09:30.112326926Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:30.112327926Z     class Queue:
+api-1     | 2026-11-10T10:09:30.112328634Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+api-1     | 2026-11-10T10:09:30.112371301Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+api-1     | 2026-11-10T10:09:30.112378884Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:30.112425009Z TypeError: 'function' object is not subscriptable
+api-1     | 2026-11-10T10:09:33.964986511Z Traceback (most recent call last):
+api-1     | 2026-11-10T10:09:33.965010302Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+api-1     | 2026-11-10T10:09:33.965012219Z     sys.exit(main())
+api-1     | 2026-11-10T10:09:33.965013177Z              ^^^^^^
+api-1     | 2026-11-10T10:09:33.965014136Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1653, in __call__
+api-1     | 2026-11-10T10:09:33.965101802Z     return self.main(*args, **kwargs)
+api-1     | 2026-11-10T10:09:33.965105677Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965106636Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1560, in main
+api-1     | 2026-11-10T10:09:33.965230552Z     rv = self.invoke(ctx)
+api-1     | 2026-11-10T10:09:33.965233511Z          ^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965234386Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1414, in invoke
+api-1     | 2026-11-10T10:09:33.965391219Z     return ctx.invoke(self.callback, **ctx.params)
+api-1     | 2026-11-10T10:09:33.965396927Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965398386Z   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 911, in invoke
+api-1     | 2026-11-10T10:09:33.965427177Z     return callback(*args, **kwargs)
+api-1     | 2026-11-10T10:09:33.965429511Z            ^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965445719Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 448, in main
+api-1     | 2026-11-10T10:09:33.965506761Z     run(
+api-1     | 2026-11-10T10:09:33.965508802Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 620, in run
+api-1     | 2026-11-10T10:09:33.965562594Z     config.load_app()
+api-1     | 2026-11-10T10:09:33.965565261Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 434, in load_app
+api-1     | 2026-11-10T10:09:33.965623719Z     return import_from_string(self.app)
+api-1     | 2026-11-10T10:09:33.965626094Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965626927Z   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+api-1     | 2026-11-10T10:09:33.965661427Z     module = importlib.import_module(module_str)
+api-1     | 2026-11-10T10:09:33.965670552Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965672844Z   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+api-1     | 2026-11-10T10:09:33.965714761Z     return _bootstrap._gcd_import(name[level:], package, level)
+api-1     | 2026-11-10T10:09:33.965736677Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965738136Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+api-1     | 2026-11-10T10:09:33.965739052Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+api-1     | 2026-11-10T10:09:33.965741719Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+api-1     | 2026-11-10T10:09:33.965742552Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+api-1     | 2026-11-10T10:09:33.965746177Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+api-1     | 2026-11-10T10:09:33.965747011Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+api-1     | 2026-11-10T10:09:33.965747761Z   File "/app/src/training_queue/api.py", line 12, in <module>
+api-1     | 2026-11-10T10:09:33.965779886Z     from training_queue.transitions import Conflict, NotFound, Queue, QueueUnavailable
+api-1     | 2026-11-10T10:09:33.965781552Z   File "/app/src/training_queue/transitions.py", line 39, in <module>
+api-1     | 2026-11-10T10:09:33.965847052Z     class Queue:
+api-1     | 2026-11-10T10:09:33.965851344Z   File "/app/src/training_queue/transitions.py", line 225, in Queue
+api-1     | 2026-11-10T10:09:33.965867427Z     async def recover(self) -> list[tuple[UUID, str, int]]:
+api-1     | 2026-11-10T10:09:33.965884511Z                                ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+api-1     | 2026-11-10T10:09:33.965887011Z TypeError: 'function' object is not subscriptable

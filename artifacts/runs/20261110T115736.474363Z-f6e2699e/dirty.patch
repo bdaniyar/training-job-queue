@@ -1,0 +1,169 @@
+diff --git a/AI_USE.md b/AI_USE.md
+index 2e062d3..a118cfb 100644
+--- a/AI_USE.md
++++ b/AI_USE.md
+@@ -1,4 +1,4 @@
+-# AI assistance: Phase 2
++# AI assistance: Phases 2 and 3
+ 
+ AI assistance is allowed by the Soup assignment. This file describes what happened
+ in this collaboration; it does not claim that the developer independently reviewed
+@@ -63,3 +63,36 @@ An engineering observation from this phase: a successful command to send a signa
+ does not establish that the intended worker died. Checking process restart and
+ claim generation was necessary to make the smoke result meaningful. Likewise, a
+ passing test count with cleanup warnings was insufficient evidence of correctness.
++
++## Phase 3 assistance and verification
++
++Codex reread the complete original PDF, Phase 2 documents/code/tests/recorder, and
++created the Phase 3 branch from the supplied Phase 2 commit. It implemented the
++seeded HTTP/SIGKILL harness, read-only snapshot oracle, open-loop load generator,
++live SIGSTOP/SIGCONT zombie check, helper tests, summary/index tools, and reports.
++It ran all recorded checks; no independent human verification is claimed.
++
++The transaction protocol and deployed application code were retained. Three full
++10,000-job chaos runs passed their final invariants. One smaller pilot showed that
++aggressive cancellation preempted every transient retry, so cancellation intensity
++was reduced before full runs to exercise retries and longer work more meaningfully.
++The pilot is retained, not counted as a full run. Four create transport errors in
++seed 2202 were reconciled by same-key retries; their root cause remains unproven.
++The report treats them as an availability warning, not a concurrency fix or a
++fabricated network-partition test. No application exception was found at those
++times in captured logs. Deliberately induced SQL errors in the integration-test
++database are identified separately from chaos failures.
++
++Additional corrections addressed Ruff findings, load-task exception collection,
++HTTP-response versus attempt-completion counting, safe environment/inspect capture,
++and event-driven waiting for the resumed worker's ownership-lost log. The recorder
++now passes an evidence-directory path to experiments and records selected relevant
++configuration/dependency versions. Compressed raw streams remain separate from
++derived summaries; previous raw artifacts were not rewritten.
++
++The production verdict and actual load measurements are in REPORT.md. Any
++interpretation of the four transport failures, harness overhead, or production
++capacity beyond the measured workload is explicitly limited. Database clock jumps,
++real network partitions, failover durability, and realistic CPU/GPU training remain
++untested. The user's update cancelling the live discussion governs over the PDF's
++older statement. No email or PR was sent/opened; submission remains for user review.
+diff --git a/DESIGN.md b/DESIGN.md
+index 9196558..79fc64b 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -1,6 +1,7 @@
+ # Training job queue: Phase 1 design
+ 
+-**Implemented in Phase 2; capacity remains unmeasured.** Python 3.11+, FastAPI, async SQLAlchemy,
++**Implemented in Phase 2; Phase 3 evidence is in [REPORT.md](REPORT.md).**
++Python 3.11+, FastAPI, async SQLAlchemy,
+ PostgreSQL, Alembic, pytest, Ruff; one modular monolith with independent worker
+ processes. PostgreSQL provides row locking and atomic effect/state commits in one
+ store; Redis/Celery would add another coordination boundary without a requirement.
+diff --git a/README.md b/README.md
+index c99e33b..29944aa 100644
+--- a/README.md
++++ b/README.md
+@@ -1,9 +1,10 @@
+ # training-job-queue
+ 
+ A small FastAPI/PostgreSQL queue with independent worker processes, fenced leases,
+-transactional completion, and countable database effects. Phase 2 implements the
+-core service. The full 10,000-job chaos harness and 100 requests/sec verdict are
+-Phase 3; no production-readiness or throughput claim is made here.
++transactional completion, and countable database effects. Phase 3 adds real seeded
++chaos experiments, a sustained open-loop HTTP load test, and a documented verdict.
++See [REPORT.md](REPORT.md) for measured results and their limits; the submission
++design note is [DESIGN_SUMMARY.md](DESIGN_SUMMARY.md), with the full design retained.
+ 
+ The complete one-page Soup assignment PDF was read in Phase 1. The user's stack
+ and deadline govern: **November 11, 2026, 22:10 Asia/Almaty (UTC+05:00)**. Per the
+@@ -175,9 +176,9 @@ archives. Snapshotting service logs before Compose recreation was added after th
+ first smoke run; its HTTP/command output is retained, but its old worker containers'
+ full logs were not captured. This evidence gap is not retrospectively filled.
+ 
+-## Limitations and Phase 3
++## Limitations and production verdict
+ 
+-No 100 requests/sec measurements, full chaos runs, or SHIP verdict yet. The
++The measured scope and production verdict are in [REPORT.md](REPORT.md). The
+ simulation asynchronously waits and squares an integer; it does not measure real
+ CPU/GPU training, external effects, or shared resource capacity. Authentication,
+ rate limiting, key expiry, and retention are out of scope. Direct privileged SQL
+@@ -188,9 +189,72 @@ partitions, unfair scheduling/starvation, and every possible interleaving remain
+ unproven. Client clock offsets cannot authorize leases; a DB wall-clock jump can
+ change recovery timing. Pagination is not a consistent snapshot across requests.
+ 
+-Phase 3 will add the 10,000-job/eight-worker seeded harness, concurrent key replays
+-and cancellations, repeated random kills approximately every two seconds, bounded
+-drain/reconciliation, snapshot invariant queries, raw output of **all** attempted
+-runs, and harness blind spots. Then measure a stated 100 requests/sec workload
+-with agreed latency/error/backlog limits and publish an evidence-based verdict,
+-first fixes, reflection, and updated AI notes. Stop after Phase 2 for review.
++## Reproduce Phase 3 experiments
++
++The experiment scripts require invocation through `scripts/record.py`. They use
++only their specified Compose project and unique key namespaces; they never delete
++existing jobs or volumes. Use a separate project to preserve Phase 2 data:
++
++```sh
++export QUEUE_API_PORT=18000 QUEUE_DB_PORT=55433
++python3 scripts/record.py docker compose -p queue-phase3 up --build -d --wait
++python3 scripts/record.py docker compose -p queue-phase3 \
++  -f compose.yaml -f compose.eight.yaml up -d --wait --no-build
++python3 scripts/record.py uv run --frozen python -m scripts.chaos --seed 1101
++python3 scripts/record.py uv run --frozen python -m scripts.chaos --seed 2202
++python3 scripts/record.py uv run --frozen python -m scripts.chaos --seed 3303
++python3 scripts/record.py uv run --frozen python -m scripts.zombie --seed 5505
++python3 scripts/record.py uv run --frozen python -m scripts.load --seed 4404
++```
++
++Run those commands sequentially. The tested service is http://localhost:18000;
++the scripts default to PostgreSQL on localhost:55433. If overriding the project,
++ports, or database, pass matching `--project`, `--base-url`, and database configuration.
++`QUEUE_DATABASE_URL` overrides the experiment database address, so do not leave it
++pointing at a test database or another stack. Containers are label-checked before
++faults; SIGKILL targets the Python worker child and verifies a new boot UUID and
++restart count. SIGSTOP/SIGCONT in the zombie check exercises a returning live process.
++
++A full chaos run creates 10,000 distinct intended jobs; `--jobs 300 --create-rps 50`
++is a small pilot, not a full run. Default full runs create at a target 200/sec,
++run completion-paced replay/conflict traffic up to 50/sec, and target up to two
++queued and one running cancellation every 0.5 s. Secondary traffic slows under
++load. Exactly eight worker slots are maintained, with measured brief restart gaps.
++Kill scheduling can slip while replacement is pending. Seeds reproduce payloads
++and random choices, not every OS/transaction interleaving. Workload distributions,
++drain formula, and predeclared load criteria are in [EXPERIMENTS.md](EXPERIMENTS.md).
++
++The load test offers 100 HTTP requests/sec for 120 seconds. Its mix is 40% creates,
++20% status, 10% list, 10% cancel, 10% replay, and 10% conflicting replay; retries
++count toward offered traffic. Twenty setup jobs are excluded from measured rate.
++API request throughput and worker job throughput are reported separately.
++
++Each experiment retains compressed unedited HTTP/service/fault/telemetry streams,
++intended manifests, read-only database snapshots, configuration/environment,
++assertions, and summary. Read with `gzip -cd FILE.jsonl.gz`. `summary.json` contains
++the final outcome; intermediate console events are not the final verdict.
++
++For a separate integration-test database on the Phase 3 PostgreSQL server:
++
++```sh
++# Create once; an existing-database error means this step is already done.
++python3 scripts/record.py docker compose -p queue-phase3 exec -T db \
++  createdb -U queue queue_phase3_test
++QUEUE_DATABASE_URL=postgresql+asyncpg://queue:queue@localhost:55433/queue_phase3_test \
++  python3 scripts/record.py uv run --frozen alembic upgrade head
++TEST_DATABASE_URL=postgresql+asyncpg://queue:queue@localhost:55433/queue_phase3_test \
++  python3 scripts/record.py uv run --frozen pytest -v -W error
++```
++
++[artifacts/INDEX.md](artifacts/INDEX.md) indexes every Phase 2 and Phase 3 recorded
++run, including failures. Regenerate derived summaries with:
++
++```sh
++python3 scripts/record.py uv run --frozen python -m scripts.summarize_experiments
++uv run --frozen python -m scripts.index_evidence
++```
++
++The report includes the failure-analysis matrix, exact counts, performance metrics,
++limitations, reflection, and prioritized fixes. The live discussion was cancelled
++according to the user's latest Soup email update. No submission email or PR has
++been sent/opened. Phase 3 ends for review before submission.

@@ -1,0 +1,28 @@
+{
+  "kind": "zombie",
+  "seed": 5505,
+  "namespace": "zombie-5505-a37c77edf206-",
+  "outcome": "PASS",
+  "started_at": "2026-11-10T11:50:23.982927+00:00",
+  "drain_seconds": 4.108436333001009,
+  "snapshot": "93130:93130:",
+  "intended_jobs": 1,
+  "jobs": 1,
+  "effects": 1,
+  "states": {
+    "succeeded": 1
+  },
+  "failed_reasons": {},
+  "committed_claims": 2,
+  "retries": 1,
+  "cancelled_acknowledgements": 0,
+  "worker_log_counts": {
+    "claim_committed": 2,
+    "execution_started": 2,
+    "recovered": 1,
+    "execution_finished": 2,
+    "ownership_lost": 1,
+    "effect_committed": 1
+  },
+  "assertions_failed": []
+}

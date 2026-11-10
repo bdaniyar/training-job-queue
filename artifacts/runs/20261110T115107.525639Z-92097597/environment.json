@@ -1,0 +1,136 @@
+{
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "cpu_count": 8,
+  "dependencies": {
+    "httpx": "0.28.1",
+    "asyncpg": "0.32.0",
+    "sqlalchemy": "2.0.57",
+    "fastapi": "0.162.2"
+  },
+  "docker": {
+    "version": "28.3.2",
+    "cpus": 8,
+    "memory_bytes": 8218316800,
+    "os": "Docker Desktop",
+    "architecture": "aarch64"
+  },
+  "workers": [
+    {
+      "id": "3ce177c9778f4ca37c087e3bc6e08c5355a679d49bd8416e167ae6f53116d806",
+      "name": "/queue-phase3-worker-1",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:25.364662801Z"
+      },
+      "restarts": 6
+    },
+    {
+      "id": "06a04001a4e5e6172e2de8e7789a02957934ac97dd98a171673587dc7d1d4189",
+      "name": "/queue-phase3-worker-2",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:07.221548751Z"
+      },
+      "restarts": 9
+    },
+    {
+      "id": "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7",
+      "name": "/queue-phase3-worker-3",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:31.665258971Z"
+      },
+      "restarts": 12
+    },
+    {
+      "id": "913e9e33bcb1c1b98c1e89f6cbab0324ab659791da729976df9965faeaea241a",
+      "name": "/queue-phase3-worker-4",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:35.338547375Z"
+      },
+      "restarts": 9
+    },
+    {
+      "id": "2c5963955ed539c2e869783181fd0036d8909e51a638348ce220ddaf0daa574d",
+      "name": "/queue-phase3-worker-5",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:28.065548469Z"
+      },
+      "restarts": 10
+    },
+    {
+      "id": "4e4f4c9d6983c42c534f42171061a6ca0ad7c5f269d857edcd504b5b63a8718a",
+      "name": "/queue-phase3-worker-6",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:37.661710376Z"
+      },
+      "restarts": 13
+    },
+    {
+      "id": "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc",
+      "name": "/queue-phase3-worker-7",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:01.085283221Z"
+      },
+      "restarts": 9
+    },
+    {
+      "id": "8429daeb550491dca0006ec099fb811e1e4d8c1164c150eb3977d7abe57dbf6e",
+      "name": "/queue-phase3-worker-8",
+      "image": "sha256:fe4b3a735a4cd7bfb2201a43c72431e2c323b977b2c6bf08552d08e1cb630b41",
+      "project": "queue-phase3",
+      "service": "worker",
+      "state": {
+        "Running": true,
+        "StartedAt": "2026-11-10T11:48:39.357515502Z"
+      },
+      "restarts": 6
+    }
+  ],
+  "worker_owners": {
+    "3ce177c9778f4ca37c087e3bc6e08c5355a679d49bd8416e167ae6f53116d806": "0f34dd54-e0b0-4c3a-a423-a35bf30541ab",
+    "06a04001a4e5e6172e2de8e7789a02957934ac97dd98a171673587dc7d1d4189": "c4f5ce54-815c-4f7e-b81d-ebc996d7cd9f",
+    "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7": "b44776de-e980-4941-8cdb-cc9973779cb8",
+    "913e9e33bcb1c1b98c1e89f6cbab0324ab659791da729976df9965faeaea241a": "8030cf18-9630-4311-ac40-e8d9a88a874b",
+    "2c5963955ed539c2e869783181fd0036d8909e51a638348ce220ddaf0daa574d": "f583b60c-b036-49fd-bbd7-90902cf63f81",
+    "4e4f4c9d6983c42c534f42171061a6ca0ad7c5f269d857edcd504b5b63a8718a": "41b03eba-8f49-4a8b-a24a-19e67ce17c69",
+    "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc": "e4649f58-d882-4c28-a590-b5d85b97c8da",
+    "8429daeb550491dca0006ec099fb811e1e4d8c1164c150eb3977d7abe57dbf6e": "b0ba1be5-0197-414d-b175-927853ff59cd"
+  },
+  "postgres": "PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "config": {
+    "seed": 4404,
+    "project": "queue-phase3",
+    "base_url": "http://localhost:18000",
+    "rps": 100,
+    "seconds": 120
+  },
+  "lease_seconds": 10,
+  "heartbeat_seconds": 3,
+  "attempt_seconds": 120
+}

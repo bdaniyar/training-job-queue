@@ -1,0 +1,5 @@
+# docker compose -f compose.yaml -f compose.eight.yaml up --build
+services:
+  worker:
+    deploy:
+      replicas: 8

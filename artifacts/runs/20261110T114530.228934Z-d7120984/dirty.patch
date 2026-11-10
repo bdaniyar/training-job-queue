@@ -1,0 +1,19 @@
+diff --git a/scripts/experiment.py b/scripts/experiment.py
+index 44cc4ce..4a0540e 100644
+--- a/scripts/experiment.py
++++ b/scripts/experiment.py
+@@ -98,6 +98,7 @@ class Experiment:
+         self.http_errors = []
+         self.request_count = 0
+         self.log_events = []
++        self.log_changed = asyncio.Event()
+         self.samples = []
+         self.kills = []
+         self.client = httpx.AsyncClient(
+@@ -249,6 +250,7 @@ class Experiment:
+                             entry = json.loads(line[line.index(b"{") :])
+                             if "event" in entry:
+                                 self.log_events.append(entry)
++                                self.log_changed.set()
+                         except (ValueError, UnicodeError):
+                             pass  # raw line remains available for independent inspection

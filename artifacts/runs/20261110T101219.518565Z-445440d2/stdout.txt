@@ -1,0 +1,124 @@
+unformatted: File would be reformatted
+  --> scripts/record.py:35:34
+   |
+34 |     }
+   -     db = urlsplit(os.environ.get(
+   -         "TEST_DATABASE_URL", os.environ.get("QUEUE_DATABASE_URL", "")
+   -     ))
+35 +     db = urlsplit(os.environ.get("TEST_DATABASE_URL", os.environ.get("QUEUE_DATABASE_URL", "")))
+36 |     metadata = {
+   |
+
+unformatted: File would be reformatted
+   --> scripts/smoke.py:37:1
+    |
+36  |     async with httpx.AsyncClient(base_url="http://localhost:8000", timeout=10) as client:
+37  +
+38  |         async def request(method, path, **kwargs):
+39  |             response = await client.request(method, path, **kwargs)
+    -             print(json.dumps({"method": method, "path": path, "status": response.status_code,
+    -                               "body": response.json()}), flush=True)
+40  +             print(
+41  +                 json.dumps(
+42  +                     {
+43  +                         "method": method,
+44  +                         "path": path,
+45  +                         "status": response.status_code,
+46  +                         "body": response.json(),
+47  +                     }
+48  +                 ),
+49  +                 flush=True,
+50  +             )
+51  |             return response
+52  |
+53  |         async def create(name, **payload):
+    -             response = await request("POST", "/jobs", json=payload,
+    -                                      headers={"Idempotency-Key": f"{prefix}-{name}"})
+54  +             response = await request(
+55  +                 "POST", "/jobs", json=payload, headers={"Idempotency-Key": f"{prefix}-{name}"}
+56  +             )
+57  |             assert response.status_code == 201
+--------------------------------------------------------------------------------
+78  |                 await create(str(i), value=i - 2, duration_ms=20)
+    -             replay = await request("POST", "/jobs", json={"value": -2, "duration_ms": 20},
+    -                                    headers={"Idempotency-Key": f"{prefix}-0"})
+79  +             replay = await request(
+80  +                 "POST",
+81  +                 "/jobs",
+82  +                 json={"value": -2, "duration_ms": 20},
+83  +                 headers={"Idempotency-Key": f"{prefix}-0"},
+84  +             )
+85  |             assert replay.status_code == 200 and replay.json()["id"] == ids[0]
+    -             assert (await request("POST", "/jobs", json={"value": 99},
+    -                                   headers={"Idempotency-Key": f"{prefix}-0"})).status_code == 409
+86  +             assert (
+87  +                 await request(
+88  +                     "POST", "/jobs", json={"value": 99}, headers={"Idempotency-Key": f"{prefix}-0"}
+89  +                 )
+90  +             ).status_code == 409
+91  |             permanent = await create("permanent", fail_permanently=True)
+--------------------------------------------------------------------------------
+118 |             # process death, so restart policy is exercised, unlike a manual stop.
+    -             docker("exec", container, "python", "-c",
+    -                    "import os, signal; os.kill(1, signal.SIGKILL)")
+119 +             docker(
+120 +                 "exec", container, "python", "-c", "import os, signal; os.kill(1, signal.SIGKILL)"
+121 +             )
+122 |             abandoned = await request("GET", f"/jobs/{abrupt['id']}")
+--------------------------------------------------------------------------------
+126 |             assert final["generation"] == before["generation"] + 1
+    -             assert int(docker("inspect", "--format", "{{.RestartCount}}", container)) > restart_before
+127 +             assert (
+128 +                 int(docker("inspect", "--format", "{{.RestartCount}}", container)) > restart_before
+129 +             )
+130 |
+131 |             async with sessions() as session:
+    -                 jobs = (await session.scalars(select(Job).where(
+    -                     Job.idempotency_key.startswith(prefix)
+    -                 ))).all()
+    -                 effects = (await session.scalars(select(JobEffect).where(
+    -                     JobEffect.job_id.in_([job.id for job in jobs])
+    -                 ))).all()
+132 +                 jobs = (
+133 +                     await session.scalars(select(Job).where(Job.idempotency_key.startswith(prefix)))
+134 +                 ).all()
+135 +                 effects = (
+136 +                     await session.scalars(
+137 +                         select(JobEffect).where(JobEffect.job_id.in_([job.id for job in jobs]))
+138 +                     )
+139 +                 ).all()
+140 |             by_job = {effect.job_id: effect for effect in effects}
+--------------------------------------------------------------------------------
+148 |                     assert effect.result == job.result
+    -             print(json.dumps({"smoke": "passed", "jobs": len(jobs), "effects": len(effects),
+    -                               "succeeded": sum(j.state == "succeeded" for j in jobs),
+    -                               "failed": sum(j.state == "failed" for j in jobs),
+    -                               "cancelled": sum(j.state == "cancelled" for j in jobs)}), flush=True)
+149 +             print(
+150 +                 json.dumps(
+151 +                     {
+152 +                         "smoke": "passed",
+153 +                         "jobs": len(jobs),
+154 +                         "effects": len(effects),
+155 +                         "succeeded": sum(j.state == "succeeded" for j in jobs),
+156 +                         "failed": sum(j.state == "failed" for j in jobs),
+157 +                         "cancelled": sum(j.state == "cancelled" for j in jobs),
+158 +                     }
+159 +                 ),
+160 +                 flush=True,
+161 +             )
+162 |         finally:
+    |
+
+unformatted: File would be reformatted
+   --> src/training_queue/transitions.py:137:25
+    |
+136 |
+    -     async def list_jobs(self, limit: int, cursor: Cursor | None = None) -> tuple[list[Job], str | None]:
+137 +     async def list_jobs(
+138 +         self, limit: int, cursor: Cursor | None = None
+139 +     ) -> tuple[list[Job], str | None]:
+140 |         if not 1 <= limit <= 100:
+    |
+
+3 files would be reformatted, 17 files already formatted

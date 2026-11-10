@@ -1,0 +1,27 @@
+{
+  "command": [
+    "docker",
+    "info",
+    "--format",
+    "{{json .ServerVersion}}"
+  ],
+  "started_at": "2026-11-10T10:01:39.771626+00:00",
+  "commit": "2c1177441e8d0efe19142b0f7e9f52486d7c1c71",
+  "branch": "feature/phase-2-core",
+  "status": "?? scripts/",
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 8,
+  "database": {
+    "host": null,
+    "port": null,
+    "database": ""
+  },
+  "source_sha256": {
+    "scripts/record.py": "23989c66668e45603ba7ed5a1ef5257dddbba6f7c9e8b0c6d484d86d1baa1cce",
+    ".gitignore": "114f3cdc2057d610cbc810f69cbc4f195acec0cd15dd54e9b154cf5f6657fc24",
+    "DESIGN.md": "4508e4a5bc9fcab64def44f63d727f5b684efbdafe6c16fce11fce3c449cfbea",
+    "README.md": "9e09a75ac0aaca510d336509390f78d32f994c08602f2e5074e20e2678521bc5"
+  }
+}

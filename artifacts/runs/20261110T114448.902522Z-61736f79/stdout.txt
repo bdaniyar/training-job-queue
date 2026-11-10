@@ -1,0 +1,18 @@
+ASYNC110 Use `asyncio.Event` instead of awaiting `asyncio.sleep` in a `while` loop
+  --> scripts/zombie.py:89:17
+   |
+87 |               # Wait for actual stale worker's ownership_lost log as well as final DB state.
+88 |               async with asyncio.timeout(5):
+89 | /                 while not any(
+90 | |                     e.get("event") == "ownership_lost"
+91 | |                     and e.get("owner") == owner
+92 | |                     and e.get("job_id") == job_id
+93 | |                     for e in run.log_events
+94 | |                 ):
+95 | |                     await asyncio.sleep(0.05)
+   | |_____________________________________________^
+96 |               await run.validate()
+97 |               assert run.summary["effects"] == 1
+   |
+
+Found 1 error.

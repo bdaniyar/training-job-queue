@@ -1,0 +1,52 @@
+diff --git a/scripts/experiment.py b/scripts/experiment.py
+index 44cc4ce..4a0540e 100644
+--- a/scripts/experiment.py
++++ b/scripts/experiment.py
+@@ -98,6 +98,7 @@ class Experiment:
+         self.http_errors = []
+         self.request_count = 0
+         self.log_events = []
++        self.log_changed = asyncio.Event()
+         self.samples = []
+         self.kills = []
+         self.client = httpx.AsyncClient(
+@@ -249,6 +250,7 @@ class Experiment:
+                             entry = json.loads(line[line.index(b"{") :])
+                             if "event" in entry:
+                                 self.log_events.append(entry)
++                                self.log_changed.set()
+                         except (ValueError, UnicodeError):
+                             pass  # raw line remains available for independent inspection
+ 
+diff --git a/tests/test_queue.py b/tests/test_queue.py
+index aaf4c00..dd8eb89 100644
+--- a/tests/test_queue.py
++++ b/tests/test_queue.py
+@@ -88,6 +88,27 @@ async def test_claim_skips_locked_job(queue):
+     assert (await queue.claim(uuid4())).id == first.id
+ 
+ 
++async def test_two_workers_one_job_only_locked_winner_claims(queue, monkeypatch):
++    original = await new_job(queue)
++    locked, release = asyncio.Event(), asyncio.Event()
++    original_clock = queue._clock
++
++    async def pause_after_lock(session):
++        locked.set()
++        await release.wait()
++        return await original_clock(session)
++
++    monkeypatch.setattr(queue, "_clock", pause_after_lock)
++    winner = asyncio.create_task(queue.claim(uuid4()))
++    await asyncio.wait_for(locked.wait(), 1)
++    try:
++        assert await queue.claim(uuid4()) is None
++    finally:
++        release.set()
++    assert (await winner).id == original.id
++    assert (await queue.get(original.id)).generation == 1
++
++
+ async def test_idempotency_conflict_waits_and_reads_fresh_snapshot(queue):
+     payload = Payload().model_dump()
+     async with queue.sessions.begin() as session:

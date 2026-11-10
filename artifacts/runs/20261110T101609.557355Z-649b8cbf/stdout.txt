@@ -1,0 +1,42 @@
+E731 Do not assign a `lambda` expression, use a `def`
+   --> tests/test_queue.py:195:5
+    |
+193 |     # after it has the real row lock, then observe the loser blocked in Postgres.
+194 |     monkeypatch.setattr(queue, "_clock", pause_after_first_lock)
+195 |     complete = lambda: queue.complete(job.id, job.owner, job.generation, {"winner": True})
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+196 |     cancel = lambda: queue.cancel(job.id)
+197 |     winning = asyncio.create_task(complete() if winner == "complete" else cancel())
+    |
+help: Rewrite `complete` as a `def`
+    |
+194 |     monkeypatch.setattr(queue, "_clock", pause_after_first_lock)
+    -     complete = lambda: queue.complete(job.id, job.owner, job.generation, {"winner": True})
+195 +     def complete():
+196 +         return queue.complete(job.id, job.owner, job.generation, {"winner": True})
+197 |     cancel = lambda: queue.cancel(job.id)
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+E731 Do not assign a `lambda` expression, use a `def`
+   --> tests/test_queue.py:196:5
+    |
+194 |     monkeypatch.setattr(queue, "_clock", pause_after_first_lock)
+195 |     complete = lambda: queue.complete(job.id, job.owner, job.generation, {"winner": True})
+196 |     cancel = lambda: queue.cancel(job.id)
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+197 |     winning = asyncio.create_task(complete() if winner == "complete" else cancel())
+198 |     await asyncio.wait_for(locked.wait(), 1)
+    |
+help: Rewrite `cancel` as a `def`
+    |
+195 |     complete = lambda: queue.complete(job.id, job.owner, job.generation, {"winner": True})
+    -     cancel = lambda: queue.cancel(job.id)
+196 +     def cancel():
+197 +         return queue.cancel(job.id)
+198 |     winning = asyncio.create_task(complete() if winner == "complete" else cancel())
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 2 errors.
+2 unsafe fixes available with `--fix --unsafe-fixes`.

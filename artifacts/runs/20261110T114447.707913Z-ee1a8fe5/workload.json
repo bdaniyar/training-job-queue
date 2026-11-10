@@ -1,0 +1,20 @@
+{
+  "seed": 2202,
+  "project": "queue-phase3",
+  "base_url": "http://localhost:18000",
+  "jobs": 10000,
+  "create_rps": 200,
+  "duplicate_rps": 50,
+  "kill_interval": 2,
+  "distribution": {
+    "long": 400,
+    "short": 8000,
+    "permanent": 100,
+    "medium": 1200,
+    "transient": 200,
+    "heartbeat": 100
+  },
+  "drain_deadline_seconds": 491,
+  "namespace": "chaos-2202-d9104fd20bbd-",
+  "nominal_serial_seconds": 1000.5149999999678
+}

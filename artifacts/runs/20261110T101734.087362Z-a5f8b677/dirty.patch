@@ -1,0 +1,356 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 8735b5f..9196558 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -1,6 +1,6 @@
+ # Training job queue: Phase 1 design
+ 
+-**Proposal, not implemented or measured.** Python 3.11+, FastAPI, async SQLAlchemy,
++**Implemented in Phase 2; capacity remains unmeasured.** Python 3.11+, FastAPI, async SQLAlchemy,
+ PostgreSQL, Alembic, pytest, Ruff; one modular monolith with independent worker
+ processes. PostgreSQL provides row locking and atomic effect/state commits in one
+ store; Redis/Celery would add another coordination boundary without a requirement.
+@@ -90,6 +90,32 @@ fencing still prevent competing commits. Single-DB durability/failover and load
+ capacity remain unproven. Structure, validation phases, and evidence policy follow
+ in [README.md](README.md).
+ 
++## Phase 2 implementation details
++
++The architecture above is retained. The simulation payload is strict and immutable:
++`duration_ms` (0..60000, default 100), `value` (-1000000..1000000, default 1),
++`fail_attempts` (0..4, default 0), and `fail_permanently` (default false). Execution
++asynchronously waits, optionally reports a transient/permanent failure, and returns
++`squared_value`. It performs no durable writes; only guarded completion inserts
++the effect. This bounded simulation does not represent CPU/GPU training performance.
++
++Additional database guards reject changes to job identity, payload, creation time,
++or a terminal row. Checks require generation = attempts, running attempts > 0,
++queued attempts < 5, lease <= deadline, and result iff succeeded. These strengthen
++the approved invariants without moving concurrency decisions out of PostgreSQL.
++
++SIGTERM/SIGINT stop claims and cancel execution/heartbeat tasks, then attempt a
++guarded transient failure/requeue (or fail at attempt 5); abrupt death leaves the
++lease for recovery. Both consume the already-committed claim attempt. An uncertain
++claim is conservatively abandoned to recovery rather than executed; an uncertain
++completion is read back and logged. Only PostgreSQL-guaranteed transaction aborts
++are automatically retried. Session cleanup encloses transaction cleanup so a commit
++exception cannot bypass connection return. Queue timing settings are configurable,
++with heartbeat < half the lease and deadline >= lease; five claims remains a DB constraint.
++Compose uses `init: true` for signal forwarding/reaping. It also permits the smoke
++check to kill the Python child rather than signal a protected PID-namespace init
++or deliberately stop the container through Docker (which suppresses restart).
++
+ Protocol references: PostgreSQL [queue locking](https://www.postgresql.org/docs/18/sql-select.html#SQL-FOR-UPDATE-SHARE),
+ [READ COMMITTED conflict visibility](https://www.postgresql.org/docs/18/transaction-iso.html#XACT-READ-COMMITTED),
+ and [database clocks](https://www.postgresql.org/docs/18/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT).
+diff --git a/README.md b/README.md
+index 7c5a4b4..c99e33b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,113 +1,196 @@
+ # training-job-queue
+-Fault-tolerant training job queue with FastAPI, PostgreSQL, and concurrent workers.
+-
+-Phase 1 contains a proposed [design](DESIGN.md), with no application code yet.
+-There are no endpoints, workers, migrations, Compose configuration, or test/chaos
+-results. `docker compose up` is the planned startup command; it does not work yet.
+-
+-## Assignment and starting point
+-
+-Read the complete one-page `Soup-Task-04-Backend-Engineer(1).pdf` supplied locally
+-from Downloads on November 10, 2026. It is not copied into this repository.
+-The PDF requests design before code, at least four workers, 10,000-job chaos runs
+-with eight workers, raw output including failures, a 100 requests/sec verdict,
+-reflection, AI disclosure, and a later live discussion. It permits any stack and
+-Postgres or SQLite and gives a relative 48-hour deadline. The user's explicit
+-Python/PostgreSQL stack and **November 11, 2026, 22:10 Asia/Almaty (UTC+05:00)**
+-deadline govern this collaboration. The document's email submission instruction
+-is a deliverable requirement, not authorization to send an email in Phase 1.
+-
+-Initial inspection: clean `main` at `b07000e`, matching the remote tree; only this
+-short README and a general Python `.gitignore` were tracked. No application,
+-dependency manifest, tests, database setup, or repository/ancestor `AGENTS.md`
+-was found. Phase 1 changes only this README and adds DESIGN.md; `.gitignore`
+-remains unchanged.
+-
+-Unspecified by the assignment: exact payload/result schema and simulated job
+-duration, endpoint paths/status codes, retry/lease settings, key retention/scope,
+-cancellation race policy, pagination consistency, authentication, and performance
+-acceptance thresholds/environment. DESIGN.md proposes the concurrency policies;
+-the initial payload will be a small validated simulation configuration, with its
+-exact fields and workload distribution agreed before implementation. Lease and
+-attempt limits require validation against that workload. A finite retry budget
+-means a repeatedly killed job may legitimately finish failed; "no lost jobs"
+-means every committed job is accounted for, not that every job succeeds.
+-
+-## Proposed structure and setup roadmap
+-
+-```text
+-src/training_queue/
+-  api.py, schemas.py, config.py    # HTTP contract and configuration
+-  db.py, models.py                 # engine/sessions and persistence model
+-  transitions.py                  # all guarded job/effect transactions
+-  worker.py, execution.py          # process loop and bounded simulation
+-alembic/                          # schema, constraints, indexes
+-tests/                            # unit, real-Postgres integration, concurrency
+-scripts/chaos.py                   # workload, process kills, reconciliation
+-artifacts/runs/<run-id>/           # immutable raw evidence and run metadata
+-compose.yaml, Dockerfile, pyproject.toml, dependency lockfile
+-DESIGN.md, README.md, REPORT.md, AI_USE.md
++
++A small FastAPI/PostgreSQL queue with independent worker processes, fenced leases,
++transactional completion, and countable database effects. Phase 2 implements the
++core service. The full 10,000-job chaos harness and 100 requests/sec verdict are
++Phase 3; no production-readiness or throughput claim is made here.
++
++The complete one-page Soup assignment PDF was read in Phase 1. The user's stack
++and deadline govern: **November 11, 2026, 22:10 Asia/Almaty (UTC+05:00)**. Per the
++user's latest Soup email update, the 40-minute live discussion has been cancelled.
++No email submission has been sent by this collaboration.
++
++## Quick start
++
++Requires Docker with Compose v2 and internet access for the initial image build.
++No external credentials or local environment files are needed.
++
++```sh
++docker compose up
+ ```
+ 
+-1. **Review this design.** Stop here in Phase 1; confirm the missing workload and
+-   acceptance details before building it. No application or performance tests
+-   have been run, and there is no evidence to support a SHIP claim.
+-2. **Persistence and startup.** Add pinned dependencies, Alembic migrations,
+-   constraints, transaction functions, and Compose. Postgres health precedes a
+-   single migration service; successful migration precedes API/four independent
+-   worker processes. Persist database data and configure worker restarts. Document
+-   fresh setup and an override that starts exactly eight workers for chaos.
+-3. **API and execution.** Add create/status/list/cancel, the worker loop, heartbeat,
+-   recovery, and bounded simulation. Test against real Postgres, never SQLite as
+-   a substitute for locking behavior. Give each process its own bounded pool and
+-   each concurrent coroutine its own session; budget API, worker, and harness
+-   connections against the database limit.
+-4. **Deterministic failure checks.** Use barriers and separate sessions/processes
+-   to force simultaneous claims; kill before/after claim/effect/commit; resume an
+-   expired worker after a newer claim; exercise both cancel/complete orderings,
+-   concurrent same/different-payload key retries, heartbeat/recovery races, retry
+-   exhaustion, and READ COMMITTED visibility after an INSERT conflict. Verify
+-   application clock offsets do not affect leases, and test DB-clock jumps in an
+-   isolated environment if feasible; otherwise disclose that gap. Exercise a hung
+-   attempt, database disconnects/unknown commit outcomes, and transaction timeouts.
+-5. **Chaos and load evidence.** Create 10,000 distinct intended jobs, eight live
+-   worker slots, random SIGKILL roughly every two seconds with replacement, while
+-   replaying keys and cancelling jobs concurrently. Record seed, scheduling and
+-   actual kill times, request outcomes, worker boot UUID/generation/claim events,
+-   and database transition outcomes. Track intended keys separately from HTTP
+-   acknowledgements and reconcile ambiguous requests by retrying the same keys.
+-   After injection ends, let survivors drain within a documented timeout derived
+-   from workload, leases, and retry budget; timeout is a failed run. In one database
+-   snapshot assert every intended key maps to exactly one job, every acknowledged
+-   ID exists, all jobs are terminal, each succeeded job has exactly one effect,
+-   and every other job has zero. Verify cancelled acknowledgements stay cancelled,
+-   effects reference the winning generation, and no stale generation committed.
+-   Logs distinguish overlapping execution from multiple valid ownership claims.
+-6. **Verdict and reflection.** Run repeatable 100 HTTP requests/sec tests with a
+-   stated create/read/list/cancel mix, duration, hardware, execution durations,
+-   and whether retries count toward offered load. Report achieved throughput,
+-   errors, p50/p95/p99, queue growth/drain, DB/pool pressure, and recovery latency.
+-   Agree latency/error/backlog thresholds before judging. Report SHIP/DON'T SHIP
+-   with evidence and first fixes; record surprises, concerns, harness blind spots,
+-   and number of all attempted runs. Do not prewrite live-discussion answers.
+-
+-## Evidence and AI use
+-
+-Before every later lint/test/benchmark/chaos invocation, allocate a unique run
+-directory and capture command, commit, dirty diff, configuration, dependency
+-versions, environment/hardware, seed, timestamps, exit code, and unedited
+-stdout/stderr (including failures and interrupted runs). Preserve service logs,
+-request history, and invariant-query output; keep derived summaries separate.
+-Use `.txt`/`.jsonl` because the existing `.gitignore` ignores `*.log`. Ensure raw
+-artifacts are tracked or durably archived and linked; never overwrite or delete
+-failed evidence. Disable secret logging at the source rather than edit results.
+-The harness cannot prove every interleaving, arbitrary network partitions,
+-failover/disk durability, real training behavior, or performance on other hardware.
+-
+-Phase 1 used Codex to inspect the repository, extract and visually review the full
+-PDF, consult PostgreSQL documentation, and draft these files. Proposed accepted
+-design choices are row locks, leases with generation fencing, and an atomic
+-database effect/success commit. Only document/repository consistency is reviewed
+-in this phase; runtime correctness and performance remain unverified. No personal
+-verification by the developer is claimed. Later AI_USE.md should record suggestions
+-accepted/rejected, human checks, and changes or rework as they actually happen.
++Postgres readiness precedes a single Alembic migration service. A successful
++migration precedes the API and **four independent worker containers**, one process
++per container (plus Docker's tiny init for signal forwarding and child reaping).
++Open http://localhost:8000/docs or GET http://localhost:8000/health.
++Data persists in the Compose volume. Development-only credentials are `queue:queue`;
++API and Postgres ports bind to localhost. Set `QUEUE_API_PORT` or `QUEUE_DB_PORT`
++if the default 8000/55432 ports are occupied. `docker compose down` preserves data.
++
++Exactly eight workers for Phase 3:
++
++```sh
++docker compose -f compose.yaml -f compose.eight.yaml up --build
++```
++
++Do not run both configurations concurrently against the same project. Return to
++four with `docker compose up -d --wait`. Workers use `restart: unless-stopped`;
++a deliberate stop stays stopped, while an unexpected process death restarts it.
++
++## API contract
++
++Create takes the payload directly as JSON and a required `Idempotency-Key` header
++(1..200 characters, not all whitespace). Keys are global, case sensitive, and kept
++for the lifetime of the database, including after cancellation/failure.
++
++```sh
++curl -i http://localhost:8000/jobs \
++  -H 'Content-Type: application/json' -H 'Idempotency-Key: example-1' \
++  -d '{"duration_ms":1000,"value":7}'
++curl http://localhost:8000/jobs/JOB_UUID
++curl 'http://localhost:8000/jobs?limit=20'
++curl -X POST http://localhost:8000/jobs/JOB_UUID/cancel
++```
++
++| Route | Contract |
++| --- | --- |
++| `POST /jobs` | 201 new; 200 same key and canonical payload, with current job status; 409 different payload for existing key. Defaults participate in canonical equality. |
++| `GET /jobs/{id}` | 200 job or 404. |
++| `GET /jobs?limit=50&cursor=...` | `items` and nullable `next_cursor`; limit 1..100. Pass returned opaque cursor for next page. Ascending `(created_at,id)` keyset; live view, not a snapshot across pages. Late commits can be missed until a new traversal. |
++| `POST /jobs/{id}/cancel` | 200 cancelled, including repeats; 409 already succeeded/failed; 404 missing. |
++| `GET /health` | 200 after a database round trip, otherwise 503. It does not prove worker progress. |
++
++All job responses include ID, canonical payload, state, attempts, generation,
++timestamps, result, and error. Invalid input/UUID/cursor returns 422. Expected
++errors use `detail`; request validation uses FastAPI's field-detail array. Database
++availability/timeouts return 503 with `Retry-After: 1`; the outcome may be uncertain.
++Retry creates with the **same key and payload**, and reconcile cancellation by ID.
++Unexpected integrity failures remain visible server errors rather than fake success.
++
++Payload fields are strict (no string-to-number coercion; unknown fields rejected):
++
++| Field | Default | Allowed |
++| --- | --- | --- |
++| `duration_ms` | 100 | integer 0..60000 |
++| `value` | 1 | integer -1000000..1000000; result is `{"squared_value": value²}` |
++| `fail_attempts` | 0 | integer 0..4; those initial attempts fail transiently |
++| `fail_permanently` | false | boolean; deterministic failure |
++
++## How it works
++
++See [DESIGN.md](DESIGN.md) for the transaction protocol and PostgreSQL references.
++Every transition uses a short READ COMMITTED transaction and its own AsyncSession.
++Workers claim with `FOR UPDATE SKIP LOCKED`, commit, and execute outside database
++locks. Each process starts with a fresh owner UUID; each claim increments generation.
++Heartbeat and completion lock the job, then sample PostgreSQL `clock_timestamp()`
++and check ownership/generation/lease/deadline. Recovery and cancellation use the
++same row lock. Cancellation can end computation later, but prevents its effect
++from committing if cancellation wins the transaction race.
++
++Defaults: 10-second lease, heartbeat every 3 seconds, 120-second attempt deadline,
++0.2-second polling, recovery batches of 32, maximum five committed claims, and
++1/2/4/8-second retry backoff before subsequent claims. The deadline caps heartbeat
++renewal. `QUEUE_LEASE_SECONDS`, `QUEUE_HEARTBEAT_SECONDS`, `QUEUE_ATTEMPT_SECONDS`,
++`QUEUE_POLL_SECONDS`, and `QUEUE_RECOVERY_BATCH` configure timing; inconsistent
++settings fail startup. Local development uses `QUEUE_DATABASE_URL`.
++
++The countable effect is one `job_effects` row inserted in the same transaction as
++`succeeded`. A primary key prevents duplicate effects. **Exactly-once committed
++database effect does not mean exactly-once execution.** Attempts may repeat or
++overlap; successful jobs have one effect, failed/cancelled jobs zero. Logs distinguish
++`claim_committed`, `execution_started`, `execution_finished`, and `effect_committed`.
++A crash after commit but before logging may leave a committed effect without a log;
++the database is authoritative. Stale work logs `ownership_lost`, never success.
++
++Graceful SIGTERM/SIGINT cancels active computation and tries to requeue it under
++its current lease. SIGKILL cannot run cleanup: the next healthy worker recovers the
++expired lease. At attempt five, either path can finish failed. Unknown claim commits
++are left to recovery; unknown completion commits are reconciled by reading status.
++
++## Development and verification
++
++Requires Python 3.11 and uv; runtime dependencies are locked in `uv.lock` and
++hash-pinned `requirements.lock` (Docker uses the latter). Tests use a **dedicated
++real PostgreSQL database**, truncate it between tests, and must not run concurrently
++against the same test database. The fixture rejects database names not ending `_test`.
++
++```sh
++uv sync --frozen
++# Start Postgres if the full stack is not already running:
++docker compose up -d db
++# Once per fresh database:
++docker compose exec -T db createdb -U queue queue_test
++QUEUE_DATABASE_URL=postgresql+asyncpg://queue:queue@localhost:55432/queue_test \
++  python3 scripts/record.py uv run --frozen alembic upgrade head
++python3 scripts/record.py uv run --frozen ruff check .
++python3 scripts/record.py uv run --frozen ruff format --check .
++python3 scripts/record.py uv run --frozen pytest -v -W error
++```
++
++Tests default to `postgresql+asyncpg://queue:queue@localhost:55432/queue_test`.
++Set `TEST_DATABASE_URL` for another isolated PostgreSQL test database, and use the
++same URL as `QUEUE_DATABASE_URL` for its migrations. No SQLite fallback or skipped
++integration suite is provided. Tests force blocked transactions and use events,
++separate sessions, real unique violations, backend termination, and post-commit
++acknowledgement failure injection. The latter injects a client exception **after a
++real commit**; it does not emulate a complete network partition.
++
++Optional negative control (expected exit 1 and one failed regression test):
++
++```sh
++python3 scripts/record.py uv run --frozen python scripts/regression_probe.py
++```
++
++This disables generation fencing in that disposable Python process only. The
++normal source and running workers remain unchanged.
++
++Small actual HTTP/process smoke check, with the default four-worker stack running:
++
++```sh
++python3 scripts/record.py uv run --frozen python scripts/smoke.py
++```
++
++It submits 11 jobs, verifies replay/conflict, success/failure/cancellation, tests
++one graceful stop and one SIGKILL/restart, and checks database effects. It temporarily
++stops this project's workers, captures service logs, then restores four. It leaves
++its uniquely keyed jobs as evidence. This is not the Phase 3 chaos harness.
++
++## Repository and evidence
++
++- `src/training_queue/`: schemas/config, database/models, centralized transitions,
++  HTTP API, bounded execution simulation, and worker loop.
++- `alembic/`: initial immutable migration, constraints, indexes, and update guard.
++- `tests/`: API, concurrency, lease/fencing, atomicity, recovery, and fault tests.
++- `scripts/`: raw-output recorder, small Compose smoke check, negative control.
++- `artifacts/runs/<unique-id>/`: unedited stdout/stderr, command, platform, source
++  hashes, Git state/diff, and exit code. Newer runs also include source archives.
++- [VERIFICATION.md](VERIFICATION.md): actual results, failures, and evidence links.
++- [AI_USE.md](AI_USE.md): honest AI assistance and verification boundaries.
++
++Always use the recorder for later verification runs; never overwrite failed
++results. It records selected safe database connection coordinates, not credentials
++or the entire environment. Configure secret-free logging before running workloads.
++The first implementation runs have source hashes/diffs rather than full source
++archives. Snapshotting service logs before Compose recreation was added after the
++first smoke run; its HTTP/command output is retained, but its old worker containers'
++full logs were not captured. This evidence gap is not retrospectively filled.
++
++## Limitations and Phase 3
++
++No 100 requests/sec measurements, full chaos runs, or SHIP verdict yet. The
++simulation asynchronously waits and squares an integer; it does not measure real
++CPU/GPU training, external effects, or shared resource capacity. Authentication,
++rate limiting, key expiry, and retention are out of scope. Direct privileged SQL
++can bypass the shared cross-table transition protocol; this is a trusted application
++with development database credentials, not a hardened multi-tenant deployment.
++Single-Postgres durability/failover, clock jumps on the database host, arbitrary
++partitions, unfair scheduling/starvation, and every possible interleaving remain
++unproven. Client clock offsets cannot authorize leases; a DB wall-clock jump can
++change recovery timing. Pagination is not a consistent snapshot across requests.
++
++Phase 3 will add the 10,000-job/eight-worker seeded harness, concurrent key replays
++and cancellations, repeated random kills approximately every two seconds, bounded
++drain/reconciliation, snapshot invariant queries, raw output of **all** attempted
++runs, and harness blind spots. Then measure a stated 100 requests/sec workload
++with agreed latency/error/backlog limits and publish an evidence-based verdict,
++first fixes, reflection, and updated AI notes. Stop after Phase 2 for review.

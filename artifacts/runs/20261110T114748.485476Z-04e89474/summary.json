@@ -1,0 +1,61 @@
+{
+  "kind": "chaos",
+  "seed": 3303,
+  "namespace": "chaos-3303-14d08ab54888-",
+  "outcome": "PASS",
+  "started_at": "2026-11-10T11:47:48.907460+00:00",
+  "injection_seconds": 50.14103850000538,
+  "kills": 24,
+  "verified_restarts": 24,
+  "drain_seconds": 80.40496174999862,
+  "snapshot": "93123:93123:",
+  "intended_jobs": 10000,
+  "jobs": 10000,
+  "effects": 9637,
+  "states": {
+    "succeeded": 9637,
+    "cancelled": 265,
+    "failed": 98
+  },
+  "failed_reasons": {
+    "simulated permanent failure": 98
+  },
+  "committed_claims": 10020,
+  "retries": 194,
+  "cancelled_acknowledgements": 265,
+  "worker_log_counts": {
+    "claim_committed": 10020,
+    "execution_started": 10020,
+    "execution_finished": 9684,
+    "effect_committed": 9637,
+    "failure_recorded": 291,
+    "ownership_lost": 68,
+    "recovered": 5
+  },
+  "assertions_failed": [],
+  "ended_at": "2026-11-10T11:50:02.227553+00:00",
+  "requests": 11835,
+  "operations": {
+    "create": 10000,
+    "conflict": 313,
+    "replay": 1252,
+    "cancel_queued": 180,
+    "cancel_running": 90
+  },
+  "statuses": {
+    "201": 10000,
+    "409": 318,
+    "200": 1517
+  },
+  "http_errors": [],
+  "latency_ms": {
+    "p50": 5.477041995618492,
+    "p95": 51.022375002503395,
+    "p99": 125.93070800357964
+  },
+  "dispatch_lag_ms": {
+    "p50": 0,
+    "p95": 0,
+    "p99": 0
+  }
+}

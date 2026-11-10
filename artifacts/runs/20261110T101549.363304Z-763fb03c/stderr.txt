@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue/scripts/smoke.py", line 181, in <module>
+    asyncio.run(main())
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue/scripts/smoke.py", line 117, in main
+    docker(
+  File "/Users/daniarboranov/Documents/code_materials/events/intern_tasks/soup/training-job-queue/scripts/smoke.py", line 27, in docker
+    result.check_returncode()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 502, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+subprocess.CalledProcessError: Command '['docker', 'exec', '2e83f0b491aa442bad6415a2ae99760255490ef3fcee7222ff677b3fc7b3087e', 'python', '-c', "import os, signal; from pathlib import Path; pid = next(int(p.parent.name) for p in Path('/proc').glob('[0-9]*/cmdline') if p.read_bytes().split(bytes([0]))[:3] == [b'python', b'-m', b'training_queue.worker']); assert pid != 1; print('killing worker child', pid, flush=True); os.kill(pid, signal.SIGKILL)"]' returned non-zero exit status 137.

@@ -1,0 +1,23 @@
+E501 Line too long (103 > 100)
+  --> scripts/chaos.py:74:101
+   |
+72 |             "import os,signal; from pathlib import Path; "
+73 |             f"pid={probe['pid']}; assert pid != 1; "
+74 |             f'assert Path(f"/proc/{{pid}}/stat").read_text().split()[21] == {probe["start_ticks"]!r}; '
+   |                                                                                                     ^^^
+75 |             'print("SIGKILL",pid,flush=True); os.kill(pid,signal.SIGKILL)'
+76 |         )
+   |
+
+E501 Line too long (102 > 100)
+   --> scripts/experiment.py:364:101
+    |
+362 |                 row["state"]: row["n"]
+363 |                 for row in await connection.fetch(
+364 |                     "SELECT state, count(*) n FROM jobs WHERE idempotency_key LIKE $1 GROUP BY state",
+    |                                                                                                     ^^
+365 |                     self.namespace + "%",
+366 |                 )
+    |
+
+Found 2 errors.

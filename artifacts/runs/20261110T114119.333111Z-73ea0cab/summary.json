@@ -1,0 +1,60 @@
+{
+  "kind": "chaos",
+  "seed": 99,
+  "namespace": "chaos-99-fb03abec4b7f-",
+  "outcome": "PASS",
+  "started_at": "2026-11-10T11:41:19.570283+00:00",
+  "injection_seconds": 6.364475292008137,
+  "kills": 2,
+  "verified_restarts": 2,
+  "drain_seconds": 0.0036835000064456835,
+  "snapshot": "1685:1685:",
+  "intended_jobs": 300,
+  "jobs": 300,
+  "effects": 242,
+  "states": {
+    "succeeded": 242,
+    "cancelled": 55,
+    "failed": 3
+  },
+  "failed_reasons": {
+    "simulated permanent failure": 3
+  },
+  "committed_claims": 282,
+  "retries": 0,
+  "cancelled_acknowledgements": 55,
+  "worker_log_counts": {
+    "claim_committed": 282,
+    "execution_started": 282,
+    "execution_finished": 266,
+    "effect_committed": 242,
+    "failure_recorded": 10,
+    "ownership_lost": 27
+  },
+  "assertions_failed": [],
+  "ended_at": "2026-11-10T11:41:27.623596+00:00",
+  "requests": 577,
+  "operations": {
+    "create": 300,
+    "conflict": 44,
+    "replay": 175,
+    "cancel_queued": 37,
+    "cancel_running": 21
+  },
+  "statuses": {
+    "201": 300,
+    "409": 47,
+    "200": 230
+  },
+  "http_errors": [],
+  "latency_ms": {
+    "p50": 5.08629200339783,
+    "p95": 13.71283300977666,
+    "p99": 41.90766700776294
+  },
+  "dispatch_lag_ms": {
+    "p50": 0,
+    "p95": 0,
+    "p99": 0
+  }
+}

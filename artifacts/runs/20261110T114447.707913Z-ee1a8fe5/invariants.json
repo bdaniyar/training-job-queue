@@ -1,0 +1,36 @@
+{
+  "kind": "chaos",
+  "seed": 2202,
+  "namespace": "chaos-2202-d9104fd20bbd-",
+  "outcome": "PASS",
+  "started_at": "2026-11-10T11:44:48.005776+00:00",
+  "injection_seconds": 53.90767487499397,
+  "kills": 23,
+  "verified_restarts": 23,
+  "drain_seconds": 84.27840258399374,
+  "snapshot": "62754:62754:",
+  "intended_jobs": 10000,
+  "jobs": 10000,
+  "effects": 9794,
+  "states": {
+    "failed": 100,
+    "succeeded": 9794,
+    "cancelled": 106
+  },
+  "failed_reasons": {
+    "simulated permanent failure": 100
+  },
+  "committed_claims": 10139,
+  "retries": 208,
+  "cancelled_acknowledgements": 106,
+  "worker_log_counts": {
+    "claim_committed": 10139,
+    "execution_started": 10139,
+    "failure_recorded": 298,
+    "execution_finished": 9810,
+    "effect_committed": 9794,
+    "ownership_lost": 24,
+    "recovered": 11
+  },
+  "assertions_failed": []
+}
