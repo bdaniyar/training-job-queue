@@ -18,7 +18,7 @@ The measured load dispatched all 12,000 scheduled requests: **99.982 dispatched
 RPS, 99.980 completed RPS, p50/p95/p99 4.55/7.96/22.50 ms, zero unexpected errors or
 timeouts**, maximum active queue depth 21, and 1.04 s post-load drain. All declared
 criteria passed. The live discussion was cancelled per the user's latest email
-update; no email submission or PR has been made.
+update; at the time of these experiments, no email submission or PR had been made.
 
 ## 2. System architecture and delivery semantics
 
@@ -310,6 +310,8 @@ invalidate the correctness tests. The transport-error cause remains open.
   Gzip preserves original bytes/JSON records; all artifacts are tracked in Git.
 - [Phase 2 verification and its retained failures](VERIFICATION.md).
 - [AI assistance disclosure](AI_USE.md); [reproduction commands](README.md).
+- [Subsequent developer-led manual API and SQL checks](MANUAL_VERIFICATION.md)
+  (distinct from Codex's automated chaos and performance runs).
 
 Final checks are listed in [PHASE3_VERIFICATION.md](PHASE3_VERIFICATION.md), including
 Ruff, full pytest, clean migrations/schema comparison, actual four/eight-worker
