@@ -1,9 +1,10 @@
 # training-job-queue
 
 A small FastAPI/PostgreSQL queue with independent worker processes, fenced leases,
-transactional completion, and countable database effects. Phase 2 implements the
-core service. The full 10,000-job chaos harness and 100 requests/sec verdict are
-Phase 3; no production-readiness or throughput claim is made here.
+transactional completion, and countable database effects. Phase 3 adds real seeded
+chaos experiments, a sustained open-loop HTTP load test, and a documented verdict.
+See [REPORT.md](REPORT.md) for measured results and their limits; the submission
+design note is [DESIGN_SUMMARY.md](DESIGN_SUMMARY.md), with the full design retained.
 
 The complete one-page Soup assignment PDF was read in Phase 1. The user's stack
 and deadline govern: **November 11, 2026, 22:10 Asia/Almaty (UTC+05:00)**. Per the
@@ -175,9 +176,9 @@ archives. Snapshotting service logs before Compose recreation was added after th
 first smoke run; its HTTP/command output is retained, but its old worker containers'
 full logs were not captured. This evidence gap is not retrospectively filled.
 
-## Limitations and Phase 3
+## Limitations and production verdict
 
-No 100 requests/sec measurements, full chaos runs, or SHIP verdict yet. The
+The measured scope and production verdict are in [REPORT.md](REPORT.md). The
 simulation asynchronously waits and squares an integer; it does not measure real
 CPU/GPU training, external effects, or shared resource capacity. Authentication,
 rate limiting, key expiry, and retention are out of scope. Direct privileged SQL
@@ -188,9 +189,73 @@ partitions, unfair scheduling/starvation, and every possible interleaving remain
 unproven. Client clock offsets cannot authorize leases; a DB wall-clock jump can
 change recovery timing. Pagination is not a consistent snapshot across requests.
 
-Phase 3 will add the 10,000-job/eight-worker seeded harness, concurrent key replays
-and cancellations, repeated random kills approximately every two seconds, bounded
-drain/reconciliation, snapshot invariant queries, raw output of **all** attempted
-runs, and harness blind spots. Then measure a stated 100 requests/sec workload
-with agreed latency/error/backlog limits and publish an evidence-based verdict,
-first fixes, reflection, and updated AI notes. Stop after Phase 2 for review.
+## Reproduce Phase 3 experiments
+
+The experiment scripts require invocation through `scripts/record.py`. They use
+only their specified Compose project and unique key namespaces; they never delete
+existing jobs or volumes. Use a separate project to preserve Phase 2 data:
+
+```sh
+export QUEUE_API_PORT=18000 QUEUE_DB_PORT=55433
+python3 scripts/record.py docker compose -p queue-phase3 up --build -d --wait
+python3 scripts/record.py docker compose -p queue-phase3 \
+  -f compose.yaml -f compose.eight.yaml up -d --wait --no-build
+python3 scripts/record.py uv run --frozen python -m scripts.chaos --seed 1101
+python3 scripts/record.py uv run --frozen python -m scripts.chaos --seed 2202
+python3 scripts/record.py uv run --frozen python -m scripts.chaos --seed 3303
+python3 scripts/record.py uv run --frozen python -m scripts.zombie --seed 5505
+python3 scripts/record.py uv run --frozen python -m scripts.load --seed 4404
+```
+
+Run those commands sequentially. The tested service is http://localhost:18000;
+the scripts default to PostgreSQL on localhost:55433. If overriding the project,
+ports, or database, pass matching `--project`, `--base-url`, and database configuration.
+`QUEUE_DATABASE_URL` overrides the experiment database address, so do not leave it
+pointing at a test database or another stack. Containers are label-checked before
+faults; SIGKILL targets the Python worker child and verifies a new boot UUID and
+restart count. SIGSTOP/SIGCONT in the zombie check exercises a returning live process.
+
+A full chaos run creates 10,000 distinct intended jobs; `--jobs 300 --create-rps 50`
+is a small pilot, not a full run. Default full runs create at a target 200/sec,
+run completion-paced replay/conflict traffic up to 50/sec, and target up to two
+queued and one running cancellation every 0.5 s. Secondary traffic slows under
+load. Exactly eight worker slots are maintained, with measured brief restart gaps.
+Kill scheduling can slip while replacement is pending. Seeds reproduce payloads
+and random choices, not every OS/transaction interleaving. Workload distributions,
+drain formula, and predeclared load criteria are in [EXPERIMENTS.md](EXPERIMENTS.md).
+
+The load test offers 100 HTTP requests/sec for 120 seconds. Its mix is 40% creates,
+20% status, 10% list, 10% cancel, 10% replay, and 10% conflicting replay; retries
+count toward offered traffic. Twenty setup jobs are excluded from measured rate.
+API request throughput and worker job throughput are reported separately.
+
+Each experiment retains compressed unedited HTTP/service/fault/telemetry streams,
+intended manifests, read-only database snapshots, configuration/environment,
+assertions, and summary. Read with `gzip -cd FILE.jsonl.gz`. `summary.json` contains
+the final outcome; intermediate console events are not the final verdict.
+
+For a separate integration-test database on the Phase 3 PostgreSQL server:
+
+```sh
+# Create once; an existing-database error means this step is already done.
+python3 scripts/record.py docker compose -p queue-phase3 exec -T db \
+  createdb -U queue queue_phase3_test
+QUEUE_DATABASE_URL=postgresql+asyncpg://queue:queue@localhost:55433/queue_phase3_test \
+  python3 scripts/record.py uv run --frozen alembic upgrade head
+TEST_DATABASE_URL=postgresql+asyncpg://queue:queue@localhost:55433/queue_phase3_test \
+  python3 scripts/record.py uv run --frozen pytest -v -W error
+```
+
+[artifacts/INDEX.md](artifacts/INDEX.md) indexes every Phase 2 and Phase 3 recorded
+run, including failures. Regenerate derived summaries with:
+
+```sh
+python3 scripts/record.py uv run --frozen python -m scripts.summarize_experiments
+uv run --frozen python -m scripts.index_evidence
+python3 scripts/record.py uv run --frozen python -m scripts.verify_evidence
+```
+
+The report includes the failure-analysis matrix, exact counts, performance metrics,
+limitations, reflection, and prioritized fixes. The live discussion was cancelled
+according to the user's latest Soup email update. No submission email or PR has
+been sent/opened. Phase 3 ends for review before submission.

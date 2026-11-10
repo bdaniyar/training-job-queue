@@ -1,4 +1,4 @@
-# AI assistance: Phase 2
+# AI assistance: Phases 2 and 3
 
 AI assistance is allowed by the Soup assignment. This file describes what happened
 in this collaboration; it does not claim that the developer independently reviewed
@@ -63,3 +63,36 @@ An engineering observation from this phase: a successful command to send a signa
 does not establish that the intended worker died. Checking process restart and
 claim generation was necessary to make the smoke result meaningful. Likewise, a
 passing test count with cleanup warnings was insufficient evidence of correctness.
+
+## Phase 3 assistance and verification
+
+Codex reread the complete original PDF, Phase 2 documents/code/tests/recorder, and
+created the Phase 3 branch from the supplied Phase 2 commit. It implemented the
+seeded HTTP/SIGKILL harness, read-only snapshot oracle, open-loop load generator,
+live SIGSTOP/SIGCONT zombie check, helper tests, summary/index tools, and reports.
+It ran all recorded checks; no independent human verification is claimed.
+
+The transaction protocol and deployed application code were retained. Three full
+10,000-job chaos runs passed their final invariants. One smaller pilot showed that
+aggressive cancellation preempted every transient retry, so cancellation intensity
+was reduced before full runs to exercise retries and longer work more meaningfully.
+The pilot is retained, not counted as a full run. Four create transport errors in
+seed 2202 were reconciled by same-key retries; their root cause remains unproven.
+The report treats them as an availability warning, not a concurrency fix or a
+fabricated network-partition test. No application exception was found at those
+times in captured logs. Deliberately induced SQL errors in the integration-test
+database are identified separately from chaos failures.
+
+Additional corrections addressed Ruff findings, load-task exception collection,
+HTTP-response versus attempt-completion counting, safe environment/inspect capture,
+and event-driven waiting for the resumed worker's ownership-lost log. The recorder
+now passes an evidence-directory path to experiments and records selected relevant
+configuration/dependency versions. Compressed raw streams remain separate from
+derived summaries; previous raw artifacts were not rewritten.
+
+The production verdict and actual load measurements are in REPORT.md. Any
+interpretation of the four transport failures, harness overhead, or production
+capacity beyond the measured workload is explicitly limited. Database clock jumps,
+real network partitions, failover durability, and realistic CPU/GPU training remain
+untested. The user's update cancelling the live discussion governs over the PDF's
+older statement. No email or PR was sent/opened; submission remains for user review.

@@ -1,6 +1,7 @@
 # Training job queue: Phase 1 design
 
-**Implemented in Phase 2; capacity remains unmeasured.** Python 3.11+, FastAPI, async SQLAlchemy,
+**Implemented in Phase 2; Phase 3 evidence is in [REPORT.md](REPORT.md).**
+Python 3.11+, FastAPI, async SQLAlchemy,
 PostgreSQL, Alembic, pytest, Ruff; one modular monolith with independent worker
 processes. PostgreSQL provides row locking and atomic effect/state commits in one
 store; Redis/Celery would add another coordination boundary without a requirement.
