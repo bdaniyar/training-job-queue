@@ -1,0 +1,1 @@
+PASS: 119 local Markdown links, 112 gzip artifacts, report totals, and Phase 2 preservation.

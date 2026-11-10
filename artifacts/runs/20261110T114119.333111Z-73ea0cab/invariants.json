@@ -1,0 +1,35 @@
+{
+  "kind": "chaos",
+  "seed": 99,
+  "namespace": "chaos-99-fb03abec4b7f-",
+  "outcome": "FAIL",
+  "started_at": "2026-11-10T11:41:19.570283+00:00",
+  "injection_seconds": 6.364475292008137,
+  "kills": 2,
+  "verified_restarts": 2,
+  "drain_seconds": 0.0036835000064456835,
+  "snapshot": "1685:1685:",
+  "intended_jobs": 300,
+  "jobs": 300,
+  "effects": 242,
+  "states": {
+    "succeeded": 242,
+    "cancelled": 55,
+    "failed": 3
+  },
+  "failed_reasons": {
+    "simulated permanent failure": 3
+  },
+  "committed_claims": 282,
+  "retries": 0,
+  "cancelled_acknowledgements": 55,
+  "worker_log_counts": {
+    "claim_committed": 282,
+    "execution_started": 282,
+    "execution_finished": 266,
+    "effect_committed": 242,
+    "failure_recorded": 10,
+    "ownership_lost": 27
+  },
+  "assertions_failed": []
+}

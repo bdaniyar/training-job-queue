@@ -1,0 +1,854 @@
+[
+  {
+    "time": "2026-11-10T11:44:54.480864+00:00",
+    "container": "8429daeb550491dca0006ec099fb811e1e4d8c1164c150eb3977d7abe57dbf6e",
+    "name": "/queue-phase3-worker-8",
+    "old_owner": "04796907-c49b-4307-9ca3-61c353d8ecfd",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "430364"
+    },
+    "old_started_at": "2026-11-10T11:42:46.70778038Z",
+    "old_restart_count": 3,
+    "affected_jobs": [
+      {
+        "id": "9fe8ed26-8e59-45ad-a214-fb13be44ed0d",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:04.457383+00:00",
+        "observed_at": "2026-11-10 11:44:54.467000+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.548954790996504,
+    "terminated_and_replaced": true,
+    "new_owner": "8f60d37b-453b-47d2-836f-934b779c42d0",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "443167"
+    },
+    "new_restart_count": 4,
+    "new_started_at": "2026-11-10T11:44:54.700931134Z",
+    "replacement_seconds": 0.9456652079970809,
+    "final_jobs": [
+      {
+        "id": "9fe8ed26-8e59-45ad-a214-fb13be44ed0d",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:44:56.111133+00:00",
+    "container": "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc",
+    "name": "/queue-phase3-worker-7",
+    "old_owner": "95453987-7d63-4ede-a40c-bccf2969218c",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "432533"
+    },
+    "old_started_at": "2026-11-10T11:43:08.389797126Z",
+    "old_restart_count": 2,
+    "affected_jobs": [],
+    "schedule_lag_seconds": 0.17922404099954292,
+    "terminated_and_replaced": true,
+    "new_owner": "8613959e-d14f-4fb0-9dec-07485305306c",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "443327"
+    },
+    "new_restart_count": 3,
+    "new_started_at": "2026-11-10T11:44:56.323152718Z",
+    "replacement_seconds": 0.881895207989146,
+    "final_jobs": []
+  },
+  {
+    "time": "2026-11-10T11:44:58.358302+00:00",
+    "container": "913e9e33bcb1c1b98c1e89f6cbab0324ab659791da729976df9965faeaea241a",
+    "name": "/queue-phase3-worker-4",
+    "old_owner": "1162df20-4222-4f8e-b08b-165ff8e894e3",
+    "old_process": {
+      "pid": 6,
+      "start_ticks": "431737"
+    },
+    "old_started_at": "2026-11-10T11:43:00.379958012Z",
+    "old_restart_count": 4,
+    "affected_jobs": [
+      {
+        "id": "03f86e82-8508-4bf1-9e4a-0d1715f879f2",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:08.206229+00:00",
+        "observed_at": "2026-11-10 11:44:58.307105+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.42640012499759905,
+    "terminated_and_replaced": true,
+    "new_owner": "ed1c4831-837f-402c-adef-d01370a49c62",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "443556"
+    },
+    "new_restart_count": 5,
+    "new_started_at": "2026-11-10T11:44:58.602279844Z",
+    "replacement_seconds": 1.4158828749932582,
+    "final_jobs": [
+      {
+        "id": "03f86e82-8508-4bf1-9e4a-0d1715f879f2",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:00.644768+00:00",
+    "container": "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc",
+    "name": "/queue-phase3-worker-7",
+    "old_owner": "8613959e-d14f-4fb0-9dec-07485305306c",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "443327"
+    },
+    "old_started_at": "2026-11-10T11:44:56.323152718Z",
+    "old_restart_count": 3,
+    "affected_jobs": [
+      {
+        "id": "f18d25ed-e77b-4ec9-bf6a-a4c80eceabd7",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:09.349322+00:00",
+        "observed_at": "2026-11-10 11:45:00.582725+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.7018149999930756,
+    "terminated_and_replaced": true,
+    "new_owner": "4422fe43-957c-47b9-899e-a3f27945b289",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "443790"
+    },
+    "new_restart_count": 4,
+    "new_started_at": "2026-11-10T11:45:00.960202012Z",
+    "replacement_seconds": 1.3468789589969674,
+    "final_jobs": [
+      {
+        "id": "f18d25ed-e77b-4ec9-bf6a-a4c80eceabd7",
+        "state": "succeeded",
+        "generation": 2,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:02.854269+00:00",
+    "container": "06a04001a4e5e6172e2de8e7789a02957934ac97dd98a171673587dc7d1d4189",
+    "name": "/queue-phase3-worker-2",
+    "old_owner": "f30ea09d-0005-4c7a-a08f-6544125c4cee",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "431363"
+    },
+    "old_started_at": "2026-11-10T11:42:56.67959826Z",
+    "old_restart_count": 4,
+    "affected_jobs": [
+      {
+        "id": "51e708de-e2f0-481f-9154-99f3b5118838",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:12.283642+00:00",
+        "observed_at": "2026-11-10 11:45:02.801465+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.7051314170093974,
+    "terminated_and_replaced": true,
+    "new_owner": "1a400137-943d-4b8e-a92b-88474deca17d",
+    "new_process": {
+      "pid": 6,
+      "start_ticks": "444004"
+    },
+    "new_restart_count": 5,
+    "new_started_at": "2026-11-10T11:45:03.07696118Z",
+    "replacement_seconds": 1.4881272920029005,
+    "final_jobs": [
+      {
+        "id": "51e708de-e2f0-481f-9154-99f3b5118838",
+        "state": "cancelled",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:04.871053+00:00",
+    "container": "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc",
+    "name": "/queue-phase3-worker-7",
+    "old_owner": "4422fe43-957c-47b9-899e-a3f27945b289",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "443790"
+    },
+    "old_started_at": "2026-11-10T11:45:00.960202012Z",
+    "old_restart_count": 4,
+    "affected_jobs": [
+      {
+        "id": "da8e12ef-1221-40c5-838b-15725a32af30",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:13.618992+00:00",
+        "observed_at": "2026-11-10 11:45:04.840713+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.3715410840086406,
+    "terminated_and_replaced": true,
+    "new_owner": "510b91df-629c-422b-a571-57a5df3f5a21",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "444231"
+    },
+    "new_restart_count": 5,
+    "new_started_at": "2026-11-10T11:45:05.385949417Z",
+    "replacement_seconds": 1.344873624999309,
+    "final_jobs": [
+      {
+        "id": "da8e12ef-1221-40c5-838b-15725a32af30",
+        "state": "cancelled",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:07.061301+00:00",
+    "container": "4e4f4c9d6983c42c534f42171061a6ca0ad7c5f269d857edcd504b5b63a8718a",
+    "name": "/queue-phase3-worker-6",
+    "old_owner": "be6e83d9-aac9-4d41-bba0-d43ec5128178",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "431539"
+    },
+    "old_started_at": "2026-11-10T11:42:58.384310053Z",
+    "old_restart_count": 4,
+    "affected_jobs": [
+      {
+        "id": "901937c5-b8e8-4acb-bff8-5e9db7516368",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:14.068428+00:00",
+        "observed_at": "2026-11-10 11:45:07.032257+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.5617932090099202,
+    "terminated_and_replaced": true,
+    "new_owner": "e3f697db-b943-443c-96c8-8818fa81868d",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "444422"
+    },
+    "new_restart_count": 5,
+    "new_started_at": "2026-11-10T11:45:07.268592251Z",
+    "replacement_seconds": 1.0913378750119591,
+    "final_jobs": [
+      {
+        "id": "901937c5-b8e8-4acb-bff8-5e9db7516368",
+        "state": "cancelled",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:08.791690+00:00",
+    "container": "4e4f4c9d6983c42c534f42171061a6ca0ad7c5f269d857edcd504b5b63a8718a",
+    "name": "/queue-phase3-worker-6",
+    "old_owner": "e3f697db-b943-443c-96c8-8818fa81868d",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "444422"
+    },
+    "old_started_at": "2026-11-10T11:45:07.268592251Z",
+    "old_restart_count": 5,
+    "affected_jobs": [
+      {
+        "id": "c549c085-862e-4c23-b524-4a0a9851b55e",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:18.388647+00:00",
+        "observed_at": "2026-11-10 11:45:08.778802+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.2921874590101652,
+    "terminated_and_replaced": true,
+    "new_owner": "7a5351e2-e63e-40c8-965e-9f08fc10673d",
+    "new_process": {
+      "pid": 6,
+      "start_ticks": "444606"
+    },
+    "new_restart_count": 6,
+    "new_started_at": "2026-11-10T11:45:09.130435627Z",
+    "replacement_seconds": 1.6209001660026843,
+    "final_jobs": [
+      {
+        "id": "c549c085-862e-4c23-b524-4a0a9851b55e",
+        "state": "cancelled",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:11.287569+00:00",
+    "container": "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7",
+    "name": "/queue-phase3-worker-3",
+    "old_owner": "af248cfc-e798-4f4c-94c3-a8e5d994097e",
+    "old_process": {
+      "pid": 6,
+      "start_ticks": "432134"
+    },
+    "old_started_at": "2026-11-10T11:43:04.37382168Z",
+    "old_restart_count": 4,
+    "affected_jobs": [
+      {
+        "id": "bfb63bb7-d1ae-482c-9cae-56cde0c48834",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:20.636546+00:00",
+        "observed_at": "2026-11-10 11:45:11.225529+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.7178457499976503,
+    "terminated_and_replaced": true,
+    "new_owner": "dfcaab95-1518-4b8a-bbe2-68314cab469a",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "444844"
+    },
+    "new_restart_count": 5,
+    "new_started_at": "2026-11-10T11:45:11.490953295Z",
+    "replacement_seconds": 1.6324726669990923,
+    "final_jobs": [
+      {
+        "id": "bfb63bb7-d1ae-482c-9cae-56cde0c48834",
+        "state": "succeeded",
+        "generation": 2,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:13.862153+00:00",
+    "container": "06a04001a4e5e6172e2de8e7789a02957934ac97dd98a171673587dc7d1d4189",
+    "name": "/queue-phase3-worker-2",
+    "old_owner": "1a400137-943d-4b8e-a92b-88474deca17d",
+    "old_process": {
+      "pid": 6,
+      "start_ticks": "444004"
+    },
+    "old_started_at": "2026-11-10T11:45:03.07696118Z",
+    "old_restart_count": 5,
+    "affected_jobs": [
+      {
+        "id": "0bec0d2a-cfbb-4fab-9078-32b05e0a07d7",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:21.604346+00:00",
+        "observed_at": "2026-11-10 11:45:13.778711+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.77214775000175,
+    "terminated_and_replaced": true,
+    "new_owner": "a7bc0f81-bc73-4fb6-8684-4886b04fa235",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "445101"
+    },
+    "new_restart_count": 6,
+    "new_started_at": "2026-11-10T11:45:14.071700046Z",
+    "replacement_seconds": 1.1697177919995738,
+    "final_jobs": [
+      {
+        "id": "0bec0d2a-cfbb-4fab-9078-32b05e0a07d7",
+        "state": "succeeded",
+        "generation": 2,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:15.862348+00:00",
+    "container": "2c5963955ed539c2e869783181fd0036d8909e51a638348ce220ddaf0daa574d",
+    "name": "/queue-phase3-worker-5",
+    "old_owner": "b63809b0-f398-4c55-98d6-853ce53db7ed",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "432333"
+    },
+    "old_started_at": "2026-11-10T11:43:06.383496917Z",
+    "old_restart_count": 4,
+    "affected_jobs": [
+      {
+        "id": "86c18d7d-f251-44e9-b2df-28ead91afa13",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:25.785591+00:00",
+        "observed_at": "2026-11-10 11:45:15.813848+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.6314215000165859,
+    "terminated_and_replaced": true,
+    "new_owner": "ed97b540-8011-4310-a796-f146c93db247",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "445303"
+    },
+    "new_restart_count": 5,
+    "new_started_at": "2026-11-10T11:45:16.079362297Z",
+    "replacement_seconds": 1.411052000010386,
+    "final_jobs": [
+      {
+        "id": "86c18d7d-f251-44e9-b2df-28ead91afa13",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:18.021872+00:00",
+    "container": "913e9e33bcb1c1b98c1e89f6cbab0324ab659791da729976df9965faeaea241a",
+    "name": "/queue-phase3-worker-4",
+    "old_owner": "ed1c4831-837f-402c-adef-d01370a49c62",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "443556"
+    },
+    "old_started_at": "2026-11-10T11:44:58.602279844Z",
+    "old_restart_count": 5,
+    "affected_jobs": [
+      {
+        "id": "65df54c0-14bf-4268-9007-9d66220405c0",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:27.436448+00:00",
+        "observed_at": "2026-11-10 11:45:17.986523+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.5930926670116605,
+    "terminated_and_replaced": true,
+    "new_owner": "9e298971-ca7e-460d-8baf-61f838f00c14",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "445517"
+    },
+    "new_restart_count": 6,
+    "new_started_at": "2026-11-10T11:45:18.229985339Z",
+    "replacement_seconds": 1.3129404169885674,
+    "final_jobs": [
+      {
+        "id": "65df54c0-14bf-4268-9007-9d66220405c0",
+        "state": "cancelled",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:19.760229+00:00",
+    "container": "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7",
+    "name": "/queue-phase3-worker-3",
+    "old_owner": "dfcaab95-1518-4b8a-bbe2-68314cab469a",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "444844"
+    },
+    "old_started_at": "2026-11-10T11:45:11.490953295Z",
+    "old_restart_count": 5,
+    "affected_jobs": [
+      {
+        "id": "f259560c-9cfc-44b2-8ded-db9b430ecd3a",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:29.055230+00:00",
+        "observed_at": "2026-11-10 11:45:19.743933+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.2824151250097202,
+    "terminated_and_replaced": true,
+    "new_owner": "4f32c627-5026-46db-8628-1a9603c86574",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "445701"
+    },
+    "new_restart_count": 6,
+    "new_started_at": "2026-11-10T11:45:20.080562382Z",
+    "replacement_seconds": 1.103824165998958,
+    "final_jobs": [
+      {
+        "id": "f259560c-9cfc-44b2-8ded-db9b430ecd3a",
+        "state": "succeeded",
+        "generation": 2,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:21.796666+00:00",
+    "container": "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc",
+    "name": "/queue-phase3-worker-7",
+    "old_owner": "510b91df-629c-422b-a571-57a5df3f5a21",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "444231"
+    },
+    "old_started_at": "2026-11-10T11:45:05.385949417Z",
+    "old_restart_count": 5,
+    "affected_jobs": [
+      {
+        "id": "4892612d-d7de-437a-8491-c11b703bc1f7",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:31.769945+00:00",
+        "observed_at": "2026-11-10 11:45:21.780634+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.3188568750047125,
+    "terminated_and_replaced": true,
+    "new_owner": "28de8968-7245-4ec8-bc74-fb7d6f46dd4d",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "445898"
+    },
+    "new_restart_count": 6,
+    "new_started_at": "2026-11-10T11:45:22.015738091Z",
+    "replacement_seconds": 1.1976365000009537,
+    "final_jobs": [
+      {
+        "id": "4892612d-d7de-437a-8491-c11b703bc1f7",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:23.996327+00:00",
+    "container": "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc",
+    "name": "/queue-phase3-worker-7",
+    "old_owner": "28de8968-7245-4ec8-bc74-fb7d6f46dd4d",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "445898"
+    },
+    "old_started_at": "2026-11-10T11:45:22.015738091Z",
+    "old_restart_count": 6,
+    "affected_jobs": [
+      {
+        "id": "4ce4fa5f-4354-42e1-b623-0a12e5db673f",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:33.201548+00:00",
+        "observed_at": "2026-11-10 11:45:23.977902+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.5185235420067329,
+    "terminated_and_replaced": true,
+    "new_owner": "5c30afa6-005c-45ee-aa5f-96905b803d0c",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "446126"
+    },
+    "new_restart_count": 7,
+    "new_started_at": "2026-11-10T11:45:24.319589384Z",
+    "replacement_seconds": 1.5449676670104964,
+    "final_jobs": [
+      {
+        "id": "4ce4fa5f-4354-42e1-b623-0a12e5db673f",
+        "state": "cancelled",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:26.051696+00:00",
+    "container": "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7",
+    "name": "/queue-phase3-worker-3",
+    "old_owner": "4f32c627-5026-46db-8628-1a9603c86574",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "445701"
+    },
+    "old_started_at": "2026-11-10T11:45:20.080562382Z",
+    "old_restart_count": 6,
+    "affected_jobs": [
+      {
+        "id": "8f1c0a8e-8447-4e1d-b248-1c1cbb351fda",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:35.348579+00:00",
+        "observed_at": "2026-11-10 11:45:26.025871+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.3649427090131212,
+    "terminated_and_replaced": true,
+    "new_owner": "f0eb5365-e465-420d-a3be-f5f24f341f4f",
+    "new_process": {
+      "pid": 6,
+      "start_ticks": "446355"
+    },
+    "new_restart_count": 7,
+    "new_started_at": "2026-11-10T11:45:26.595596677Z",
+    "replacement_seconds": 1.2837144160002936,
+    "final_jobs": [
+      {
+        "id": "8f1c0a8e-8447-4e1d-b248-1c1cbb351fda",
+        "state": "succeeded",
+        "generation": 2,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:27.888774+00:00",
+    "container": "4e4f4c9d6983c42c534f42171061a6ca0ad7c5f269d857edcd504b5b63a8718a",
+    "name": "/queue-phase3-worker-6",
+    "old_owner": "7a5351e2-e63e-40c8-965e-9f08fc10673d",
+    "old_process": {
+      "pid": 6,
+      "start_ticks": "444606"
+    },
+    "old_started_at": "2026-11-10T11:45:09.130435627Z",
+    "old_restart_count": 6,
+    "affected_jobs": [
+      {
+        "id": "64c60a89-c2c9-495c-a6d2-d57be09a5afa",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:36.918885+00:00",
+        "observed_at": "2026-11-10 11:45:27.888047+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.20202512500691228,
+    "terminated_and_replaced": true,
+    "new_owner": "abe62127-692c-4b88-9861-7b11a28cdb5b",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "446505"
+    },
+    "new_restart_count": 7,
+    "new_started_at": "2026-11-10T11:45:28.101052594Z",
+    "replacement_seconds": 1.5869540839921683,
+    "final_jobs": [
+      {
+        "id": "64c60a89-c2c9-495c-a6d2-d57be09a5afa",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:30.483129+00:00",
+    "container": "3ce177c9778f4ca37c087e3bc6e08c5355a679d49bd8416e167ae6f53116d806",
+    "name": "/queue-phase3-worker-1",
+    "old_owner": "311b9ff7-fc83-4135-ab5e-249a9217ad65",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "431936"
+    },
+    "old_started_at": "2026-11-10T11:43:02.362762138Z",
+    "old_restart_count": 2,
+    "affected_jobs": [],
+    "schedule_lag_seconds": 0.796386000016355,
+    "terminated_and_replaced": true,
+    "new_owner": "10ad81dd-b324-45de-9604-5d0774b97892",
+    "new_process": {
+      "pid": 6,
+      "start_ticks": "446772"
+    },
+    "new_restart_count": 3,
+    "new_started_at": "2026-11-10T11:45:30.741264679Z",
+    "replacement_seconds": 1.6820018750004238,
+    "final_jobs": []
+  },
+  {
+    "time": "2026-11-10T11:45:33.024086+00:00",
+    "container": "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7",
+    "name": "/queue-phase3-worker-3",
+    "old_owner": "f0eb5365-e465-420d-a3be-f5f24f341f4f",
+    "old_process": {
+      "pid": 6,
+      "start_ticks": "446355"
+    },
+    "old_started_at": "2026-11-10T11:45:26.595596677Z",
+    "old_restart_count": 7,
+    "affected_jobs": [
+      {
+        "id": "b0079cd5-242e-4bc9-910b-e18e97a10146",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:40.994241+00:00",
+        "observed_at": "2026-11-10 11:45:32.988638+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.6703293750033481,
+    "terminated_and_replaced": true,
+    "new_owner": "a7b81d45-d447-4db8-b531-f2bde9ce7a12",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "447091"
+    },
+    "new_restart_count": 8,
+    "new_started_at": "2026-11-10T11:45:33.936013472Z",
+    "replacement_seconds": 2.9902870830119355,
+    "final_jobs": [
+      {
+        "id": "b0079cd5-242e-4bc9-910b-e18e97a10146",
+        "state": "cancelled",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:36.823774+00:00",
+    "container": "555735b0e7b71c206a7213e39b9a186afa6e2e87dd3264e25f0a1f999716e5dc",
+    "name": "/queue-phase3-worker-7",
+    "old_owner": "5c30afa6-005c-45ee-aa5f-96905b803d0c",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "446126"
+    },
+    "old_started_at": "2026-11-10T11:45:24.319589384Z",
+    "old_restart_count": 7,
+    "affected_jobs": [],
+    "schedule_lag_seconds": 0.6703527080098866,
+    "terminated_and_replaced": true,
+    "new_owner": "2d814a5f-8330-4ef0-8ff3-cef768cf5b54",
+    "new_process": {
+      "pid": 6,
+      "start_ticks": "447399"
+    },
+    "new_restart_count": 8,
+    "new_started_at": "2026-11-10T11:45:37.023593542Z",
+    "replacement_seconds": 1.6465555409959052,
+    "final_jobs": []
+  },
+  {
+    "time": "2026-11-10T11:45:39.432922+00:00",
+    "container": "06a04001a4e5e6172e2de8e7789a02957934ac97dd98a171673587dc7d1d4189",
+    "name": "/queue-phase3-worker-2",
+    "old_owner": "a7bc0f81-bc73-4fb6-8684-4886b04fa235",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "445101"
+    },
+    "old_started_at": "2026-11-10T11:45:14.071700046Z",
+    "old_restart_count": 6,
+    "affected_jobs": [
+      {
+        "id": "b70d6ae4-c69d-4dab-8b4d-7252559bc7db",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:48.391223+00:00",
+        "observed_at": "2026-11-10 11:45:39.356717+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.8041015829949174,
+    "terminated_and_replaced": true,
+    "new_owner": "1637918e-dccd-4f8a-aa24-ada7d0a556af",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "447664"
+    },
+    "new_restart_count": 7,
+    "new_started_at": "2026-11-10T11:45:39.660491127Z",
+    "replacement_seconds": 1.2692790419969242,
+    "final_jobs": [
+      {
+        "id": "b70d6ae4-c69d-4dab-8b4d-7252559bc7db",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:41.398426+00:00",
+    "container": "3ce177c9778f4ca37c087e3bc6e08c5355a679d49bd8416e167ae6f53116d806",
+    "name": "/queue-phase3-worker-1",
+    "old_owner": "10ad81dd-b324-45de-9604-5d0774b97892",
+    "old_process": {
+      "pid": 6,
+      "start_ticks": "446772"
+    },
+    "old_started_at": "2026-11-10T11:45:30.741264679Z",
+    "old_restart_count": 3,
+    "affected_jobs": [
+      {
+        "id": "f2acd21e-1ebd-45ae-83e7-513f3743c30e",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:51.285340+00:00",
+        "observed_at": "2026-11-10 11:45:41.378710+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.5067305830161786,
+    "terminated_and_replaced": true,
+    "new_owner": "2070fab2-9d8c-4ef5-9b98-9aba05ac4c19",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "447865"
+    },
+    "new_restart_count": 4,
+    "new_started_at": "2026-11-10T11:45:41.62364242Z",
+    "replacement_seconds": 1.2204778750019614,
+    "final_jobs": [
+      {
+        "id": "f2acd21e-1ebd-45ae-83e7-513f3743c30e",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:45:43.310701+00:00",
+    "container": "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7",
+    "name": "/queue-phase3-worker-3",
+    "old_owner": "a7b81d45-d447-4db8-b531-f2bde9ce7a12",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "447091"
+    },
+    "old_started_at": "2026-11-10T11:45:33.936013472Z",
+    "old_restart_count": 8,
+    "affected_jobs": [
+      {
+        "id": "5ab220cf-922d-4b26-a57a-9465a6cbb208",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:45:52.863740+00:00",
+        "observed_at": "2026-11-10 11:45:43.305135+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.41900958301266655,
+    "terminated_and_replaced": true,
+    "new_owner": "be8f55b8-30c2-4265-9e73-172b36a2e815",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "448196"
+    },
+    "new_restart_count": 9,
+    "new_started_at": "2026-11-10T11:45:45.019108546Z",
+    "replacement_seconds": 2.4176419580035144,
+    "final_jobs": [
+      {
+        "id": "5ab220cf-922d-4b26-a57a-9465a6cbb208",
+        "state": "succeeded",
+        "generation": 2,
+        "killed_generation": 1
+      }
+    ]
+  }
+]

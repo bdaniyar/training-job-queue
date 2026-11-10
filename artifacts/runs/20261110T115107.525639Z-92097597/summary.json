@@ -1,0 +1,106 @@
+{
+  "kind": "load",
+  "seed": 4404,
+  "namespace": "load-4404-7cea0aa7061a-",
+  "outcome": "PASS",
+  "started_at": "2026-11-10T11:51:07.918363+00:00",
+  "offered_start": 90705.950404916,
+  "offered_seconds": 120,
+  "target_rps": 100,
+  "scheduled_requests": 12000,
+  "mix": {
+    "create": 40,
+    "status": 20,
+    "list": 10,
+    "cancel": 10,
+    "replay": 10,
+    "conflict": 10
+  },
+  "retries_count_toward_rps": true,
+  "drain_seconds": 1.0394354580057552,
+  "snapshot": "108791:108791:",
+  "intended_jobs": 4820,
+  "jobs": 4820,
+  "effects": 4809,
+  "states": {
+    "succeeded": 4809,
+    "cancelled": 11
+  },
+  "failed_reasons": {},
+  "committed_claims": 4818,
+  "retries": 0,
+  "cancelled_acknowledgements": 11,
+  "worker_log_counts": {
+    "claim_committed": 4818,
+    "execution_started": 4818,
+    "execution_finished": 4818,
+    "effect_committed": 4809,
+    "ownership_lost": 9
+  },
+  "assertions_failed": [],
+  "setup_requests": 20,
+  "measured_requests": 12000,
+  "dispatched": 12000,
+  "dropped": 0,
+  "dispatch_rps": 99.98155458379574,
+  "completed_rps": 99.98027236422733,
+  "successful_rps": 99.98027236422733,
+  "measured_statuses": {
+    "201": 4800,
+    "200": 4817,
+    "409": 2383
+  },
+  "unexpected": [],
+  "measured_latency_ms": {
+    "p50": 4.547000004095025,
+    "p95": 7.961750001413748,
+    "p99": 22.502624997287057
+  },
+  "measured_dispatch_lag_ms": {
+    "p50": 0.9053749963641167,
+    "p95": 1.6173339972738177,
+    "p99": 4.494708991842344
+  },
+  "backlog_growth_per_second": 0.11943906365211301,
+  "max_depth": 21,
+  "acceptance": {
+    "dispatched_99_percent": true,
+    "dispatch_rps_99_to_101": true,
+    "unexpected_error_ratio_under_1_percent": true,
+    "p95_under_250ms": true,
+    "p99_under_1000ms": true,
+    "dispatch_lag_p99_under_100ms": true,
+    "backlog_growth_at_most_1_per_second": true,
+    "max_depth_at_most_200": true,
+    "drain_within_60_seconds": true,
+    "database_invariants": true
+  },
+  "worker_terminal_rps": 39.94464799065257,
+  "worker_effect_rps": 39.88407335115202,
+  "ended_at": "2026-11-10T11:53:12.007744+00:00",
+  "requests": 12020,
+  "operations": {
+    "create": 4820,
+    "status": 2400,
+    "list": 1200,
+    "cancel": 1200,
+    "replay": 1200,
+    "conflict": 1200
+  },
+  "statuses": {
+    "201": 4820,
+    "200": 4817,
+    "409": 2383
+  },
+  "http_errors": [],
+  "latency_ms": {
+    "p50": 4.546541997115128,
+    "p95": 7.979999994859099,
+    "p99": 23.083499996573664
+  },
+  "dispatch_lag_ms": {
+    "p50": 0.9035420080181211,
+    "p95": 1.616833993466571,
+    "p99": 4.494708991842344
+  }
+}

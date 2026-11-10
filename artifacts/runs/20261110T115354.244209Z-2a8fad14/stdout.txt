@@ -1,0 +1,19 @@
+BEGIN
+ version_num 
+-------------
+ 0001
+(1 row)
+
+   state   | count 
+-----------+-------
+ cancelled |   696
+ failed    |   299
+ succeeded | 34126
+(3 rows)
+
+ jobs  | effects | mismatches | stale_or_wrong 
+-------+---------+------------+----------------
+ 35121 |   34126 |          0 |              0
+(1 row)
+
+COMMIT

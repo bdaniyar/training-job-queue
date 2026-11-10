@@ -1,0 +1,56 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 34a9688..ad83940 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -26,6 +26,7 @@ packages = ["src/training_queue"]
+ asyncio_mode = "auto"
+ asyncio_default_fixture_loop_scope = "function"
+ testpaths = ["tests"]
++pythonpath = ["."]
+ addopts = "-ra"
+ 
+ [tool.ruff]
+diff --git a/scripts/record.py b/scripts/record.py
+index 68eb17d..4ca2b87 100644
+--- a/scripts/record.py
++++ b/scripts/record.py
+@@ -1,6 +1,7 @@
+ """Run a command once and retain unedited stdout/stderr, even when it fails."""
+ 
+ import hashlib
++import importlib.metadata
+ import json
+ import os
+ import platform
+@@ -44,6 +45,19 @@ def main() -> int:
+         "platform": platform.platform(),
+         "machine": platform.machine(),
+         "cpu_count": os.cpu_count(),
++        "dependencies": {
++            item.metadata["Name"]: item.version
++            for item in importlib.metadata.distributions()
++            if item.metadata["Name"].lower() in {
++                "fastapi", "sqlalchemy", "asyncpg", "httpx", "pydantic", "alembic", "pytest", "ruff"
++            }
++        },
++        "configuration": {
++            key: os.environ[key]
++            for key in ("QUEUE_API_PORT", "QUEUE_DB_PORT", "QUEUE_LEASE_SECONDS",
++                        "QUEUE_HEARTBEAT_SECONDS", "QUEUE_ATTEMPT_SECONDS")
++            if key in os.environ
++        },
+         "database": {"host": db.hostname, "port": db.port, "database": db.path},
+         "source_sha256": sources,
+     }
+@@ -63,7 +77,10 @@ def main() -> int:
+                 target.flush()
+ 
+     try:
+-        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
++        environment = os.environ | {"QUEUE_RUN_DIR": str(run.resolve())}
++        process = subprocess.Popen(
++            command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=environment
++        )
+     except OSError as exc:
+         (run / "stderr.txt").write_text(str(exc) + "\n")
+         (run / "stdout.txt").touch()

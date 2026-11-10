@@ -1,0 +1,80 @@
+{
+  "kind": "chaos",
+  "seed": 2202,
+  "namespace": "chaos-2202-d9104fd20bbd-",
+  "outcome": "PASS",
+  "started_at": "2026-11-10T11:44:48.005776+00:00",
+  "injection_seconds": 53.90767487499397,
+  "kills": 23,
+  "verified_restarts": 23,
+  "drain_seconds": 84.27840258399374,
+  "snapshot": "62754:62754:",
+  "intended_jobs": 10000,
+  "jobs": 10000,
+  "effects": 9794,
+  "states": {
+    "failed": 100,
+    "succeeded": 9794,
+    "cancelled": 106
+  },
+  "failed_reasons": {
+    "simulated permanent failure": 100
+  },
+  "committed_claims": 10139,
+  "retries": 208,
+  "cancelled_acknowledgements": 106,
+  "worker_log_counts": {
+    "claim_committed": 10139,
+    "execution_started": 10139,
+    "failure_recorded": 298,
+    "execution_finished": 9810,
+    "effect_committed": 9794,
+    "ownership_lost": 24,
+    "recovered": 11
+  },
+  "assertions_failed": [],
+  "ended_at": "2026-11-10T11:47:11.121876+00:00",
+  "requests": 10501,
+  "operations": {
+    "create": 10000,
+    "conflict": 73,
+    "replay": 292,
+    "cancel_queued": 88,
+    "cancel_running": 44,
+    "create_retry": 4
+  },
+  "statuses": {
+    "201": 10000,
+    "409": 99,
+    "200": 398,
+    "transport_error": 4
+  },
+  "http_errors": [
+    {
+      "operation": "create",
+      "error": "RemoteProtocolError"
+    },
+    {
+      "operation": "create",
+      "error": "RemoteProtocolError"
+    },
+    {
+      "operation": "create",
+      "error": "RemoteProtocolError"
+    },
+    {
+      "operation": "create",
+      "error": "RemoteProtocolError"
+    }
+  ],
+  "latency_ms": {
+    "p50": 121.37812499713618,
+    "p95": 538.1396250013495,
+    "p99": 902.247834004811
+  },
+  "dispatch_lag_ms": {
+    "p50": 0,
+    "p95": 0,
+    "p99": 0
+  }
+}

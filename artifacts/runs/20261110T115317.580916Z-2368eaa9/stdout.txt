@@ -1,0 +1,12 @@
+E501 Line too long (102 > 100)
+  --> scripts/index_evidence.py:16:101
+   |
+14 |         meta = json.loads((run/'metadata.json').read_text())
+15 |         result_path = run/'result.json'
+16 |         code = json.loads(result_path.read_text())['exit_code'] if result_path.exists() else 'RUNNING'
+   |                                                                                                     ^^
+17 |         command = ' '.join(meta['command']).replace('|', r'\|').replace('`', "'")
+18 |         if len(command) > 130:
+   |
+
+Found 1 error.

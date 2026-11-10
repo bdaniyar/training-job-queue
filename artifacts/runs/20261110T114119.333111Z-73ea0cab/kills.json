@@ -1,0 +1,65 @@
+[
+  {
+    "time": "2026-11-10T11:41:22.920017+00:00",
+    "container": "06a04001a4e5e6172e2de8e7789a02957934ac97dd98a171673587dc7d1d4189",
+    "name": "/queue-phase3-worker-2",
+    "old_owner": "a153181d-23de-49cf-a161-c11cde68efc6",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "419371"
+    },
+    "old_started_at": "2026-11-10T11:40:56.748983177Z",
+    "old_restart_count": 0,
+    "affected_jobs": [
+      {
+        "id": "57fb68c8-6004-4672-a3c4-0b244b689113",
+        "generation": 1,
+        "state": "running",
+        "lease_until": "2026-11-10 11:41:32.915270+00:00",
+        "observed_at": "2026-11-10 11:41:22.919256+00:00"
+      }
+    ],
+    "schedule_lag_seconds": 0.22106720799638424,
+    "terminated_and_replaced": true,
+    "new_owner": "4179d8fa-9c6b-4726-97ac-f75b2650090a",
+    "new_process": {
+      "pid": 8,
+      "start_ticks": "422015"
+    },
+    "new_restart_count": 1,
+    "new_started_at": "2026-11-10T11:41:23.13616755Z",
+    "replacement_seconds": 0.856665208004415,
+    "final_jobs": [
+      {
+        "id": "57fb68c8-6004-4672-a3c4-0b244b689113",
+        "state": "succeeded",
+        "generation": 1,
+        "killed_generation": 1
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T11:41:24.875881+00:00",
+    "container": "00c0db3291323b4d1b1567881e7134cdf6240a9417a956681ebd320b7398ebf7",
+    "name": "/queue-phase3-worker-3",
+    "old_owner": "9787e810-8be9-442e-96e9-451dd38b46fc",
+    "old_process": {
+      "pid": 7,
+      "start_ticks": "419390"
+    },
+    "old_started_at": "2026-11-10T11:40:56.911055594Z",
+    "old_restart_count": 0,
+    "affected_jobs": [],
+    "schedule_lag_seconds": 0.17694720800500363,
+    "terminated_and_replaced": true,
+    "new_owner": "dd1266cf-0ed7-4985-839b-acc68dadb8a9",
+    "new_process": {
+      "pid": 7,
+      "start_ticks": "422205"
+    },
+    "new_restart_count": 1,
+    "new_started_at": "2026-11-10T11:41:25.097361218Z",
+    "replacement_seconds": 0.7679682080051862,
+    "final_jobs": []
+  }
+]

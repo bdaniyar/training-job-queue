@@ -1,0 +1,43 @@
+unformatted: File would be reformatted
+  --> scripts/index_evidence.py:9:9
+   |
+8  |     rows = [
+   -         '# Raw verification runs', '',
+   -         'Generated index only; raw files are unedited. Times in IDs are UTC.', '',
+   -         '| Run | Exit | Command (full command in metadata) |', '| --- | --- | --- |',
+9  +         "# Raw verification runs",
+10 +         "",
+11 +         "Generated index only; raw files are unedited. Times in IDs are UTC.",
+12 +         "",
+13 +         "| Run | Exit | Command (full command in metadata) |",
+14 +         "| --- | --- | --- |",
+15 |     ]
+   -     for run in sorted(Path('artifacts/runs').iterdir()):
+   -         meta = json.loads((run/'metadata.json').read_text())
+   -         result_path = run/'result.json'
+   -         code = json.loads(result_path.read_text())['exit_code'] if result_path.exists() else 'RUNNING'
+   -         command = ' '.join(meta['command']).replace('|', r'\|').replace('`', "'")
+16 +     for run in sorted(Path("artifacts/runs").iterdir()):
+17 +         meta = json.loads((run / "metadata.json").read_text())
+18 +         result_path = run / "result.json"
+19 +         code = (
+20 +             json.loads(result_path.read_text())["exit_code"] if result_path.exists() else "RUNNING"
+21 +         )
+22 +         command = " ".join(meta["command"]).replace("|", r"\|").replace("`", "'")
+23 |         if len(command) > 130:
+   -             command = command[:127] + '...'
+   -         rows.append(f'| [{run.name}](runs/{run.name}/metadata.json) | {code} | `{command}` |')
+   -     Path('artifacts/INDEX.md').write_text('\n'.join(rows) + '\n')
+   -     print(f'Indexed {len(rows)-6} raw runs, including in-progress recorder invocations.')
+24 +             command = command[:127] + "..."
+25 +         rows.append(f"| [{run.name}](runs/{run.name}/metadata.json) | {code} | `{command}` |")
+26 +     Path("artifacts/INDEX.md").write_text("\n".join(rows) + "\n")
+27 +     print(f"Indexed {len(rows) - 6} raw runs, including in-progress recorder invocations.")
+28 |
+29 |
+   - if __name__ == '__main__':
+30 + if __name__ == "__main__":
+31 |     main()
+   |
+
+1 file would be reformatted, 32 files already formatted
