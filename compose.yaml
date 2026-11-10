@@ -1,0 +1,61 @@
+name: training-job-queue
+
+x-application: &application
+  build: .
+  init: true
+  environment:
+    QUEUE_DATABASE_URL: postgresql+asyncpg://queue:queue@db:5432/queue
+  depends_on:
+    db:
+      condition: service_healthy
+    migrate:
+      condition: service_completed_successfully
+  restart: unless-stopped
+  stop_grace_period: 15s
+
+services:
+  db:
+    image: postgres:18@sha256:e3d24f6906d0760bf4da0dae872415391ededefad23fd471c47dc53b0ddf3c42
+    environment:
+      POSTGRES_USER: queue
+      POSTGRES_PASSWORD: queue
+      POSTGRES_DB: queue
+    ports:
+      - "127.0.0.1:${QUEUE_DB_PORT:-55432}:5432"
+    volumes:
+      - queue-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U queue -d queue"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+  migrate:
+    build: .
+    environment:
+      QUEUE_DATABASE_URL: postgresql+asyncpg://queue:queue@db:5432/queue
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["alembic", "upgrade", "head"]
+    restart: "no"
+
+  api:
+    <<: *application
+    ports:
+      - "127.0.0.1:${QUEUE_API_PORT:-8000}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"]
+      interval: 5s
+      timeout: 4s
+      retries: 20
+
+  worker:
+    <<: *application
+    command: ["python", "-m", "training_queue.worker"]
+    deploy:
+      replicas: 4
+
+volumes:
+  queue-data:
