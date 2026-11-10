@@ -1,8 +1,6 @@
 # AI assistance: Phases 2 and 3
 
-AI assistance is allowed by the Soup assignment. This file describes what happened
-in this collaboration; it does not claim that the developer independently reviewed
-or verified the generated implementation.
+AI assistance is allowed by the Soup assignment. This file distinguishes Codex's implementation and automated verification from the developer's subsequent manual checks. It does not claim independent authorship of AI-generated code, independent reruns of the full chaos/load suite, or broader production certification.
 
 ## Scope of assistance
 
@@ -56,8 +54,7 @@ This does not establish production readiness, 100 requests/sec capacity, full ch
 survival, database failover durability, or the behavior of real training work. No
 benchmark or 10,000-job harness output was invented. No SHIP verdict was written.
 The user reported cancellation of the live discussion; no email was accessed or
-sent. Developer review and explanation of the protocol are still needed before
-Phase 3, including independent checks the developer chooses to perform.
+sent. At the end of Phase 2, independent developer verification remained to be performed; the developer's later manual checks are recorded below.
 
 An engineering observation from this phase: a successful command to send a signal
 does not establish that the intended worker died. Checking process restart and
@@ -70,7 +67,7 @@ Codex reread the complete original PDF, Phase 2 documents/code/tests/recorder, a
 created the Phase 3 branch from the supplied Phase 2 commit. It implemented the
 seeded HTTP/SIGKILL harness, read-only snapshot oracle, open-loop load generator,
 live SIGSTOP/SIGCONT zombie check, helper tests, summary/index tools, and reports.
-It ran all recorded checks; no independent human verification is claimed.
+It ran all recorded automated checks and experiments. The developer separately performed the exploratory checks recorded below, but did not rerun the full automated, chaos, or load-testing suites.
 
 The transaction protocol and deployed application code were retained. Three full
 10,000-job chaos runs passed their final invariants. One smaller pilot showed that
@@ -95,4 +92,34 @@ interpretation of the four transport failures, harness overhead, or production
 capacity beyond the measured workload is explicitly limited. Database clock jumps,
 real network partitions, failover durability, and realistic CPU/GPU training remain
 untested. The user's update cancelling the live discussion governs over the PDF's
-older statement. No email or PR was sent/opened; submission remains for user review.
+older statement. At the end of Phase 3 no email or PR had been sent/opened; subsequent submission preparation is separate from the recorded experiment evidence.
+
+## Independent developer manual walkthrough (November 10, 2026)
+
+After Codex completed Phase 3, the developer independently interacted with the
+running FastAPI service through Swagger UI (`http://localhost:8000/docs`), including
+creation/status inspection, idempotency-key replay/conflict, a successful job, a
+cancellation, and a transient-retry scenario. The developer also opened the real
+Docker Compose PostgreSQL database using `psql` and inspected both `jobs` and
+`job_effects` with their own SQL queries.
+
+The developer-supplied terminal transcript directly confirms:
+
+- `manual-test-001`: `succeeded`, attempts/generation `1/1`, committed
+  effect `{\"squared_value\": 49}`.
+- `manual-cancel-001`: `cancelled`, no committed effect row.
+- `manual-retry-001`: `succeeded` at generation 2, committed effect
+  `{\"squared_value\": 25}`.
+
+The developer discussed and reviewed the key ideas behind the implementation:
+separating HTTP ingestion from independent workers, durable queue state in
+PostgreSQL, atomic result/state commits, row locks for competing transitions,
+and leases/recovery for worker failures. This is a conceptual review, not a claim
+of a full independent source-code audit or authorship.
+
+The exact SQL commands and copied observed rows are preserved in
+[MANUAL_VERIFICATION.md](MANUAL_VERIFICATION.md). The Swagger results were observed
+interactively, not exported as raw machine-readable artifacts. The chaos,
+performance, automated concurrency, and SIGKILL tests were run by Codex and are
+reported separately with raw evidence. No unperformed verification is attributed
+to the developer.
